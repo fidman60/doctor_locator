@@ -1,4 +1,4 @@
 import {createStore} from "redux";
-import mapCenterReducer from './Reducers/mapCenterReducer';
+import mapReducer from './Reducers/mapReducer';
 
-export default createStore(mapCenterReducer);
+export default createStore(mapReducer);

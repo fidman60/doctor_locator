@@ -67692,52 +67692,79 @@ module.exports = function(module) {
 /*!********************************************!*\
   !*** ./resources/js/Actions/mapActions.js ***!
   \********************************************/
-/*! exports provided: CHANGE_CENTER, changeCenterAction */
+/*! exports provided: CHANGE_CENTER, SET_IN_BOUNDS_MARKERS, SET_MARKERS, changeCenterAction, markersAction */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CHANGE_CENTER", function() { return CHANGE_CENTER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_IN_BOUNDS_MARKERS", function() { return SET_IN_BOUNDS_MARKERS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_MARKERS", function() { return SET_MARKERS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "changeCenterAction", function() { return changeCenterAction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "markersAction", function() { return markersAction; });
 var CHANGE_CENTER = 'CHANGE_CENTER';
+var SET_IN_BOUNDS_MARKERS = 'SET_IN_BOUNDS_MARKERS';
+var SET_MARKERS = 'SET_MARKERS';
 function changeCenterAction(position) {
   return {
     type: CHANGE_CENTER,
     value: position
   };
 }
+function markersAction(type, value) {
+  return {
+    type: type,
+    value: value
+  };
+}
 
 /***/ }),
 
-/***/ "./resources/js/Store/Reducers/mapCenterReducer.js":
-/*!*********************************************************!*\
-  !*** ./resources/js/Store/Reducers/mapCenterReducer.js ***!
-  \*********************************************************/
+/***/ "./resources/js/Store/Reducers/mapReducer.js":
+/*!***************************************************!*\
+  !*** ./resources/js/Store/Reducers/mapReducer.js ***!
+  \***************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return mapCenterReducer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return mapReducer; });
 /* harmony import */ var _Actions_mapActions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../Actions/mapActions */ "./resources/js/Actions/mapActions.js");
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 var initialState = {
   position: {
     lat: 46.227638,
     lng: 2.213749000000007
   },
-  zoom: 5
+  zoom: 5,
+  markers: [],
+  inBoundsMarkers: []
 };
-function mapCenterReducer() {
+function mapReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
     case _Actions_mapActions__WEBPACK_IMPORTED_MODULE_0__["CHANGE_CENTER"]:
-      return {
+      return _objectSpread({}, state, {
         position: action.value,
         zoom: 14
-      };
+      });
+
+    case _Actions_mapActions__WEBPACK_IMPORTED_MODULE_0__["SET_IN_BOUNDS_MARKERS"]:
+      return _objectSpread({}, state, {
+        inBoundsMarkers: action.value
+      });
+
+    case _Actions_mapActions__WEBPACK_IMPORTED_MODULE_0__["SET_MARKERS"]:
+      return _objectSpread({}, state, {
+        markers: action.value
+      });
 
     default:
       return state;
@@ -67756,10 +67783,10 @@ function mapCenterReducer() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-/* harmony import */ var _Reducers_mapCenterReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Reducers/mapCenterReducer */ "./resources/js/Store/Reducers/mapCenterReducer.js");
+/* harmony import */ var _Reducers_mapReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Reducers/mapReducer */ "./resources/js/Store/Reducers/mapReducer.js");
 
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_Reducers_mapCenterReducer__WEBPACK_IMPORTED_MODULE_1__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_Reducers_mapReducer__WEBPACK_IMPORTED_MODULE_1__["default"]));
 
 /***/ }),
 
@@ -68079,6 +68106,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_google_maps__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_google_maps__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _Actions_mapActions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Actions/mapActions */ "./resources/js/Actions/mapActions.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -68089,13 +68118,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -68107,21 +68137,39 @@ var Map =
 function (_Component) {
   _inherits(Map, _Component);
 
-  function Map() {
+  function Map(props) {
+    var _this;
+
     _classCallCheck(this, Map);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Map).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Map).call(this, props));
+    _this._map = undefined;
+    _this._handleBoundsChanged = _this._handleBoundsChanged.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(Map, [{
     key: "componentDidMount",
     value: function componentDidMount() {
       this._getCurrentLocation();
+
+      this._getMarkers();
+    }
+  }, {
+    key: "_getMarkers",
+    value: function _getMarkers() {
+      var _this2 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_4___default.a.get('/api/ophthalmologists').then(function (response) {
+        _this2.props.dispatch(Object(_Actions_mapActions__WEBPACK_IMPORTED_MODULE_3__["markersAction"])(_Actions_mapActions__WEBPACK_IMPORTED_MODULE_3__["SET_MARKERS"], response.data));
+      })["catch"](function (error) {
+        console.log(error);
+      });
     }
   }, {
     key: "_getCurrentLocation",
     value: function _getCurrentLocation() {
-      var _this = this;
+      var _this3 = this;
 
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
@@ -68130,19 +68178,43 @@ function (_Component) {
             lng: position.coords.longitude
           };
 
-          _this.props.dispatch(Object(_Actions_mapActions__WEBPACK_IMPORTED_MODULE_3__["changeCenterAction"])(pos));
+          _this3.props.dispatch(Object(_Actions_mapActions__WEBPACK_IMPORTED_MODULE_3__["changeCenterAction"])(pos));
         }, function (error) {
           console.log(error);
         });
       }
     }
   }, {
+    key: "_getExistingBoundsMarkers",
+    value: function _getExistingBoundsMarkers() {
+      var _this4 = this;
+
+      return this.props.markers.filter(function (marker) {
+        return _this4._map.getBounds().contains({
+          lat: marker.lat,
+          lng: marker.lng
+        });
+      });
+    }
+  }, {
+    key: "_handleBoundsChanged",
+    value: function _handleBoundsChanged() {
+      this.props.dispatch(Object(_Actions_mapActions__WEBPACK_IMPORTED_MODULE_3__["markersAction"])(_Actions_mapActions__WEBPACK_IMPORTED_MODULE_3__["SET_IN_BOUNDS_MARKERS"], this._getExistingBoundsMarkers()));
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this5 = this;
+
+      console.log("bounds markers: ");
+      console.log(this.props.inBoundsMarkers);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_google_maps__WEBPACK_IMPORTED_MODULE_1__["GoogleMap"], {
         center: this.props.position,
         zoom: this.props.zoom,
-        ref: "map"
+        ref: function ref(map) {
+          return _this5._map = map;
+        },
+        onBoundsChanged: this._handleBoundsChanged
       });
     }
   }]);
@@ -68153,7 +68225,9 @@ function (_Component) {
 var mapStateToProps = function mapStateToProps(state) {
   return {
     position: state.position,
-    zoom: state.zoom
+    zoom: state.zoom,
+    markers: state.markers,
+    inBoundsMarkers: state.inBoundsMarkers
   };
 };
 
