@@ -1,0 +1,228 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
+    background-color: #ffffff;
+    width: 100%;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+header .header-logo h2 {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+header .header-logo a .fa {
+    position: relative;
+    padding: 0 6px;
+    color: #fdc600;
+    font-size: 34px;
+}
+
+header .header-logo a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+header h2 a {
+    line-height: 60px;
+}
+
+.toggle-btn, .search-btn {
+    float: left;
+    width: 40px;
+    height: 40px;
+    color: #777777;
+    background-color: #fff;
+    transition: all .3s ease;
+}
+
+.search-btn{
+    background-color: #fdc600;
+    color: #333333;
+    font-size: 16px;
+    float: none;
+    margin-left: 20px
+}
+
+button {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline: 0;
+    outline-offset: 0;
+    border: none;
+    cursor: pointer;
+}
+
+#searchGeo{
+    width: 100%;
+    height: 40px;
+    margin: auto 10px;
+}
+
+#searchGeo input {
+    height: 40px;
+    border-radius: 0
+}
+
+#secondBlockHeader{
+    background-color: #333333;
+    padding: 20px;
+    overflow: auto;
+}
+
+.select-country, .region, .address, .category-search {
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+}
+
+.select-country input, .region input, .address input, .category-search input, select {
+    outline: 0;
+    border: none;
+    width: 100%;
+    height: inherit;
+    color: #333333;
+    font-size: 16px;
+    padding: 5px 15px;
+    border-radius: 3px;
+}
+
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+.label{
+    display: inline-block;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.itemOption{
+    margin-bottom: 15px;
+}
+
+.filter-btn{
+    display: inline-block;
+    width: 100px;
+}
+
+
+.imgFavorite{
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.imgFavorite{
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.orderNbr {
+    border-radius: 13px;
+    color:white;
+    line-height: 26px;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #137ab6;
+    font-size: 12px;
+}
+
+#searchBox {
+    display: flex;
+    justify-content: space-between
+}
+
+.search-toggle {
+    overflow: auto;
+    width:100%;
+    top:0;
+    display: block;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px
+}
+
+/* tabs */
+nav > .nav.nav-tabs{
+    border: none;
+    color:#fff;
+    background:white;
+    border-radius:0;
+
+}
+nav > div a.nav-item.nav-link,
+nav > div a.nav-item.nav-link.active
+{
+    border: none;
+    padding: 10px 25px;
+    color:#fff;
+    background:#333333;
+    border-radius:0;
+}
+
+nav > div a.nav-item.nav-link.active{
+    background: #fdc600;
+    color: #333333;
+}
+
+nav > div a.nav-item.nav-link:hover,
+nav > div a.nav-item.nav-link:focus {
+    border: none;
+    background: #fdc600;
+    color: #333333;
+    border-radius:0;
+    transition:background 0.20s linear;
+}
+
+a.nav-item.nav-link.active .badge {
+    background: #333333;
+    color: white;
+}
+
+
+/* input icon */
+.form-group .form-control-icon {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.input-icon {
+    padding-left: 35px !important;
+}
+
+/* tab icon */
+.tab-icon {
+    color: #333333;
+    font-size: 30px;
+    transition: 1s;
+}
+
+.tab-icon:hover {
+    color: #fdc600;
+}

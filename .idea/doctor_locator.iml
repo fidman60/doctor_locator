@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$/../doctor_locator">
+      <sourceFolder url="file://$MODULE_DIR$/../doctor_locator/app" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/../doctor_locator/tests" isTestSource="true" packagePrefix="Tests\" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/barryvdh/laravel-ide-helper" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/barryvdh/reflection-docblock" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/beyondcode/laravel-dump-server" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/dnoegel/php-xdg-base-dir" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/doctrine/inflector" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/doctrine/instantiator" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/dragonmantank/cron-expression" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/egulias/email-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/erusev/parsedown" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/fideloper/proxy" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/filp/whoops" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/fzaninotto/faker" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/hamcrest/hamcrest-php" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/jakub-onderka/php-console-color" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/jakub-onderka/php-console-highlighter" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/justinrainbow/json-schema" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/laravel/framework" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/laravel/tinker" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/league/flysystem" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/mockery/mockery" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/myclabs/deep-copy" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/nesbot/carbon" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/nikic/php-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/nunomaduro/collision" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/opis/closure" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/paragonie/random_compat" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/phar-io/manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/phar-io/version" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/phpdocumentor/reflection-common" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/phpdocumentor/reflection-docblock" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/phpdocumentor/type-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/phpoption/phpoption" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/phpspec/prophecy" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/phpunit/php-code-coverage" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/phpunit/php-file-iterator" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/phpunit/php-text-template" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/phpunit/php-timer" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/phpunit/php-token-stream" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/phpunit/phpunit" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/psr/simple-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/psy/psysh" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/ramsey/uuid" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/sebastian/code-unit-reverse-lookup" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/sebastian/comparator" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/sebastian/diff" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/sebastian/environment" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/sebastian/exporter" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/sebastian/global-state" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/sebastian/object-enumerator" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/sebastian/object-reflector" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/sebastian/recursion-context" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/sebastian/resource-operations" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/sebastian/version" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/seld/jsonlint" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/seld/phar-utils" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/swiftmailer/swiftmailer" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/symfony/contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/symfony/css-selector" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/symfony/debug" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/symfony/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/symfony/filesystem" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/symfony/finder" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/symfony/http-foundation" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/symfony/http-kernel" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/symfony/polyfill-iconv" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/symfony/polyfill-intl-idn" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/symfony/polyfill-php72" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/symfony/process" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/symfony/routing" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/symfony/translation" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/symfony/var-dumper" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/theseer/tokenizer" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/tijsverkoyen/css-to-inline-styles" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/vlucas/phpdotenv" />
+      <excludeFolder url="file://$MODULE_DIR$/../doctor_locator/vendor/webmozart/assert" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
