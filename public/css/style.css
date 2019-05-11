@@ -32,7 +32,6 @@ header h2 a {
 }
 
 .toggle-btn, .search-btn {
-    float: left;
     width: 40px;
     height: 40px;
     color: #777777;
@@ -127,6 +126,17 @@ button, input, optgroup, select, textarea {
     line-height: 30px;
     width: 30px;
     height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.search-btn{
+    position: relative;
+}
+
+.search-div{
     position: absolute;
     top: 50%;
     left: 50%;

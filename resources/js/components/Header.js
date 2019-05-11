@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React, {Component} from 'react';
+import Search from "./Search";
 
 export default class Header extends Component {
 
@@ -9,20 +9,9 @@ export default class Header extends Component {
                 <div className="header-logo text-center">
                     <h2><a href="index.html">GL<i className="fa fa-globe" />BO</a></h2>
                 </div>
-                <div style={{position: 'relative'}} id="secondBlockHeader">
-                    <div className="container">
-                        <div id="searchBox">
-                            <button type="button" data-toggle="collapse" data-target="#dd" aria-controls="dd" aria-expanded="false" aria-label="Toggle" className="toggle-btn"><i className="fa fa-bars" /></button>
-                            <div style={{flexGrow: 6}} className="search-value">
-                                <div id="searchGeo" className="form-group">
-                                    <span className="fa fa-map-marker-alt form-control-icon" />
-                                    <input type="text" className="form-control input-icon" placeholder="Rechercher" />
-                                </div>
-                            </div>
-                            <button className="search-btn" type="submit"><i className="fa fa-search" /></button>
-                        </div>
-                    </div>
-                </div>
+
+                <Search />
+
                 <div id="dd" className="collapse navbar-collapse" style={{position: 'relative', zIndex: 999}}>
                     <div className="search-toggle">
                         <div className="container">

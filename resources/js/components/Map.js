@@ -30,6 +30,7 @@ class Map extends Component {
             <GoogleMap
                 center={this.props.position}
                 zoom={this.props.zoom}
+                ref='map'
             />
         );
     }

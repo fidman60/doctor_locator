@@ -11,6 +11,7 @@ class OphthalmologistsTableSeeder extends Seeder
      */
     public function run()
     {
+        /*
         DB::table('ophthalmologists')->insert([
             'adresse_line1' => 'DR ACKER JACQUES',
             'adresse_line2' => '5 Rue des Pharmaciens',
@@ -20,6 +21,17 @@ class OphthalmologistsTableSeeder extends Seeder
             'partenaire_acuvue' => true,
             'lat' => 48.7676428,
             'lng' => 7.860464900000011,
+        ]);*/
+
+        DB::table('ophthalmologists')->insert([
+            'adresse_line1' => 'DR AIDIB ALI',
+            'adresse_line2' => '2 Rue des Deux Frères Laporte',
+            'ville' => 'Mézières-sur-Seine',
+            'cp' => 78970,
+            'tele' => '0323819034',
+            'partenaire_acuvue' => false,
+            'lat' => 48.9590374,
+            'lng' => 1.8089755999999397,
         ]);
     }
 }
