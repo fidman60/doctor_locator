@@ -20,3 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::apiResource('/ophthalmologists','OphthalmologistController');
 
 Route::get('/specialities','SpecialityController@index');
+
+Route::post('/ophthalmologists/toggle_favorite/','OphthalmologistController@toggleFavorite');
+
+Route::post('/ophthalmologists/get_favorites/','OphthalmologistController@getFavorites');

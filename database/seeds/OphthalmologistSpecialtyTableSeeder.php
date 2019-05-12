@@ -11,7 +11,6 @@ class OphthalmologistSpecialtyTableSeeder extends Seeder
      */
     public function run()
     {
-        /*
         DB::table('ophthalmologist_specialty')->insert([
             'ophthalmologist_id' => 1,
             'specialty_id' => 1,
@@ -21,7 +20,6 @@ class OphthalmologistSpecialtyTableSeeder extends Seeder
             'ophthalmologist_id' => 1,
             'specialty_id' => 3,
         ]);
-        */
 
         DB::table('ophthalmologist_specialty')->insert([
             'ophthalmologist_id' => 2,

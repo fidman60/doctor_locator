@@ -11,6 +11,8 @@ namespace App\Repositories;
 
 use App\Models\Ophthalmologist;
 
+use Cookie;
+
 class OphthalmologistRepositoryImpl implements OphthalmologistRepository {
 
     protected $ophthalmologist;

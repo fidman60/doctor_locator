@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Repositories\OphthalmologistRepository;
 use Illuminate\Http\Request;
+use Cookie;
+use function MongoDB\BSON\toJSON;
 
 class OphthalmologistController extends Controller{
 
@@ -67,4 +69,30 @@ class OphthalmologistController extends Controller{
     public function destroy($id){
         //
     }
+
+    public function toggleFavorite(Request $request) {
+        $id = $request->all()['id'];
+        if ($request->cookie('favoritesList')){
+            $arr = unserialize($request->cookie('favoritesList'));
+            if(($key = array_search($id, $arr)) !== false) {
+                unset($arr[$key]);
+                $response = 'L\'ophthalmologist a été bien supprimé de la liste des favoris!';
+            } else {
+                array_push($arr,$id);
+                $response = 'L\'ophthalmologist a été bien ajouté à la liste des favoris!';
+            }
+            $newArr = [];
+            foreach ($arr as $item) $newArr[] = $item;
+            return response($response)->withCookie(cookie('favoritesList',serialize($newArr),100));
+        } else {
+            return response('L\'ophthalmologist a été bien ajouté à la liste favoris!')
+                ->withCookie(cookie('favoritesList', serialize([$id]), 100));
+        }
+    }
+
+    public function getFavorites(Request $request) {
+        if ($value = unserialize($request->cookie('favoritesList'))) return json_encode($value);
+        return json_encode([]);
+    }
+
 }

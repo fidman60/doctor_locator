@@ -6,9 +6,11 @@ import Map from "./Map";
 import {googleApiToken} from "../config/tokens";
 import {Provider} from 'react-redux';
 import Store from '../Store/configureStore';
+import OphthalmologistsList from "./OphthalmologistsList";
 
 
 class App extends Component {
+
     render() {
         return (
             <Provider store={Store}>
@@ -21,11 +23,13 @@ class App extends Component {
                             containerElement={ <div style={{width: '100%', height: '400px'}} /> }
                             mapElement={ <div style={{ height: `100%` }} /> }
                         />
+                        <OphthalmologistsList />
                     </div>
                 </BrowserRouter>
             </Provider>
         );
     }
+
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));

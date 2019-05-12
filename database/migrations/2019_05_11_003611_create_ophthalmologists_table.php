@@ -15,11 +15,13 @@ class CreateOphthalmologistsTable extends Migration
     {
         Schema::create('ophthalmologists', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('nom',200);
             $table->text('adresse_line1');
             $table->text('adresse_line2');
             $table->string('cp',20);
             $table->string('ville',50);
             $table->string('tele',20);
+            $table->string('email',200);
             $table->boolean('partenaire_acuvue')->default(false);
             $table->double('lat');
             $table->double('lng');

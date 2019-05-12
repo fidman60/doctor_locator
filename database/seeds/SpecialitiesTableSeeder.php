@@ -11,7 +11,7 @@ class SpecialitiesTableSeeder extends Seeder
      */
     public function run()
     {
-        /*
+
         DB::table('specialties')->insert([
             'label' => 'Spécialiste en lentilles de contact multifocales',
         ]);
@@ -27,6 +27,5 @@ class SpecialitiesTableSeeder extends Seeder
         DB::table('specialties')->insert([
             'label' => 'Spécialiste en sécheresse oculaire',
         ]);
-        */
     }
 }
