@@ -36,5 +36,31 @@ class OphthalmologistsTableSeeder extends Seeder
             'lat' => 48.9590374,
             'lng' => 1.8089755999999397,
         ]);
+
+        DB::table('ophthalmologists')->insert([
+            'nom' => 'FORK OPTIQUE',
+            'adresse_line1' => 'DR ALEN VRINCEANU',
+            'adresse_line2' => '8 RUE NATIONALE',
+            'ville' => 'MUIDS',
+            'cp' => 27430,
+            'tele' => '0232513751',
+            'partenaire_acuvue' => false,
+            'email' => 'fork_optique@gmail.com',
+            'lat' => 49.221327,
+            'lng' => 1.2903625000000147,
+        ]);
+
+        DB::table('ophthalmologists')->insert([
+            'nom' => 'OPTIQUE Li',
+            'adresse_line1' => 'DR ARCHAIMBAULT MELEARD VALE',
+            'adresse_line2' => '68 rue jean jaures',
+            'ville' => 'POITIERS',
+            'cp' => 86000,
+            'tele' => '0586161021',
+            'partenaire_acuvue' => false,
+            'email' => 'li_optique@gmail.com',
+            'lat' => 46.5816157,
+            'lng' => 0.34292260000006536,
+        ]);
     }
 }

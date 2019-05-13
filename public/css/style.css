@@ -36,7 +36,7 @@ header h2 a {
     height: 40px;
     color: #777777;
     background-color: #fff;
-    transition: all .3s ease;
+    transition: all .1s ease;
 }
 
 .search-btn{
@@ -235,4 +235,8 @@ a.nav-item.nav-link.active .badge {
 
 .tab-icon:hover {
     color: #fdc600;
+}
+
+.itemOphtho {
+    cursor: pointer;
 }

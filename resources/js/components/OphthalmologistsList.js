@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {connect} from "react-redux";
 import OphthalmologistItem from './OphthalmologistItem';
 import axios from 'axios';
+import {changeCenterAction} from "../Actions/mapActions";
+import Alert from "./Alert";
 
 class OphthalmologistsList extends Component {
 
@@ -19,7 +21,6 @@ class OphthalmologistsList extends Component {
     componentDidMount() {
         axios.post('api/ophthalmologists/get_favorites')
             .then(response => {
-                console.log(response);
                 this.setState({
                     favorites: response.data
             })})
@@ -27,7 +28,10 @@ class OphthalmologistsList extends Component {
     }
 
     _renderOphtoList(){
-        return this.props.inBoundsMarkers.map((ophthalmologist, index) => (
+        if (this.props.inBoundsMarkers.length === 0)
+            return <Alert msg="La liste est vide"/>;
+
+        const list = this.props.inBoundsMarkers.map((ophthalmologist, index) => (
             <OphthalmologistItem
                 key={ophthalmologist.id}
                 ophthalmologist = {ophthalmologist}
@@ -35,13 +39,32 @@ class OphthalmologistsList extends Component {
                 onClick={this._handleToggleFavoriteClick.bind(this,ophthalmologist)}
                 favorites={this.state.favorites}
                 forceFavorite={false}
+                onItemClick={this._handleItemClick.bind(this,ophthalmologist)}
             />
         ));
+
+        return (
+            <table className="table table-hover responsive">
+                <tbody>
+                {list}
+                </tbody>
+            </table>
+        )
+    }
+
+    _handleItemClick(ophthal){
+        this.props.dispatch(changeCenterAction({
+            lat: ophthal.lat,
+            lng: ophthal.lng,
+        }));
     }
 
     _renderFavoritesOphtoList(){
+        if (this.state.favorites.length === 0)
+            return <Alert msg="La liste est vide"/>;
+
         this.fovoritesCurrentIndex = 0;
-        return this.props.markers.map((ophthalmologist) => {
+        const list = this.props.markers.map((ophthalmologist) => {
             const foundIndex = this.state.favorites.findIndex(id => id === ophthalmologist.id);
             return foundIndex > -1 && <OphthalmologistItem
                 key={ophthalmologist.id}
@@ -50,11 +73,21 @@ class OphthalmologistsList extends Component {
                 onClick={this._handleToggleFavoriteClick.bind(this,ophthalmologist)}
                 favorites={this.state.favorites}
                 forceFavorite={true}
+                onItemClick={this._handleItemClick.bind(this,ophthalmologist)}
             />
         });
+
+        return (
+            <table className="table table-hover responsive">
+                <tbody>
+                {list}
+                </tbody>
+            </table>
+        );
     }
 
     _handleToggleFavoriteClick(ophto, e){
+        e.stopPropagation();
         e.preventDefault();
         const id = ophto.id;
 
@@ -84,24 +117,12 @@ class OphthalmologistsList extends Component {
                 <div className="tab-content" id="nav-tabContent">
                     <div className="tab-pane fade show active" id="pop1" role="tabpanel" aria-labelledby="pop1-tab">
                         <div style={{height: '335px'}} className="table-responsive" id="listAlphas">
-                            <table className="table table-hover responsive">
-                                <tbody>
-
-                                {this._renderOphtoList()}
-
-                                </tbody>
-                            </table>
+                            {this._renderOphtoList()}
                         </div>
                     </div>
                     <div className="tab-pane fade" id="pop2" role="tabpanel" aria-labelledby="pop2-tab">
                         <div style={{height: '335px'}} className="table-responsive" id="listFavoris">
-                            <table className="table table-hover responsive">
-                                <tbody>
-
-                                {this._renderFavoritesOphtoList()}
-
-                                </tbody>
-                            </table>
+                            {this._renderFavoritesOphtoList()}
                         </div>
                     </div>
                 </div>
@@ -111,6 +132,7 @@ class OphthalmologistsList extends Component {
 }
 
 const mapStateToProps = state => ({
+    position: state.position,
     markers: state.markers,
     inBoundsMarkers: state.inBoundsMarkers,
 });

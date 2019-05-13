@@ -1,0 +1,8 @@
+#infoBlock > div{
+    margin-bottom: 5px;
+}
+
+#infoBlock i {
+    display: inline-block;
+    margin-right: 5px;
+}

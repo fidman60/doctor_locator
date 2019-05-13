@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {changeCenterAction} from "../Actions/mapActions";
+import {changeCenterAndCurrentPlace, filterOptions} from "../Actions/mapActions";
 import {connect} from "react-redux";
 
 class Search extends Component {
@@ -17,15 +17,12 @@ class Search extends Component {
         // address fields in the form.
         autocomplete.addListener('place_changed', () => {
             const location = autocomplete.getPlace().geometry.location;
-            this.props.dispatch(changeCenterAction({
+            this.props.dispatch(changeCenterAndCurrentPlace({
                 lat: location.lat(),
                 lng: location.lng()
             }));
 
-            console.log({
-                lat: location.lat(),
-                lng: location.lng()
-            });
+            this.props.dispatch(filterOptions(undefined));
         });
     }
 
@@ -59,6 +56,10 @@ class Search extends Component {
 
 }
 
-const mapStateToProps = state => ({position: state.position});
+const mapStateToProps = state => ({
+    position: state.position,
+    currentPlace: state.currentPlace,
+    filter: state.filter
+});
 
 export default connect(mapStateToProps)(Search);

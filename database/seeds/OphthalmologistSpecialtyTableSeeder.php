@@ -26,5 +26,15 @@ class OphthalmologistSpecialtyTableSeeder extends Seeder
             'specialty_id' => 2,
         ]);
 
+        DB::table('ophthalmologist_specialty')->insert([
+            'ophthalmologist_id' => 3,
+            'specialty_id' => 1,
+        ]);
+
+        DB::table('ophthalmologist_specialty')->insert([
+            'ophthalmologist_id' => 4,
+            'specialty_id' => 4,
+        ]);
+
     }
 }

@@ -10,9 +10,12 @@ export default class OphthalmologistItem extends Component {
     _renderItem(ophthalmologist, index){
         const iconClass = this.props.favorites.findIndex(id => id === ophthalmologist.id) > -1 ? "fas" : "far";
         return (
-            <tr>
+            <tr
+                className="itemOphtho"
+                onClick={this.props.onItemClick}
+            >
                 <th style={{position: 'relative', textAlign: 'center', minWidth: '100px'}} scope="row">
-                    <span className="orderNbr">{index+1}</span>
+                    <span style={{backgroundColor: ophthalmologist.partenaire_acuvue ? '#f44a41' : '#137ab6'}} className="orderNbr">{index+1}</span>
                 </th>
                 <td>
                     <p>{ophthalmologist.adresse_line1}</p>
@@ -38,7 +41,6 @@ export default class OphthalmologistItem extends Component {
     }
 
     render() {
-
         const {ophthalmologist, index} = this.props;
         return this._renderItem(ophthalmologist,index);
     }
