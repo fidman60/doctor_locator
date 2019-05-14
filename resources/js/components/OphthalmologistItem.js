@@ -42,7 +42,7 @@ export default class OphthalmologistItem extends Component {
 
     render() {
         const {ophthalmologist, index} = this.props;
-        return this._renderItem(ophthalmologist,index);
+        return this._renderItem(ophthalmologist, index);
     }
 
 }

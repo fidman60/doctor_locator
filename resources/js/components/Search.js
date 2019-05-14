@@ -35,7 +35,9 @@ class Search extends Component {
             <div style={{position: 'relative'}} id="secondBlockHeader">
                 <div className="container">
                     <div id="searchBox">
-                        <button type="button" data-toggle="collapse" data-target="#dd" aria-controls="dd" aria-expanded="false" aria-label="Toggle" className="toggle-btn"><i className="fa fa-bars" /></button>
+                        <button type="button" data-toggle="collapse" data-target="#dd" aria-controls="dd" aria-expanded="false" aria-label="Toggle" className="toggle-btn" title="Filtrer">
+                            <i className="fas fa-filter" />
+                        </button>
                         <div style={{flexGrow: 6}} className="search-value">
                             <div id="searchGeo" className="form-group">
                                 <span className="fa fa-map-marker-alt form-control-icon" />

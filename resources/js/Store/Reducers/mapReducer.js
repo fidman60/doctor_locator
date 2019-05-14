@@ -6,16 +6,18 @@ import {
     FILTER_OPHTHO,
     SET_FILTER_OPHTHO_AND_BOUNDS,
     CALL_GET_BOUNDS_FUNC,
+    SET_ERROR_MSG,
 } from '../../Actions/mapActions';
 
 const initialState = {
     position: {lat: 46.227638, lng: 2.213749000000007},
-    zoom: 5,
+    zoom: 2,
     markers: [],
     inBoundsMarkers: [],
-    currentPlace: undefined,
+    currentPlace: {lat: 46.227638, lng: 2.213749000000007},
     filter: undefined,
     callGetExistingBoundsMarkers: false,
+    message: '',
 };
 
 export default function mapReducer(state = initialState, action) {
@@ -58,6 +60,11 @@ export default function mapReducer(state = initialState, action) {
             return {
                 ...state,
                 callGetExistingBoundsMarkers: action.value,
+            };
+        case SET_ERROR_MSG:
+            return {
+                ...state,
+                message: action.value,
             };
         default:
             return state;

@@ -6,7 +6,8 @@ import {
     changeCenterAndCurrentPlace,
     markersAction,
     SET_IN_BOUNDS_MARKERS,
-    SET_MARKERS
+    SET_MARKERS,
+    setErrorMessage,
 } from "../Actions/mapActions";
 import axios from 'axios';
 import DetailInfoWindow from "./DetailInfoWindow";
@@ -40,7 +41,7 @@ class Map extends Component {
                 this.props.dispatch(markersAction(SET_MARKERS,response.data));
             })
             .catch(error => {
-                console.log(error);
+                this.props.dispatch(setErrorMessage(error));
             });
     }
 
@@ -55,7 +56,7 @@ class Map extends Component {
                 this.props.dispatch(changeCenterAndCurrentPlace(pos));
 
             }, function(error) {
-                console.log(error);
+                this.props.dispatch(setErrorMessage(error));
             });
         }
     };
@@ -65,16 +66,19 @@ class Map extends Component {
             let filterLayerBool;
             const {currentPlace, filter} = this.props;
 
+            /*
             console.log("données:"+index+"\n\n\n");
             console.log("currentPlace: lat:" + currentPlace.lat + ", lng:" + currentPlace.lng);
-            console.log("filter: " + filter);
+            console.log("filter: " + filter);*/
 
 
             // filter layer
             if (currentPlace && filter) {
 
+                /*
                 console.log("check distance: " + filterMarkersByDistance(currentPlace, {lat: marker.lat, lng: marker.lng}, filter.km));
                 console.log("check spectialty: " + marker.specialties.findIndex(specialty => specialty.id === parseInt(filter.specialty)) > -1);
+                */
 
                 filterLayerBool = filterMarkersByDistance(currentPlace, {lat: marker.lat, lng: marker.lng}, filter.km)
                     && marker.specialties.findIndex(specialty => specialty.id === parseInt(filter.specialty)) > -1;
@@ -87,14 +91,14 @@ class Map extends Component {
                         || new RegExp('^'+marker.ville+'$','i').test(villeOrCp);
                 }
 
-                console.log("check villeOrCP: " + villeOrCpVerifyRegex);
+                //console.log("check villeOrCP: " + villeOrCpVerifyRegex);
 
                 filterLayerBool = filterLayerBool && villeOrCpVerifyRegex;
             } else {
                 filterLayerBool = true;
             }
 
-            console.log("check total: "+filterLayerBool);
+            //console.log("check total: "+filterLayerBool);
 
             return filterLayerBool && this._map.getBounds().contains({
                 lat: marker.lat,
@@ -108,7 +112,7 @@ class Map extends Component {
     }
 
     _renderMarkers(){
-        const {inBoundsMarkers, filter, currentPlace} = this.props;
+        const {inBoundsMarkers} = this.props;
 
         return inBoundsMarkers.map((item,index) => (
             <Marker
@@ -205,6 +209,7 @@ const mapStateToProps = state => ({
     currentPlace: state.currentPlace,
     filter: state.filter,
     callGetExistingBoundsMarkers: state.callGetExistingBoundsMarkers,
+    message: state.message,
 });
 
 export default connect(mapStateToProps)(withGoogleMap(Map));

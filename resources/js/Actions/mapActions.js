@@ -5,6 +5,7 @@ export const SET_CENTER_AND_CURRENT_PLACE = 'SET_CENTER_AND_CURRENT_PLACE';
 export const FILTER_OPHTHO = 'FILTER_OPHTHO';
 export const SET_FILTER_OPHTHO_AND_BOUNDS = 'SET_FILTER_OPHTHO_AND_BOUNDS';
 export const CALL_GET_BOUNDS_FUNC = 'CALL_GET_BOUNDS_FUNC';
+export const SET_ERROR_MSG = 'SET_ERROR_MSG';
 
 export function changeCenterAction(position) {
     return {
@@ -46,4 +47,11 @@ export function callGetBoundsFuncAction(value) {
         type: CALL_GET_BOUNDS_FUNC,
         value: value,
     }
+}
+
+export function setErrorMessage(value) {
+    return {
+        type: SET_ERROR_MSG,
+        value: value,
+    };
 }

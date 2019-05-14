@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from "react-redux";
 import OphthalmologistItem from './OphthalmologistItem';
 import axios from 'axios';
-import {changeCenterAction} from "../Actions/mapActions";
+import {changeCenterAction, setErrorMessage} from "../Actions/mapActions";
 import Alert from "./Alert";
 
 class OphthalmologistsList extends Component {
@@ -12,6 +12,8 @@ class OphthalmologistsList extends Component {
         this.state = {
             favorites: [],
         };
+
+        this.inBoundsFavoriteNbr = 0;
 
         this.fovoritesCurrentIndex = 0;
 
@@ -24,7 +26,7 @@ class OphthalmologistsList extends Component {
                 this.setState({
                     favorites: response.data
             })})
-            .catch((error) => console.log(error));
+            .catch((error) => this.props.dispatch(setErrorMessage(error)));
     }
 
     _renderOphtoList(){
@@ -60,21 +62,27 @@ class OphthalmologistsList extends Component {
     }
 
     _renderFavoritesOphtoList(){
-        if (this.state.favorites.length === 0)
+        this.fovoritesCurrentIndex = 0;
+
+        const inBoundsFavoritesList = this.props.inBoundsMarkers.filter(ophthalmologist => this.state.favorites.findIndex(id => id === ophthalmologist.id) > -1);
+
+        this.inBoundsFavoriteNbr = inBoundsFavoritesList.length;
+
+        if (inBoundsFavoritesList.length === 0)
             return <Alert msg="La liste est vide"/>;
 
-        this.fovoritesCurrentIndex = 0;
-        const list = this.props.markers.map((ophthalmologist) => {
-            const foundIndex = this.state.favorites.findIndex(id => id === ophthalmologist.id);
-            return foundIndex > -1 && <OphthalmologistItem
-                key={ophthalmologist.id}
-                ophthalmologist = {ophthalmologist}
-                index={this.fovoritesCurrentIndex++}
-                onClick={this._handleToggleFavoriteClick.bind(this,ophthalmologist)}
-                favorites={this.state.favorites}
-                forceFavorite={true}
-                onItemClick={this._handleItemClick.bind(this,ophthalmologist)}
-            />
+        const list = inBoundsFavoritesList.map((ophthalmologist) => {
+            return (
+                <OphthalmologistItem
+                    key={ophthalmologist.id}
+                    ophthalmologist = {ophthalmologist}
+                    index={this.fovoritesCurrentIndex++}
+                    onClick={this._handleToggleFavoriteClick.bind(this,ophthalmologist)}
+                    favorites={this.state.favorites}
+                    forceFavorite={true}
+                    onItemClick={this._handleItemClick.bind(this,ophthalmologist)}
+                />
+            );
         });
 
         return (
@@ -93,16 +101,15 @@ class OphthalmologistsList extends Component {
 
         axios.post('api/ophthalmologists/toggle_favorite',{id: id})
             .then(response => {
-                console.log(response);
                 axios.post('api/ophthalmologists/get_favorites')
                     .then(response => {
                         this.setState({
                             favorites: response.data
                         })
                     })
-                    .catch((error) => console.log(error));
+                    .catch((error) => this.props.dispatch(setErrorMessage(error)));
             })
-            .catch(error => console.log(error));
+            .catch(error => this.props.dispatch(setErrorMessage(error)));
     }
 
     render() {
@@ -111,7 +118,7 @@ class OphthalmologistsList extends Component {
                 <nav className="nav-justified ">
                     <div className="nav nav-tabs" id="nav-tab" role="tablist">
                         <a className="nav-item nav-link active" id="pop1-tab" data-toggle="tab" href="#pop1" role="tab" aria-controls="pop1" aria-selected="true">Liste <span className="badge badge-light">{this.props.inBoundsMarkers.length}</span></a>
-                        <a className="nav-item nav-link" id="pop2-tab" data-toggle="tab" href="#pop2" role="tab" aria-controls="pop2" aria-selected="false">Favoris <span className="badge badge-light">{this.state.favorites.length}</span></a>
+                        <a className="nav-item nav-link" id="pop2-tab" data-toggle="tab" href="#pop2" role="tab" aria-controls="pop2" aria-selected="false">Favoris <span className="badge badge-light">{this.inBoundsFavoriteNbr}</span></a>
                     </div>
                 </nav>
                 <div className="tab-content" id="nav-tabContent">

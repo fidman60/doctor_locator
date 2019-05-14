@@ -4634,6 +4634,25 @@ module.exports = exports['default'];
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/styles/errorAlert.css":
+/*!****************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/styles/errorAlert.css ***!
+  \****************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#err {\r\n    background: red;\r\n    padding: 10px;\r\n    font-weight: bold;\r\n    color: white;\r\n    display: none;\r\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/styles/infoWindow.css":
 /*!****************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/styles/infoWindow.css ***!
@@ -70649,7 +70668,7 @@ module.exports = function(module) {
 /*!********************************************!*\
   !*** ./resources/js/Actions/mapActions.js ***!
   \********************************************/
-/*! exports provided: CHANGE_CENTER, SET_IN_BOUNDS_MARKERS, SET_MARKERS, SET_CENTER_AND_CURRENT_PLACE, FILTER_OPHTHO, SET_FILTER_OPHTHO_AND_BOUNDS, CALL_GET_BOUNDS_FUNC, changeCenterAction, changeCenterAndCurrentPlace, markersAction, filterOptions, filterOptionsWithBounds, callGetBoundsFuncAction */
+/*! exports provided: CHANGE_CENTER, SET_IN_BOUNDS_MARKERS, SET_MARKERS, SET_CENTER_AND_CURRENT_PLACE, FILTER_OPHTHO, SET_FILTER_OPHTHO_AND_BOUNDS, CALL_GET_BOUNDS_FUNC, SET_ERROR_MSG, changeCenterAction, changeCenterAndCurrentPlace, markersAction, filterOptions, filterOptionsWithBounds, callGetBoundsFuncAction, setErrorMessage */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -70661,12 +70680,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FILTER_OPHTHO", function() { return FILTER_OPHTHO; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_FILTER_OPHTHO_AND_BOUNDS", function() { return SET_FILTER_OPHTHO_AND_BOUNDS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CALL_GET_BOUNDS_FUNC", function() { return CALL_GET_BOUNDS_FUNC; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_ERROR_MSG", function() { return SET_ERROR_MSG; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "changeCenterAction", function() { return changeCenterAction; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "changeCenterAndCurrentPlace", function() { return changeCenterAndCurrentPlace; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "markersAction", function() { return markersAction; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "filterOptions", function() { return filterOptions; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "filterOptionsWithBounds", function() { return filterOptionsWithBounds; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "callGetBoundsFuncAction", function() { return callGetBoundsFuncAction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setErrorMessage", function() { return setErrorMessage; });
 var CHANGE_CENTER = 'CHANGE_CENTER';
 var SET_IN_BOUNDS_MARKERS = 'SET_IN_BOUNDS_MARKERS';
 var SET_MARKERS = 'SET_MARKERS';
@@ -70674,6 +70695,7 @@ var SET_CENTER_AND_CURRENT_PLACE = 'SET_CENTER_AND_CURRENT_PLACE';
 var FILTER_OPHTHO = 'FILTER_OPHTHO';
 var SET_FILTER_OPHTHO_AND_BOUNDS = 'SET_FILTER_OPHTHO_AND_BOUNDS';
 var CALL_GET_BOUNDS_FUNC = 'CALL_GET_BOUNDS_FUNC';
+var SET_ERROR_MSG = 'SET_ERROR_MSG';
 function changeCenterAction(position) {
   return {
     type: CHANGE_CENTER,
@@ -70710,6 +70732,12 @@ function callGetBoundsFuncAction(value) {
     value: value
   };
 }
+function setErrorMessage(value) {
+  return {
+    type: SET_ERROR_MSG,
+    value: value
+  };
+}
 
 /***/ }),
 
@@ -70734,12 +70762,16 @@ var initialState = {
     lat: 46.227638,
     lng: 2.213749000000007
   },
-  zoom: 5,
+  zoom: 2,
   markers: [],
   inBoundsMarkers: [],
-  currentPlace: undefined,
+  currentPlace: {
+    lat: 46.227638,
+    lng: 2.213749000000007
+  },
   filter: undefined,
-  callGetExistingBoundsMarkers: false
+  callGetExistingBoundsMarkers: false,
+  message: ''
 };
 function mapReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
@@ -70783,6 +70815,11 @@ function mapReducer() {
     case _Actions_mapActions__WEBPACK_IMPORTED_MODULE_0__["CALL_GET_BOUNDS_FUNC"]:
       return _objectSpread({}, state, {
         callGetExistingBoundsMarkers: action.value
+      });
+
+    case _Actions_mapActions__WEBPACK_IMPORTED_MODULE_0__["SET_ERROR_MSG"]:
+      return _objectSpread({}, state, {
+        message: action.value
       });
 
     default:
@@ -70973,6 +71010,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _Store_configureStore__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Store/configureStore */ "./resources/js/Store/configureStore.js");
 /* harmony import */ var _OphthalmologistsList__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./OphthalmologistsList */ "./resources/js/components/OphthalmologistsList.js");
+/* harmony import */ var _ErrorAlert__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ErrorAlert */ "./resources/js/components/ErrorAlert.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -71001,6 +71039,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var App =
 /*#__PURE__*/
 function (_Component) {
@@ -71017,7 +71056,7 @@ function (_Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_6__["Provider"], {
         store: _Store_configureStore__WEBPACK_IMPORTED_MODULE_7__["default"]
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Map__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ErrorAlert__WEBPACK_IMPORTED_MODULE_9__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Map__WEBPACK_IMPORTED_MODULE_4__["default"], {
         googleMapURL: "https://maps.googleapis.com/maps/api/js?key=" + _config_tokens__WEBPACK_IMPORTED_MODULE_5__["googleApiToken"] + "&libraries=geometry,drawing,places",
         loadingElement: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Fidman Loading"),
         containerElement: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -71077,6 +71116,86 @@ function DetailInfoWindow(props) {
     className: "font-weight-bold"
   }, "Email:"), "  ", props.ophto.email));
 }
+
+/***/ }),
+
+/***/ "./resources/js/components/ErrorAlert.js":
+/*!***********************************************!*\
+  !*** ./resources/js/components/ErrorAlert.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _styles_errorAlert_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/errorAlert.css */ "./resources/js/styles/errorAlert.css");
+/* harmony import */ var _styles_errorAlert_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_errorAlert_css__WEBPACK_IMPORTED_MODULE_2__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+var ErrorAlert =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(ErrorAlert, _Component);
+
+  function ErrorAlert() {
+    _classCallCheck(this, ErrorAlert);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(ErrorAlert).apply(this, arguments));
+  }
+
+  _createClass(ErrorAlert, [{
+    key: "_render",
+    value: function _render() {
+      var _this = this;
+
+      this.refs.err.style.display = "block";
+      setTimeout(function () {
+        return _this.refs.err.style.display = "none";
+      }, 3000);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        ref: "err",
+        id: "err"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, this.props.message));
+    }
+  }]);
+
+  return ErrorAlert;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    message: state.message
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps)(ErrorAlert));
 
 /***/ }),
 
@@ -71148,7 +71267,7 @@ function (_Component) {
           specialties: response.data
         });
       })["catch"](function (error) {
-        return console.log(error);
+        return _this2.props.dispatch(Object(_Actions_mapActions__WEBPACK_IMPORTED_MODULE_4__["setErrorMessage"])("Le chargement des specialités a été echoué, svp rechargez la page"));
       });
     }
   }, {
@@ -71193,7 +71312,7 @@ function (_Component) {
         className: "float-right"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         id: "demo"
-      }), "KM")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), "km")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "range",
         min: 1,
         max: 100,
@@ -71229,17 +71348,22 @@ function (_Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         className: "form-group input-icon",
-        placeholder: "Code postale ou ville",
+        placeholder: "Code postale ou ville (Optionel)",
         ref: "cpOrCity"
       })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "itemOption"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "search-btn filter-btn float-right",
         type: "submit",
-        onClick: this._handleFilterClick
+        onClick: this._handleFilterClick,
+        "data-toggle": "collapse",
+        "data-target": "#dd",
+        "aria-controls": "dd",
+        "aria-expanded": "false",
+        "aria-label": "Toggle"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fas fa-filter"
-      })))))));
+      }), " Filtrer"))))));
     }
   }]);
 
@@ -71250,7 +71374,8 @@ var mapStateToProps = function mapStateToProps(state) {
   return {
     filter: state.filter,
     inBoundsMarkers: state.inBoundsMarkers,
-    callGetExistingBoundsMarkers: state.callGetExistingBoundsMarkers
+    callGetExistingBoundsMarkers: state.callGetExistingBoundsMarkers,
+    message: state.message
   };
 };
 
@@ -71344,7 +71469,7 @@ function (_Component) {
       axios__WEBPACK_IMPORTED_MODULE_4___default.a.get('/api/ophthalmologists').then(function (response) {
         _this2.props.dispatch(Object(_Actions_mapActions__WEBPACK_IMPORTED_MODULE_3__["markersAction"])(_Actions_mapActions__WEBPACK_IMPORTED_MODULE_3__["SET_MARKERS"], response.data));
       })["catch"](function (error) {
-        console.log(error);
+        _this2.props.dispatch(Object(_Actions_mapActions__WEBPACK_IMPORTED_MODULE_3__["setErrorMessage"])(error));
       });
     }
   }, {
@@ -71361,7 +71486,7 @@ function (_Component) {
 
           _this3.props.dispatch(Object(_Actions_mapActions__WEBPACK_IMPORTED_MODULE_3__["changeCenterAndCurrentPlace"])(pos));
         }, function (error) {
-          console.log(error);
+          this.props.dispatch(Object(_Actions_mapActions__WEBPACK_IMPORTED_MODULE_3__["setErrorMessage"])(error));
         });
       }
     }
@@ -71375,18 +71500,17 @@ function (_Component) {
         var _this4$props = _this4.props,
             currentPlace = _this4$props.currentPlace,
             filter = _this4$props.filter;
-        console.log("données:" + index + "\n\n\n");
+        /*
+        console.log("données:"+index+"\n\n\n");
         console.log("currentPlace: lat:" + currentPlace.lat + ", lng:" + currentPlace.lng);
-        console.log("filter: " + filter); // filter layer
+        console.log("filter: " + filter);*/
+        // filter layer
 
         if (currentPlace && filter) {
-          console.log("check distance: " + Object(_Utils_utils__WEBPACK_IMPORTED_MODULE_7__["filterMarkersByDistance"])(currentPlace, {
-            lat: marker.lat,
-            lng: marker.lng
-          }, filter.km));
-          console.log("check spectialty: " + marker.specialties.findIndex(function (specialty) {
-            return specialty.id === parseInt(filter.specialty);
-          }) > -1);
+          /*
+          console.log("check distance: " + filterMarkersByDistance(currentPlace, {lat: marker.lat, lng: marker.lng}, filter.km));
+          console.log("check spectialty: " + marker.specialties.findIndex(specialty => specialty.id === parseInt(filter.specialty)) > -1);
+          */
           filterLayerBool = Object(_Utils_utils__WEBPACK_IMPORTED_MODULE_7__["filterMarkersByDistance"])(currentPlace, {
             lat: marker.lat,
             lng: marker.lng
@@ -71398,15 +71522,15 @@ function (_Component) {
 
           if (villeOrCp.length > 0) {
             villeOrCpVerifyRegex = new RegExp('^' + marker.cp + '$', 'i').test(villeOrCp) || new RegExp('^' + marker.ville + '$', 'i').test(villeOrCp);
-          }
+          } //console.log("check villeOrCP: " + villeOrCpVerifyRegex);
 
-          console.log("check villeOrCP: " + villeOrCpVerifyRegex);
+
           filterLayerBool = filterLayerBool && villeOrCpVerifyRegex;
         } else {
           filterLayerBool = true;
-        }
+        } //console.log("check total: "+filterLayerBool);
 
-        console.log("check total: " + filterLayerBool);
+
         return filterLayerBool && _this4._map.getBounds().contains({
           lat: marker.lat,
           lng: marker.lng
@@ -71423,10 +71547,7 @@ function (_Component) {
     value: function _renderMarkers() {
       var _this5 = this;
 
-      var _this$props = this.props,
-          inBoundsMarkers = _this$props.inBoundsMarkers,
-          filter = _this$props.filter,
-          currentPlace = _this$props.currentPlace;
+      var inBoundsMarkers = this.props.inBoundsMarkers;
       return inBoundsMarkers.map(function (item, index) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_google_maps__WEBPACK_IMPORTED_MODULE_1__["Marker"], {
           position: {
@@ -71527,7 +71648,8 @@ var mapStateToProps = function mapStateToProps(state) {
     inBoundsMarkers: state.inBoundsMarkers,
     currentPlace: state.currentPlace,
     filter: state.filter,
-    callGetExistingBoundsMarkers: state.callGetExistingBoundsMarkers
+    callGetExistingBoundsMarkers: state.callGetExistingBoundsMarkers,
+    message: state.message
   };
 };
 
@@ -71698,6 +71820,7 @@ function (_Component) {
     _this.state = {
       favorites: []
     };
+    _this.inBoundsFavoriteNbr = 0;
     _this.fovoritesCurrentIndex = 0;
     _this._renderOphtoList = _this._renderOphtoList.bind(_assertThisInitialized(_this));
     return _this;
@@ -71713,7 +71836,7 @@ function (_Component) {
           favorites: response.data
         });
       })["catch"](function (error) {
-        return console.log(error);
+        return _this2.props.dispatch(Object(_Actions_mapActions__WEBPACK_IMPORTED_MODULE_4__["setErrorMessage"])(error));
       });
     }
   }, {
@@ -71752,16 +71875,18 @@ function (_Component) {
     value: function _renderFavoritesOphtoList() {
       var _this4 = this;
 
-      if (this.state.favorites.length === 0) return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Alert__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      this.fovoritesCurrentIndex = 0;
+      var inBoundsFavoritesList = this.props.inBoundsMarkers.filter(function (ophthalmologist) {
+        return _this4.state.favorites.findIndex(function (id) {
+          return id === ophthalmologist.id;
+        }) > -1;
+      });
+      this.inBoundsFavoriteNbr = inBoundsFavoritesList.length;
+      if (inBoundsFavoritesList.length === 0) return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Alert__WEBPACK_IMPORTED_MODULE_5__["default"], {
         msg: "La liste est vide"
       });
-      this.fovoritesCurrentIndex = 0;
-      var list = this.props.markers.map(function (ophthalmologist) {
-        var foundIndex = _this4.state.favorites.findIndex(function (id) {
-          return id === ophthalmologist.id;
-        });
-
-        return foundIndex > -1 && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OphthalmologistItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      var list = inBoundsFavoritesList.map(function (ophthalmologist) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OphthalmologistItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
           key: ophthalmologist.id,
           ophthalmologist: ophthalmologist,
           index: _this4.fovoritesCurrentIndex++,
@@ -71786,16 +71911,15 @@ function (_Component) {
       axios__WEBPACK_IMPORTED_MODULE_3___default.a.post('api/ophthalmologists/toggle_favorite', {
         id: id
       }).then(function (response) {
-        console.log(response);
         axios__WEBPACK_IMPORTED_MODULE_3___default.a.post('api/ophthalmologists/get_favorites').then(function (response) {
           _this5.setState({
             favorites: response.data
           });
         })["catch"](function (error) {
-          return console.log(error);
+          return _this5.props.dispatch(Object(_Actions_mapActions__WEBPACK_IMPORTED_MODULE_4__["setErrorMessage"])(error));
         });
       })["catch"](function (error) {
-        return console.log(error);
+        return _this5.props.dispatch(Object(_Actions_mapActions__WEBPACK_IMPORTED_MODULE_4__["setErrorMessage"])(error));
       });
     }
   }, {
@@ -71829,7 +71953,7 @@ function (_Component) {
         "aria-selected": "false"
       }, "Favoris ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "badge badge-light"
-      }, this.state.favorites.length)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, this.inBoundsFavoriteNbr)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "tab-content",
         id: "nav-tabContent"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -71969,9 +72093,10 @@ function (_Component) {
         "aria-controls": "dd",
         "aria-expanded": "false",
         "aria-label": "Toggle",
-        className: "toggle-btn"
+        className: "toggle-btn",
+        title: "Filtrer"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fa fa-bars"
+        className: "fas fa-filter"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         style: {
           flexGrow: 6
@@ -72021,6 +72146,36 @@ var mapStateToProps = function mapStateToProps(state) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "googleApiToken", function() { return googleApiToken; });
 var googleApiToken = 'AIzaSyCG8IyXjPNuc0j4Qx80f3Z0Oct5ewH5p0Y';
+
+/***/ }),
+
+/***/ "./resources/js/styles/errorAlert.css":
+/*!********************************************!*\
+  !*** ./resources/js/styles/errorAlert.css ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/postcss-loader/src??ref--6-2!./errorAlert.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/styles/errorAlert.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 

@@ -7,6 +7,7 @@ import {googleApiToken} from "../config/tokens";
 import {Provider} from 'react-redux';
 import Store from '../Store/configureStore';
 import OphthalmologistsList from "./OphthalmologistsList";
+import ErrorAlert from './ErrorAlert';
 
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
             <Provider store={Store}>
                 <BrowserRouter>
                     <div>
+                        <ErrorAlert/>
                         <Header />
                         <Map
                             googleMapURL={"https://maps.googleapis.com/maps/api/js?key="+googleApiToken+"&libraries=geometry,drawing,places"}

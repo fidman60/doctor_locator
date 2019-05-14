@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Search from "./Search";
 import axio from 'axios';
 import {connect} from "react-redux";
-import {filterOptions, callGetBoundsFuncAction} from "../Actions/mapActions";
+import {callGetBoundsFuncAction, filterOptions, setErrorMessage} from "../Actions/mapActions";
 
 class Header extends Component {
 
@@ -19,7 +19,7 @@ class Header extends Component {
     componentWillMount(){
         axio.get("api/specialities")
             .then(response => this.setState({specialties: response.data}))
-            .catch(error => console.log(error));
+            .catch(error => this.props.dispatch(setErrorMessage("Le chargement des specialités a été echoué, svp rechargez la page")));
     }
 
     _handleFilterClick(){
@@ -49,7 +49,7 @@ class Header extends Component {
                                     <div className="slidecontainer">
                                         <p>
                                             <span className="label">Distance :</span>
-                                            <span className="float-right"><span id="demo" />KM</span>
+                                            <span className="float-right"><span id="demo" />km</span>
                                         </p>
                                         <input
                                             type="range"
@@ -73,7 +73,7 @@ class Header extends Component {
                                     </div>
                                     <div className="col-6 region form-group">
                                         <i className="fas fa-city form-control-icon" />
-                                        <input type="text" className="form-group input-icon" placeholder="Code postale ou ville" ref="cpOrCity"/>
+                                        <input type="text" className="form-group input-icon" placeholder="Code postale ou ville (Optionel)" ref="cpOrCity"/>
                                     </div>
                                 </div>
                             </div>
@@ -82,8 +82,13 @@ class Header extends Component {
                                     className="search-btn filter-btn float-right"
                                     type="submit"
                                     onClick={this._handleFilterClick}
+                                    data-toggle="collapse"
+                                    data-target="#dd"
+                                    aria-controls="dd"
+                                    aria-expanded="false"
+                                    aria-label="Toggle"
                                 >
-                                    <i className="fas fa-filter" />
+                                    <i className="fas fa-filter" /> Filtrer
                                 </button>
                             </div>
                         </div>
@@ -98,6 +103,7 @@ const mapStateToProps = state => ({
     filter: state.filter,
     inBoundsMarkers: state.inBoundsMarkers,
     callGetExistingBoundsMarkers: state.callGetExistingBoundsMarkers,
+    message: state.message,
 });
 
 export default connect(mapStateToProps)(Header);
