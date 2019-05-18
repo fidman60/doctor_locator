@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import '../styles/errorAlert.css';
+import '../../styles/errorAlert.css';
 
 class ErrorAlert extends Component {
 

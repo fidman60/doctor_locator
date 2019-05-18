@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UpdateOphtholmologistRequest;
 use App\Repositories\OphthalmologistRepository;
 use Illuminate\Http\Request;
 use Cookie;
@@ -10,6 +11,8 @@ use function MongoDB\BSON\toJSON;
 class OphthalmologistController extends Controller{
 
     protected $ophthalmologistRepository;
+
+    protected $perPage = 5;
 
     /**
      * OphthalmologistController constructor.
@@ -27,6 +30,10 @@ class OphthalmologistController extends Controller{
      */
     public function index(){
         return $this->ophthalmologistRepository->getOphthalmologistsWithSpecialities()->toJson();
+    }
+
+    public function indexPerPage(){
+        return $this->ophthalmologistRepository->getOphthalmologistsWithSpecialitiesPaginate($this->perPage)->toJson();
     }
 
     /**
@@ -56,8 +63,9 @@ class OphthalmologistController extends Controller{
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id){
-        //
+    public function update(UpdateOphtholmologistRequest $request, $id){
+        $this->ophthalmologistRepository->update($id,$request->input('ophthalmologist'),$request->input('specialties'));
+        return response()->json($this->ophthalmologistRepository->getWithSpecialties($id));
     }
 
     /**
@@ -67,7 +75,8 @@ class OphthalmologistController extends Controller{
      * @return \Illuminate\Http\Response
      */
     public function destroy($id){
-        //
+        $this->ophthalmologistRepository->delete($id);
+        return response()->json("L'ophtholmologist a été bien supprimé");
     }
 
     public function toggleFavorite(Request $request) {

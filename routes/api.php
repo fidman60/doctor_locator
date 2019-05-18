@@ -19,6 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::apiResource('/ophthalmologists','OphthalmologistController');
 
+Route::get('/paginate/ophthalmologists','OphthalmologistController@indexPerPage');
+
 Route::get('/specialities','SpecialityController@index');
 
 Route::post('/ophthalmologists/toggle_favorite/','OphthalmologistController@toggleFavorite');

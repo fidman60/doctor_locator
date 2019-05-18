@@ -62,5 +62,31 @@ class OphthalmologistsTableSeeder extends Seeder
             'lat' => 46.5816157,
             'lng' => 0.34292260000006536,
         ]);
+
+        DB::table('ophthalmologists')->insert([
+            'nom' => 'OPTIQUE ASSOUS',
+            'adresse_line1' => 'DR ASSOUS NICOLE',
+            'adresse_line2' => '19 RUE DE LA REPUBLIQUE',
+            'ville' => 'EPINAY SUR SEINE',
+            'cp' => 93800,
+            'tele' => '0148264162',
+            'partenaire_acuvue' => false,
+            'email' => 'assous_optique@gmail.com',
+            'lat' => 48.6731,
+            'lng' => 2.33095,
+        ]);
+
+        DB::table('ophthalmologists')->insert([
+            'nom' => 'ATENA OPTIQUE',
+            'adresse_line1' => 'DR ATENA CRIVENEAU',
+            'adresse_line2' => '35 BD DU CHEVRAN',
+            'ville' => 'CLUSES',
+            'cp' => 74300,
+            'tele' => '0987145335',
+            'partenaire_acuvue' => false,
+            'email' => 'atena_optique@gmail.com',
+            'lat' => 46.0634,
+            'lng' => 6.58901,
+        ]);
     }
 }

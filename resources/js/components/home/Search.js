@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {changeCenterAndCurrentPlace, filterOptions} from "../Actions/mapActions";
+import {changeCenterAndCurrentPlace, filterOptions} from "../../Actions/mapActions";
 import {connect} from "react-redux";
 
 class Search extends Component {

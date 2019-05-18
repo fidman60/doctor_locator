@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/infoWindow.css';
+import '../../styles/infoWindow.css';
 
 export default function DetailInfoWindow (props) {
 

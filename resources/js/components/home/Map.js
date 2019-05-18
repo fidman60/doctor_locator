@@ -8,11 +8,11 @@ import {
     SET_IN_BOUNDS_MARKERS,
     SET_MARKERS,
     setErrorMessage,
-} from "../Actions/mapActions";
+} from "../../Actions/mapActions";
 import axios from 'axios';
 import DetailInfoWindow from "./DetailInfoWindow";
 import MarkerClusterer from "react-google-maps/lib/components/addons/MarkerClusterer";
-import {filterMarkersByDistance} from "../Utils/utils";
+import {filterMarkersByDistance} from "../../Utils/utils";
 
 class Map extends Component {
 

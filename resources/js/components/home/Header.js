@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Search from "./Search";
 import axio from 'axios';
 import {connect} from "react-redux";
-import {callGetBoundsFuncAction, filterOptions, setErrorMessage} from "../Actions/mapActions";
+import {callGetBoundsFuncAction, filterOptions, setErrorMessage} from "../../Actions/mapActions";
 
 class Header extends Component {
 

@@ -26,11 +26,38 @@
         <script>
             var slider = document.getElementById("myRange");
             var output = document.getElementById("demo");
-            output.innerHTML = slider.value;
 
-            slider.oninput = function() {
-                output.innerHTML = this.value;
+            if (output && slider) {
+                output.innerHTML = slider.value;
+                slider.oninput = function() {
+                    output.innerHTML = this.value;
+                }
             }
+        </script>
+        <script>
+            $(document).ready(function(){
+                // Activate tooltip
+                $('[data-toggle="tooltip"]').tooltip();
+
+                // Select/Deselect checkboxes
+                var checkbox = $('table tbody input[type="checkbox"]');
+                $("#selectAll").click(function(){
+                    if(this.checked){
+                        checkbox.each(function(){
+                            this.checked = true;
+                        });
+                    } else{
+                        checkbox.each(function(){
+                            this.checked = false;
+                        });
+                    }
+                });
+                checkbox.click(function(){
+                    if(!this.checked){
+                        $("#selectAll").prop("checked", false);
+                    }
+                });
+            });
         </script>
     </body>
 </html>

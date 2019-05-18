@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from "react-redux";
 import OphthalmologistItem from './OphthalmologistItem';
 import axios from 'axios';
-import {changeCenterAction, setErrorMessage} from "../Actions/mapActions";
+import {changeCenterAction, setErrorMessage} from "../../Actions/mapActions";
 import Alert from "./Alert";
 
 class OphthalmologistsList extends Component {
