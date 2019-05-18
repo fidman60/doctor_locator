@@ -20,4 +20,6 @@ interface OphthalmologistRepository {
 
     function delete($id);
 
+    function total();
+
 }

@@ -4646,7 +4646,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "body {\r\n    color: #566787;\r\n    background: #f5f5f5;\r\n    font-family: 'Varela Round', sans-serif;\r\n    font-size: 13px;\r\n}\r\n.table-wrapper {\r\n    background: #fff;\r\n    padding: 20px 25px;\r\n    margin: 30px 0;\r\n    border-radius: 3px;\r\n    box-shadow: 0 1px 1px rgba(0,0,0,.05);\r\n}\r\n.table-title {\r\n    padding-bottom: 15px;\r\n    background: #435d7d;\r\n    color: #fff;\r\n    padding: 16px 30px;\r\n    margin: -20px -25px 10px;\r\n    border-radius: 3px 3px 0 0;\r\n}\r\n.table-title h2 {\r\n    margin: 5px 0 0;\r\n    font-size: 24px;\r\n}\r\n.table-title .btn-group {\r\n    float: right;\r\n}\r\n.table-title .btn {\r\n    color: #fff;\r\n    float: right;\r\n    font-size: 13px;\r\n    border: none;\r\n    min-width: 50px;\r\n    border-radius: 2px;\r\n    border: none;\r\n    outline: none !important;\r\n    margin-left: 10px;\r\n}\r\n.table-title .btn i {\r\n    float: left;\r\n    font-size: 21px;\r\n    margin-right: 5px;\r\n}\r\n.table-title .btn span {\r\n    float: left;\r\n    margin-top: 2px;\r\n}\r\ntable.table tr th, table.table tr td {\r\n    border-color: #e9e9e9;\r\n    padding: 12px 15px;\r\n    vertical-align: middle;\r\n}\r\ntable.table tr th:first-child {\r\n    width: 60px;\r\n}\r\ntable.table tr th:last-child {\r\n    width: 100px;\r\n}\r\ntable.table-striped tbody tr:nth-of-type(odd) {\r\n    background-color: #fcfcfc;\r\n}\r\ntable.table-striped.table-hover tbody tr:hover {\r\n    background: #f5f5f5;\r\n}\r\ntable.table th i {\r\n    font-size: 13px;\r\n    margin: 0 5px;\r\n    cursor: pointer;\r\n}\r\ntable.table td:last-child i {\r\n    opacity: 0.9;\r\n    font-size: 22px;\r\n    margin: 0 5px;\r\n}\r\ntable.table td a {\r\n    font-weight: bold;\r\n    color: #566787;\r\n    display: inline-block;\r\n    text-decoration: none;\r\n    outline: none !important;\r\n}\r\ntable.table td a:hover {\r\n    color: #2196F3;\r\n}\r\ntable.table td a.edit {\r\n    color: #FFC107;\r\n}\r\ntable.table td a.delete {\r\n    color: #F44336;\r\n}\r\ntable.table td i {\r\n    font-size: 19px;\r\n}\r\ntable.table .avatar {\r\n    border-radius: 50%;\r\n    vertical-align: middle;\r\n    margin-right: 10px;\r\n}\r\n.pagination {\r\n    float: right;\r\n    margin: 0 0 5px;\r\n}\r\n.pagination li a {\r\n    border: none;\r\n    font-size: 13px;\r\n    min-width: 30px;\r\n    min-height: 30px;\r\n    color: #999;\r\n    margin: 0 2px;\r\n    line-height: 30px;\r\n    border-radius: 2px !important;\r\n    text-align: center;\r\n    padding: 0 6px;\r\n}\r\n.pagination li a:hover {\r\n    color: #666;\r\n}\r\n.pagination li.active a, .pagination li.active a.page-link {\r\n    background: #03A9F4;\r\n}\r\n.pagination li.active a:hover {\r\n    background: #0397d6;\r\n}\r\n.pagination li.disabled i {\r\n    color: #ccc;\r\n}\r\n.pagination li i {\r\n    font-size: 16px;\r\n    padding-top: 6px\r\n}\r\n.hint-text {\r\n    float: left;\r\n    margin-top: 10px;\r\n    font-size: 13px;\r\n}\r\n/* Custom checkbox */\r\n.custom-checkbox {\r\n    position: relative;\r\n}\r\n.custom-checkbox input[type=\"checkbox\"] {\r\n    opacity: 0;\r\n    position: absolute;\r\n    margin: 5px 0 0 3px;\r\n    z-index: 9;\r\n}\r\n.custom-checkbox label:before{\r\n    width: 18px;\r\n    height: 18px;\r\n}\r\n.custom-checkbox label:before {\r\n    content: '';\r\n    margin-right: 10px;\r\n    display: inline-block;\r\n    vertical-align: text-top;\r\n    background: white;\r\n    border: 1px solid #bbb;\r\n    border-radius: 2px;\r\n    box-sizing: border-box;\r\n    z-index: 2;\r\n}\r\n.custom-checkbox input[type=\"checkbox\"]:checked + label:after {\r\n    content: '';\r\n    position: absolute;\r\n    left: 6px;\r\n    top: 3px;\r\n    width: 6px;\r\n    height: 11px;\r\n    border: solid #000;\r\n    border-width: 0 3px 3px 0;\r\n    -webkit-transform: inherit;\r\n            transform: inherit;\r\n    z-index: 3;\r\n    -webkit-transform: rotateZ(45deg);\r\n            transform: rotateZ(45deg);\r\n}\r\n.custom-checkbox input[type=\"checkbox\"]:checked + label:before {\r\n    border-color: #03A9F4;\r\n    background: #03A9F4;\r\n}\r\n.custom-checkbox input[type=\"checkbox\"]:checked + label:after {\r\n    border-color: #fff;\r\n}\r\n.custom-checkbox input[type=\"checkbox\"]:disabled + label:before {\r\n    color: #b8b8b8;\r\n    cursor: auto;\r\n    box-shadow: none;\r\n    background: #ddd;\r\n}\r\n/* Modal styles */\r\n.modal .modal-dialog {\r\n    max-width: 400px;\r\n}\r\n.modal .modal-header, .modal .modal-body, .modal .modal-footer {\r\n    padding: 20px 30px;\r\n}\r\n.modal .modal-content {\r\n    border-radius: 3px;\r\n}\r\n.modal .modal-footer {\r\n    background: #ecf0f1;\r\n    border-radius: 0 0 3px 3px;\r\n}\r\n.modal .modal-title {\r\n    display: inline-block;\r\n}\r\n.modal .form-control {\r\n    border-radius: 2px;\r\n    box-shadow: none;\r\n    border-color: #dddddd;\r\n}\r\n.modal textarea.form-control {\r\n    resize: vertical;\r\n}\r\n.modal .btn {\r\n    border-radius: 2px;\r\n    min-width: 100px;\r\n}\r\n.modal form label {\r\n    font-weight: normal;\r\n}\r\n\r\n.pac-container {\r\n    background-color: #FFF;\r\n    z-index: 2001;\r\n    position: fixed;\r\n    display: inline-block;\r\n    float: left;\r\n}\r\n.modal{\r\n    z-index: 2000;\r\n}", ""]);
+exports.push([module.i, "body {\r\n    color: #566787;\r\n    background: #f5f5f5;\r\n    font-family: 'Varela Round', sans-serif;\r\n    font-size: 13px;\r\n}\r\n.table-wrapper {\r\n    background: #fff;\r\n    padding: 20px 25px;\r\n    margin: 30px 0;\r\n    border-radius: 3px;\r\n    box-shadow: 0 1px 1px rgba(0,0,0,.05);\r\n}\r\n.table-title {\r\n    padding-bottom: 15px;\r\n    background: #333333;\r\n    color: #fff;\r\n    padding: 16px 30px;\r\n    margin: -20px -25px 10px;\r\n    border-radius: 3px 3px 0 0;\r\n}\r\n.table-title h2 {\r\n    margin: 5px 0 0;\r\n    font-size: 24px;\r\n}\r\n.table-title .btn-group {\r\n    float: right;\r\n}\r\n.table-title .btn {\r\n    color: #fff;\r\n    float: right;\r\n    font-size: 13px;\r\n    border: none;\r\n    min-width: 50px;\r\n    border-radius: 2px;\r\n    border: none;\r\n    outline: none !important;\r\n    margin-left: 10px;\r\n}\r\n.table-title .btn i {\r\n    float: left;\r\n    font-size: 21px;\r\n    margin-right: 5px;\r\n}\r\n.table-title .btn span {\r\n    float: left;\r\n    margin-top: 2px;\r\n}\r\ntable.table tr th, table.table tr td {\r\n    border-color: #e9e9e9;\r\n    padding: 12px 15px;\r\n    vertical-align: middle;\r\n}\r\ntable.table tr th:first-child {\r\n    width: 60px;\r\n}\r\ntable.table tr th:last-child {\r\n    width: 100px;\r\n}\r\ntable.table-striped tbody tr:nth-of-type(odd) {\r\n    background-color: #fcfcfc;\r\n}\r\ntable.table-striped.table-hover tbody tr:hover {\r\n    background: #f5f5f5;\r\n}\r\ntable.table th i {\r\n    font-size: 13px;\r\n    margin: 0 5px;\r\n    cursor: pointer;\r\n}\r\ntable.table td:last-child i {\r\n    opacity: 0.9;\r\n    font-size: 22px;\r\n    margin: 0 5px;\r\n}\r\ntable.table td a {\r\n    font-weight: bold;\r\n    color: #566787;\r\n    display: inline-block;\r\n    text-decoration: none;\r\n    outline: none !important;\r\n}\r\ntable.table td a:hover {\r\n    color: #2196F3;\r\n}\r\ntable.table td a.edit {\r\n    color: #FFC107;\r\n}\r\ntable.table td a.delete {\r\n    color: #F44336;\r\n}\r\ntable.table td i {\r\n    font-size: 19px;\r\n}\r\ntable.table .avatar {\r\n    border-radius: 50%;\r\n    vertical-align: middle;\r\n    margin-right: 10px;\r\n}\r\n.pagination {\r\n    float: right;\r\n    margin: 0 0 5px;\r\n}\r\n.pagination li a {\r\n    border: none;\r\n    font-size: 13px;\r\n    min-width: 30px;\r\n    min-height: 30px;\r\n    color: #999;\r\n    margin: 0 2px;\r\n    line-height: 30px;\r\n    border-radius: 2px !important;\r\n    text-align: center;\r\n    padding: 0 6px;\r\n}\r\n.pagination li a:hover {\r\n    color: #666;\r\n}\r\n.pagination li.active a, .pagination li.active a.page-link {\r\n    background: #03A9F4;\r\n}\r\n.pagination li.active a:hover {\r\n    background: #0397d6;\r\n}\r\n.pagination li.disabled i {\r\n    color: #ccc;\r\n}\r\n.pagination li i {\r\n    font-size: 16px;\r\n    padding-top: 6px\r\n}\r\n.hint-text {\r\n    float: left;\r\n    margin-top: 10px;\r\n    font-size: 13px;\r\n}\r\n/* Custom checkbox */\r\n.custom-checkbox {\r\n    position: relative;\r\n}\r\n.custom-checkbox input[type=\"checkbox\"] {\r\n    opacity: 0;\r\n    position: absolute;\r\n    margin: 5px 0 0 3px;\r\n    z-index: 9;\r\n}\r\n.custom-checkbox label:before{\r\n    width: 18px;\r\n    height: 18px;\r\n}\r\n.custom-checkbox label:before {\r\n    content: '';\r\n    margin-right: 10px;\r\n    display: inline-block;\r\n    vertical-align: text-top;\r\n    background: white;\r\n    border: 1px solid #bbb;\r\n    border-radius: 2px;\r\n    box-sizing: border-box;\r\n    z-index: 2;\r\n}\r\n.custom-checkbox input[type=\"checkbox\"]:checked + label:after {\r\n    content: '';\r\n    position: absolute;\r\n    left: 6px;\r\n    top: 3px;\r\n    width: 6px;\r\n    height: 11px;\r\n    border: solid #000;\r\n    border-width: 0 3px 3px 0;\r\n    -webkit-transform: inherit;\r\n            transform: inherit;\r\n    z-index: 3;\r\n    -webkit-transform: rotateZ(45deg);\r\n            transform: rotateZ(45deg);\r\n}\r\n.custom-checkbox input[type=\"checkbox\"]:checked + label:before {\r\n    border-color: #03A9F4;\r\n    background: #03A9F4;\r\n}\r\n.custom-checkbox input[type=\"checkbox\"]:checked + label:after {\r\n    border-color: #fff;\r\n}\r\n.custom-checkbox input[type=\"checkbox\"]:disabled + label:before {\r\n    color: #b8b8b8;\r\n    cursor: auto;\r\n    box-shadow: none;\r\n    background: #ddd;\r\n}\r\n/* Modal styles */\r\n.modal .modal-dialog {\r\n    max-width: 400px;\r\n}\r\n.modal .modal-header, .modal .modal-body, .modal .modal-footer {\r\n    padding: 20px 30px;\r\n}\r\n.modal .modal-content {\r\n    border-radius: 3px;\r\n}\r\n.modal .modal-footer {\r\n    background: #333333;\r\n    border-radius: 0 0 3px 3px;\r\n}\r\n.modal .modal-title {\r\n    display: inline-block;\r\n}\r\n.modal .form-control {\r\n    border-radius: 2px;\r\n    box-shadow: none;\r\n    border-color: #dddddd;\r\n}\r\n.modal textarea.form-control {\r\n    resize: vertical;\r\n}\r\n.modal .btn {\r\n    border-radius: 2px;\r\n    min-width: 100px;\r\n}\r\n.modal form label {\r\n    font-weight: normal;\r\n}\r\n\r\n.pac-container {\r\n    background-color: #FFF;\r\n    z-index: 2001;\r\n    position: fixed;\r\n    display: inline-block;\r\n    float: left;\r\n}\r\n.modal{\r\n    z-index: 2000;\r\n}\r\n.addBtn,.actionBtn{\r\n    background: #fdc600 !important;\r\n    color: #333333 !important;\r\n}\r\n\r\n.cancelBtn{\r\n    background: #333333;\r\n    color: #fdc600;\r\n}\r\n\r\n.cancelBtn:hover{\r\n    background: #333333;\r\n    color: #fdc600;\r\n}", ""]);
 
 // exports
 
@@ -71087,6 +71087,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return AddItem; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _LoadingLayer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LoadingLayer */ "./resources/js/components/admin/LoadingLayer.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -71107,6 +71108,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var AddItem =
 /*#__PURE__*/
 function (_Component) {
@@ -71119,6 +71121,42 @@ function (_Component) {
   }
 
   _createClass(AddItem, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.initAutocomplete();
+    }
+  }, {
+    key: "_renderSpecialties",
+    value: function _renderSpecialties() {
+      var specialties = this.props.specialties;
+      return specialties.map(function (specialty) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          key: specialty.id
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+          className: "custom-checkbox"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+          type: "checkbox",
+          id: "checkboxAdd" + specialty.id
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+          htmlFor: "checkboxAdd" + specialty.id
+        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+          htmlFor: "checkbox" + specialty.id
+        }, specialty.label));
+      });
+    }
+  }, {
+    key: "initAutocomplete",
+    value: function initAutocomplete() {
+      var autocomplete = new window.google.maps.places.Autocomplete(this.refs.searchBox, {
+        types: ['geocode']
+      });
+      autocomplete.setFields(['address_component', 'geometry']);
+      autocomplete.addListener('place_changed', function () {
+        var location = autocomplete.getPlace().geometry.location;
+        console.log(autocomplete.getPlace());
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -71141,7 +71179,19 @@ function (_Component) {
         className: "modal-body"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Adresse"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        className: "form-control",
+        ref: "searchBox"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Nom"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        className: "form-control",
+        required: true
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Adresse ligne 1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         className: "form-control",
         required: true
@@ -71153,26 +71203,40 @@ function (_Component) {
         required: true
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Address"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "T\xE9l\xE9phone"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
         className: "form-control",
         required: true
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Phone"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "text",
-        className: "form-control",
-        required: true
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "custom-checkbox"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "checkbox",
+        id: "checkboxAcuvueAdd",
+        value: "1"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "checkboxAcuvueAdd"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "checkboxAcuvueAdd"
+      }, "Partenaire ACUVUE")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Sp\xE9cialit\xE9s"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        style: {
+          listStyleType: 'none',
+          padding: 0
+        }
+      }, this._renderSpecialties()))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-footer"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "button",
-        className: "btn btn-default",
+        className: "btn cancelBtn",
         "data-dismiss": "modal",
         value: "Cancel"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "submit",
-        className: "btn btn-success",
-        value: "Add"
+        className: "btn actionBtn",
+        value: "Save"
       }))))));
     }
   }]);
@@ -71275,7 +71339,8 @@ function (_React$Component) {
       errors: [],
       loading: false,
       message: '',
-      globalMessage: ''
+      globalMessage: '',
+      total: 0
     };
     _this.specialties = [];
     _this.selectedAddress = undefined;
@@ -71296,6 +71361,13 @@ function (_React$Component) {
       });
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("api/specialities").then(function (response) {
         return _this2.specialties = response.data;
+      })["catch"](function (error) {
+        return console.log(error);
+      });
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("api/count").then(function (response) {
+        _this2.setState({
+          total: response.data.count
+        });
       })["catch"](function (error) {
         return console.log(error);
       });
@@ -71406,6 +71478,9 @@ function (_React$Component) {
       var _this5 = this;
 
       e.preventDefault();
+      this.setState({
+        loading: true
+      });
 
       var ophtho = _objectSpread({}, this.state.selectedOphthalmologist, this.selectedAddress);
 
@@ -71454,11 +71529,13 @@ function (_React$Component) {
 
         _this5.setState({
           ophthalmologists: newListOphtho,
-          message: "L'ophtholmologist a été bien modifié"
+          message: "L'ophthalmologiste a été bien modifié",
+          loading: false
         });
       })["catch"](function (error) {
         _this5.setState({
-          errors: error.response.data.errors
+          errors: error.response.data.errors,
+          loading: false
         });
       });
     }
@@ -71484,13 +71561,18 @@ function (_React$Component) {
       e.preventDefault();
       var id = this.state.selectedOphthalmologist.id;
       axios__WEBPACK_IMPORTED_MODULE_1___default.a["delete"]('api/ophthalmologists/' + id).then(function (response) {
-        var newList = _this6.state.ophthalmologists.filter(function (ophthalmologist) {
-          return ophthalmologist.id !== id;
-        });
+        axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("api/count").then(function (response) {
+          var newList = _this6.state.ophthalmologists.filter(function (ophthalmologist) {
+            return ophthalmologist.id !== id;
+          });
 
-        _this6.setState({
-          globalMessage: "L'ophthalmologiste a été bien supprimer",
-          ophthalmologists: newList
+          _this6.setState({
+            globalMessage: "L'ophthalmologiste a été supprimé",
+            ophthalmologists: newList,
+            total: response.data.count
+          });
+        })["catch"](function (error) {
+          return console.log(error);
         });
       })["catch"](function (error) {
         return console.log(error);
@@ -71584,11 +71666,11 @@ function (_React$Component) {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-sm-6"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Manage ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, "Employees"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Doctor ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, "Locator"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-sm-6"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#addEmployeeModal",
-        className: "btn btn-success",
+        className: "btn actionBtn",
         "data-toggle": "modal"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fas fa-plus-circle material-icons"
@@ -71602,7 +71684,7 @@ function (_React$Component) {
         className: "clearfix"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "hint-text"
-      }, "Showing ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, "5"), " out of ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, "25"), " entries"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+      }, "Montrant ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, this.state.ophthalmologists.length), " sur ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, this.state.total), " entr\xE9es"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "pagination"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "page-item disabled"
@@ -71638,7 +71720,9 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#",
         className: "page-link"
-      }, "Next")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AddItem__WEBPACK_IMPORTED_MODULE_4__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EditItem__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      }, "Next")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AddItem__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        specialties: this.specialties
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EditItem__WEBPACK_IMPORTED_MODULE_5__["default"], {
         ophthalmologist: this.state.selectedOphthalmologist,
         specialties: this.specialties,
         activeSpecialties: this.state.selectedOphthalmologist.specialties,
@@ -71736,11 +71820,11 @@ function (_Component) {
         "aria-hidden": "true"
       }, "\xD7")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-body"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Vous \xEAtes s\xFBr de supprimer l'ophthalmologiste avec le nom ", this.props.ophthalmologist.nom, " ?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("small", null, "Cette action ne peut pas \xEAtre annul\xE9e")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Vous \xEAtes s\xFBr de supprimer l'ophthalmologiste avec le nom ", this.props.ophthalmologist.nom, " ?")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-footer"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "button",
-        className: "btn btn-default",
+        className: "btn cancelBtn",
         "data-dismiss": "modal",
         value: "Cancel"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -71772,8 +71856,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return EditItem; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Actions_mapActions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Actions/mapActions */ "./resources/js/Actions/mapActions.js");
-/* harmony import */ var _LoadingLayer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./LoadingLayer */ "./resources/js/components/admin/LoadingLayer.js");
+/* harmony import */ var _LoadingLayer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LoadingLayer */ "./resources/js/components/admin/LoadingLayer.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -71791,7 +71874,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
 
 
 
@@ -71821,14 +71903,20 @@ function (_Component) {
       return ophthalmologist.specialties.map(function (row) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           key: row.specialty.id
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+          className: "custom-checkbox"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
           type: "checkbox",
           checked: row.checked,
-          defaultValue: row.specialty.id,
           onChange: function onChange() {
             return onCheckSpecialtyChange(row);
-          }
-        }), " ", row.specialty.label);
+          },
+          id: "checkbox" + row.specialty.id
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+          htmlFor: "checkbox1"
+        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+          htmlFor: "checkbox" + row.specialty.id
+        }, row.specialty.label));
       });
     }
   }, {
@@ -71878,7 +71966,7 @@ function (_Component) {
         className: "modal-content"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: onEditForm
-      }, loading && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LoadingLayer__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, loading && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LoadingLayer__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
         className: "modal-title"
@@ -71934,25 +72022,38 @@ function (_Component) {
         onChange: onTeleChange
       }), renderErrorFor('ophthalmologist.tele')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "custom-checkbox"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "checkbox",
         checked: ophthalmologist.partenaire_acuvue,
         onChange: function onChange() {
           return onCheckPartenaireACUVUEChange(ophthalmologist.partenaire_acuvue);
-        }
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Partenaire ACUVUE")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        },
+        id: "checkboxAcuvue",
+        value: "1"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "checkboxAcuvue"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: "checkboxAcuvue"
+      }, "Partenaire ACUVUE")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Sp\xE9cialit\xE9s"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this._renderSpecialties(ophthalmologist.specialties)), renderErrorFor('ophthalmologist.specialties'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Sp\xE9cialit\xE9s"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        style: {
+          listStyleType: 'none',
+          padding: 0
+        }
+      }, this._renderSpecialties(ophthalmologist.specialties)), renderErrorFor('ophthalmologist.specialties'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-footer"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "button",
-        className: "btn btn-default",
+        className: "btn cancelBtn",
         "data-dismiss": "modal",
         value: "Cancel",
         onClick: onCloseModal
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "submit",
-        className: "btn btn-info",
+        className: "btn actionBtn",
         value: "Save"
       }))))));
     }

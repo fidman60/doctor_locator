@@ -12,12 +12,16 @@ export default class EditItem extends Component {
         return ophthalmologist.specialties.map(row => {
             return (
                 <li key={row.specialty.id}>
-                    <input
-                        type="checkbox"
-                        checked={row.checked}
-                        defaultValue={row.specialty.id}
-                        onChange={() => onCheckSpecialtyChange(row)}
-                    /> {row.specialty.label}
+                    <span className="custom-checkbox">
+                        <input
+                            type="checkbox"
+                            checked={row.checked}
+                            onChange={() => onCheckSpecialtyChange(row)}
+                            id={"checkbox"+row.specialty.id}
+                        />
+                        <label htmlFor="checkbox1" />
+                    </span>
+                    <label htmlFor={"checkbox"+row.specialty.id}>{row.specialty.label}</label>
                 </li>
             );
         });
@@ -125,26 +129,32 @@ export default class EditItem extends Component {
                                     />
                                     {renderErrorFor('ophthalmologist.tele')}
                                 </div>
+
                                 <div className="form-group">
-                                    <input
-                                        type="checkbox"
-                                        checked={ophthalmologist.partenaire_acuvue}
-                                        onChange={() => onCheckPartenaireACUVUEChange(ophthalmologist.partenaire_acuvue)}
-                                    />
-                                    <label>Partenaire ACUVUE</label>
+                                    <span className="custom-checkbox">
+								        <input
+                                            type="checkbox"
+                                            checked={ophthalmologist.partenaire_acuvue}
+                                            onChange={() => onCheckPartenaireACUVUEChange(ophthalmologist.partenaire_acuvue)}
+                                            id="checkboxAcuvue"
+                                            value="1"
+                                        />
+								        <label htmlFor="checkboxAcuvue" />
+							        </span>
+                                    <label htmlFor="checkboxAcuvue">Partenaire ACUVUE</label>
                                 </div>
                                 <div className="form-group">
                                     <label>Spécialités</label>
-                                    <ul>
+                                    <ul style={{listStyleType: 'none', padding: 0}}>
                                         {this._renderSpecialties(ophthalmologist.specialties)}
                                     </ul>
                                     {renderErrorFor('ophthalmologist.specialties')}
                                 </div>
                             </div>
                             <div className="modal-footer">
-                                <input type="button" className="btn btn-default" data-dismiss="modal"
-                                       value="Cancel" onClick={onCloseModal}/>
-                                <input type="submit" className="btn btn-info" value="Save" />
+                                <input type="button" className="btn cancelBtn" data-dismiss="modal"
+                                       value="Cancel" onClick={onCloseModal} />
+                                <input type="submit" className="btn actionBtn" value="Save" />
                             </div>
                         </form>
                     </div>

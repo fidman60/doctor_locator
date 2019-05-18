@@ -26,3 +26,5 @@ Route::get('/specialities','SpecialityController@index');
 Route::post('/ophthalmologists/toggle_favorite/','OphthalmologistController@toggleFavorite');
 
 Route::post('/ophthalmologists/get_favorites/','OphthalmologistController@getFavorites');
+
+Route::get('/count/','OphthalmologistController@countOphtho');

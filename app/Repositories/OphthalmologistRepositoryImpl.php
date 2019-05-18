@@ -87,5 +87,9 @@ class OphthalmologistRepositoryImpl implements OphthalmologistRepository {
         });
     }
 
+    function total(){
+        return $this->ophthalmologist->count();
+    }
+
 
 }

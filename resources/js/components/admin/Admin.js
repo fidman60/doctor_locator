@@ -34,7 +34,8 @@ export default class Admin extends React.Component {
             errors: [],
             loading: false,
             message: '',
-            globalMessage: ''
+            globalMessage: '',
+            total: 0,
         };
 
         this.specialties = [];
@@ -53,6 +54,14 @@ export default class Admin extends React.Component {
 
         axio.get("api/specialities")
             .then(response => this.specialties = response.data)
+            .catch(error => console.log(error));
+
+        axio.get("api/count")
+            .then(response => {
+                this.setState({
+                    total: response.data.count,
+                })
+            })
             .catch(error => console.log(error));
     }
 
@@ -151,6 +160,11 @@ export default class Admin extends React.Component {
 
     _handleEditForm(e){
          e.preventDefault();
+
+         this.setState({
+             loading: true,
+         });
+
          const ophtho = {
              ...this.state.selectedOphthalmologist,
              ...this.selectedAddress,
@@ -207,12 +221,14 @@ export default class Admin extends React.Component {
 
                  this.setState({
                      ophthalmologists: newListOphtho,
-                     message: "L'ophtholmologist a été bien modifié",
+                     message: "L'ophthalmologiste a été bien modifié",
+                     loading: false,
                  });
              })
              .catch(error => {
                  this.setState({
-                     errors: error.response.data.errors
+                     errors: error.response.data.errors,
+                     loading: false,
                  });
              });
     }
@@ -236,11 +252,16 @@ export default class Admin extends React.Component {
          const id = this.state.selectedOphthalmologist.id;
          axio.delete('api/ophthalmologists/'+id)
              .then((response) => {
-                 const newList = this.state.ophthalmologists.filter((ophthalmologist) => ophthalmologist.id !== id);
-                 this.setState({
-                     globalMessage: "L'ophthalmologiste a été supprimé",
-                     ophthalmologists: newList,
-                 })
+                 axio.get("api/count")
+                     .then(response => {
+                         const newList = this.state.ophthalmologists.filter((ophthalmologist) => ophthalmologist.id !== id);
+                         this.setState({
+                             globalMessage: "L'ophthalmologiste a été supprimé",
+                             ophthalmologists: newList,
+                             total: response.data.count,
+                         });
+                     })
+                     .catch(error => console.log(error));
              })
              .catch((error) => console.log(error));
     }
@@ -328,10 +349,10 @@ export default class Admin extends React.Component {
                         <div className="table-title">
                             <div className="row">
                                 <div className="col-sm-6">
-                                    <h2>Manage <b>Employees</b></h2>
+                                    <h2>Doctor <b>Locator</b></h2>
                                 </div>
                                 <div className="col-sm-6">
-                                    <a href="#addEmployeeModal" className="btn btn-success" data-toggle="modal"><i className="fas fa-plus-circle material-icons" /> <span>Add New Employee</span></a>
+                                    <a href="#addEmployeeModal" className="btn actionBtn" data-toggle="modal"><i className="fas fa-plus-circle material-icons" /> <span>Add New Employee</span></a>
                                 </div>
                             </div>
                         </div>
@@ -352,7 +373,7 @@ export default class Admin extends React.Component {
                             </tbody>
                         </table>
                         <div className="clearfix">
-                            <div className="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+                            <div className="hint-text">Montrant <b>{this.state.ophthalmologists.length}</b> sur <b>{this.state.total}</b> entrées</div>
                             <ul className="pagination">
                                 <li className="page-item disabled"><a href="#">Previous</a></li>
                                 <li className="page-item"><a href="#" className="page-link">1</a></li>
@@ -366,7 +387,9 @@ export default class Admin extends React.Component {
                     </div>
                 </div>
 
-                <AddItem/>
+                <AddItem
+                    specialties={this.specialties}
+                />
 
                 <EditItem
                     ophthalmologist={this.state.selectedOphthalmologist}

@@ -15,10 +15,9 @@ export default class DeleteItem extends Component {
                             </div>
                             <div className="modal-body">
                                 <p>Vous êtes sûr de supprimer l'ophthalmologiste avec le nom {this.props.ophthalmologist.nom} ?</p>
-                                <small>Cette action ne peut pas être annulée</small>
                             </div>
                             <div className="modal-footer">
-                                <input type="button" className="btn btn-default" data-dismiss="modal"
+                                <input type="button" className="btn cancelBtn" data-dismiss="modal"
                                        value="Cancel" />
                                 <input data-dismiss="modal" type="submit" className="btn btn-danger" value="Delete" onClick={this.props.onDeleteClick} />
                             </div>

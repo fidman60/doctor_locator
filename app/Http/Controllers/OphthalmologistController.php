@@ -104,4 +104,8 @@ class OphthalmologistController extends Controller{
         return json_encode([]);
     }
 
+    public function countOphtho(){
+        return response()->json(['count' => $this->ophthalmologistRepository->total()]);
+    }
+
 }
