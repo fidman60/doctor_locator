@@ -22,6 +22,14 @@ const defaultOphtho = {
     formatted_address: ''
 };
 
+const defaultSelectedAddress = {
+    adresse_line2: '',
+    ville: '',
+    cp: undefined,
+    lat: undefined,
+    lng: undefined,
+};
+
 export default class Admin extends React.Component {
 
     constructor(props){
@@ -39,7 +47,7 @@ export default class Admin extends React.Component {
         };
 
         this.specialties = [];
-        this.selectedAddress = undefined;
+        this.selectedAddress = defaultSelectedAddress;
 
     }
 
@@ -110,13 +118,7 @@ export default class Admin extends React.Component {
     }
 
     _formatAddress(addressComponents, location){
-        let address = {
-            adresse_line2: '',
-            ville: '',
-            cp: undefined,
-            lat: undefined,
-            lng: undefined,
-        };
+        let address = defaultSelectedAddress;
 
         addressComponents.map((item) => {
             item.types.map((type) => {
@@ -161,8 +163,11 @@ export default class Admin extends React.Component {
     _handleEditForm(e){
          e.preventDefault();
 
+         console.log(this.selectedAddress);
+
          this.setState({
              loading: true,
+             errors: []
          });
 
          const ophtho = {
@@ -313,12 +318,21 @@ export default class Admin extends React.Component {
     }
 
     _handleFormattedAddressChange(event){
+        this.selectedAddress = {
+            adresse_line2: '',
+            ville: '',
+            cp: undefined,
+            lat: undefined,
+            lng: undefined,
+        };
         this.setState({
             selectedOphthalmologist: {
                 ...this.state.selectedOphthalmologist,
                 formatted_address: event.target.value,
             }
         });
+
+        console.log(this.selectedAddress);
     }
 
     _handleCheckSpecialtiesChange(row){
@@ -342,7 +356,7 @@ export default class Admin extends React.Component {
 
     render(){
         return (
-            <div>
+            <div id="crud">
                 <div className="container">
                     {this.state.globalMessage.length > 0 && <div className="alert alert-success">{this.state.globalMessage}</div>}
                     <div className="table-wrapper">

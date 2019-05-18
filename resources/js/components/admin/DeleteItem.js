@@ -19,7 +19,7 @@ export default class DeleteItem extends Component {
                             <div className="modal-footer">
                                 <input type="button" className="btn cancelBtn" data-dismiss="modal"
                                        value="Cancel" />
-                                <input data-dismiss="modal" type="submit" className="btn btn-danger" value="Delete" onClick={this.props.onDeleteClick} />
+                                <input data-dismiss="modal" type="submit" className="btn actionBtn" value="Delete" onClick={this.props.onDeleteClick} />
                             </div>
                         </form>
                     </div>

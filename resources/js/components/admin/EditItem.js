@@ -77,12 +77,15 @@ export default class EditItem extends Component {
                                     <label>Adresse</label>
                                     <input
                                         type="text"
-                                        className={`form-control ${hasErrorFor('ophthalmologist.adresse_line2') ? 'is-invalid' : ''}`}
+                                        className={`form-control ${hasErrorFor('ophthalmologist.adresse_line2') || hasErrorFor('ophthalmologist.cp') || hasErrorFor('ophthalmologist.ville') ? 'is-invalid' : ''}`}
                                         value={ophthalmologist.formatted_address}
                                         ref='searchBox'
                                         onChange={onFormattedAddressChange}
                                     />
-                                    {renderErrorFor('ophthalmologist.adresse_line2')}
+                                    {(hasErrorFor('ophthalmologist.adresse_line2') || hasErrorFor('ophthalmologist.cp') || hasErrorFor('ophthalmologist.ville'))
+                                    && <span className='invalid-feedback'>
+                                        <strong>{"Désolé, Vous devez selectionné une adresse suggéré"}</strong>
+                                    </span>}
                                 </div>
                                 <div className="form-group">
                                     <label>Nom</label>

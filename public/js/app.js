@@ -4646,7 +4646,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "body {\r\n    color: #566787;\r\n    background: #f5f5f5;\r\n    font-family: 'Varela Round', sans-serif;\r\n    font-size: 13px;\r\n}\r\n.table-wrapper {\r\n    background: #fff;\r\n    padding: 20px 25px;\r\n    margin: 30px 0;\r\n    border-radius: 3px;\r\n    box-shadow: 0 1px 1px rgba(0,0,0,.05);\r\n}\r\n.table-title {\r\n    padding-bottom: 15px;\r\n    background: #333333;\r\n    color: #fff;\r\n    padding: 16px 30px;\r\n    margin: -20px -25px 10px;\r\n    border-radius: 3px 3px 0 0;\r\n}\r\n.table-title h2 {\r\n    margin: 5px 0 0;\r\n    font-size: 24px;\r\n}\r\n.table-title .btn-group {\r\n    float: right;\r\n}\r\n.table-title .btn {\r\n    color: #fff;\r\n    float: right;\r\n    font-size: 13px;\r\n    border: none;\r\n    min-width: 50px;\r\n    border-radius: 2px;\r\n    border: none;\r\n    outline: none !important;\r\n    margin-left: 10px;\r\n}\r\n.table-title .btn i {\r\n    float: left;\r\n    font-size: 21px;\r\n    margin-right: 5px;\r\n}\r\n.table-title .btn span {\r\n    float: left;\r\n    margin-top: 2px;\r\n}\r\ntable.table tr th, table.table tr td {\r\n    border-color: #e9e9e9;\r\n    padding: 12px 15px;\r\n    vertical-align: middle;\r\n}\r\ntable.table tr th:first-child {\r\n    width: 60px;\r\n}\r\ntable.table tr th:last-child {\r\n    width: 100px;\r\n}\r\ntable.table-striped tbody tr:nth-of-type(odd) {\r\n    background-color: #fcfcfc;\r\n}\r\ntable.table-striped.table-hover tbody tr:hover {\r\n    background: #f5f5f5;\r\n}\r\ntable.table th i {\r\n    font-size: 13px;\r\n    margin: 0 5px;\r\n    cursor: pointer;\r\n}\r\ntable.table td:last-child i {\r\n    opacity: 0.9;\r\n    font-size: 22px;\r\n    margin: 0 5px;\r\n}\r\ntable.table td a {\r\n    font-weight: bold;\r\n    color: #566787;\r\n    display: inline-block;\r\n    text-decoration: none;\r\n    outline: none !important;\r\n}\r\ntable.table td a:hover {\r\n    color: #2196F3;\r\n}\r\ntable.table td a.edit {\r\n    color: #FFC107;\r\n}\r\ntable.table td a.delete {\r\n    color: #F44336;\r\n}\r\ntable.table td i {\r\n    font-size: 19px;\r\n}\r\ntable.table .avatar {\r\n    border-radius: 50%;\r\n    vertical-align: middle;\r\n    margin-right: 10px;\r\n}\r\n.pagination {\r\n    float: right;\r\n    margin: 0 0 5px;\r\n}\r\n.pagination li a {\r\n    border: none;\r\n    font-size: 13px;\r\n    min-width: 30px;\r\n    min-height: 30px;\r\n    color: #999;\r\n    margin: 0 2px;\r\n    line-height: 30px;\r\n    border-radius: 2px !important;\r\n    text-align: center;\r\n    padding: 0 6px;\r\n}\r\n.pagination li a:hover {\r\n    color: #666;\r\n}\r\n.pagination li.active a, .pagination li.active a.page-link {\r\n    background: #03A9F4;\r\n}\r\n.pagination li.active a:hover {\r\n    background: #0397d6;\r\n}\r\n.pagination li.disabled i {\r\n    color: #ccc;\r\n}\r\n.pagination li i {\r\n    font-size: 16px;\r\n    padding-top: 6px\r\n}\r\n.hint-text {\r\n    float: left;\r\n    margin-top: 10px;\r\n    font-size: 13px;\r\n}\r\n/* Custom checkbox */\r\n.custom-checkbox {\r\n    position: relative;\r\n}\r\n.custom-checkbox input[type=\"checkbox\"] {\r\n    opacity: 0;\r\n    position: absolute;\r\n    margin: 5px 0 0 3px;\r\n    z-index: 9;\r\n}\r\n.custom-checkbox label:before{\r\n    width: 18px;\r\n    height: 18px;\r\n}\r\n.custom-checkbox label:before {\r\n    content: '';\r\n    margin-right: 10px;\r\n    display: inline-block;\r\n    vertical-align: text-top;\r\n    background: white;\r\n    border: 1px solid #bbb;\r\n    border-radius: 2px;\r\n    box-sizing: border-box;\r\n    z-index: 2;\r\n}\r\n.custom-checkbox input[type=\"checkbox\"]:checked + label:after {\r\n    content: '';\r\n    position: absolute;\r\n    left: 6px;\r\n    top: 3px;\r\n    width: 6px;\r\n    height: 11px;\r\n    border: solid #000;\r\n    border-width: 0 3px 3px 0;\r\n    -webkit-transform: inherit;\r\n            transform: inherit;\r\n    z-index: 3;\r\n    -webkit-transform: rotateZ(45deg);\r\n            transform: rotateZ(45deg);\r\n}\r\n.custom-checkbox input[type=\"checkbox\"]:checked + label:before {\r\n    border-color: #03A9F4;\r\n    background: #03A9F4;\r\n}\r\n.custom-checkbox input[type=\"checkbox\"]:checked + label:after {\r\n    border-color: #fff;\r\n}\r\n.custom-checkbox input[type=\"checkbox\"]:disabled + label:before {\r\n    color: #b8b8b8;\r\n    cursor: auto;\r\n    box-shadow: none;\r\n    background: #ddd;\r\n}\r\n/* Modal styles */\r\n.modal .modal-dialog {\r\n    max-width: 400px;\r\n}\r\n.modal .modal-header, .modal .modal-body, .modal .modal-footer {\r\n    padding: 20px 30px;\r\n}\r\n.modal .modal-content {\r\n    border-radius: 3px;\r\n}\r\n.modal .modal-footer {\r\n    background: #333333;\r\n    border-radius: 0 0 3px 3px;\r\n}\r\n.modal .modal-title {\r\n    display: inline-block;\r\n}\r\n.modal .form-control {\r\n    border-radius: 2px;\r\n    box-shadow: none;\r\n    border-color: #dddddd;\r\n}\r\n.modal textarea.form-control {\r\n    resize: vertical;\r\n}\r\n.modal .btn {\r\n    border-radius: 2px;\r\n    min-width: 100px;\r\n}\r\n.modal form label {\r\n    font-weight: normal;\r\n}\r\n\r\n.pac-container {\r\n    background-color: #FFF;\r\n    z-index: 2001;\r\n    position: fixed;\r\n    display: inline-block;\r\n    float: left;\r\n}\r\n.modal{\r\n    z-index: 2000;\r\n}\r\n.addBtn,.actionBtn{\r\n    background: #fdc600 !important;\r\n    color: #333333 !important;\r\n}\r\n\r\n.cancelBtn{\r\n    background: #333333;\r\n    color: #fdc600;\r\n}\r\n\r\n.cancelBtn:hover{\r\n    background: #333333;\r\n    color: #fdc600;\r\n}", ""]);
+exports.push([module.i, "#crud {\r\n    color: #566787;\r\n    background: #f5f5f5;\r\n    font-family: 'Varela Round', sans-serif;\r\n    font-size: 13px;\r\n}\r\n#crud .table-wrapper {\r\n    background: #fff;\r\n    padding: 20px 25px;\r\n    margin: 30px 0;\r\n    border-radius: 3px;\r\n    box-shadow: 0 1px 1px rgba(0,0,0,.05);\r\n}\r\n#crud .table-title {\r\n    padding-bottom: 15px;\r\n    background: #333333;\r\n    color: #fff;\r\n    padding: 16px 30px;\r\n    margin: -20px -25px 10px;\r\n    border-radius: 3px 3px 0 0;\r\n}\r\n#crud .table-title h2 {\r\n    margin: 5px 0 0;\r\n    font-size: 24px;\r\n}\r\n#crud .table-title .btn-group {\r\n    float: right;\r\n}\r\n#crud .table-title .btn {\r\n    color: #fff;\r\n    float: right;\r\n    font-size: 13px;\r\n    border: none;\r\n    min-width: 50px;\r\n    border-radius: 2px;\r\n    border: none;\r\n    outline: none !important;\r\n    margin-left: 10px;\r\n}\r\n#crud .table-title .btn i {\r\n    float: left;\r\n    font-size: 21px;\r\n    margin-right: 5px;\r\n}\r\n#crud .table-title .btn span {\r\n    float: left;\r\n    margin-top: 2px;\r\n}\r\n#crud table.table tr th, table.table tr td {\r\n    border-color: #e9e9e9;\r\n    padding: 12px 15px;\r\n    vertical-align: middle;\r\n}\r\n#crud table.table tr th:first-child {\r\n    width: 60px;\r\n}\r\n#crud table.table tr th:last-child {\r\n    width: 100px;\r\n}\r\n#crud table.table-striped tbody tr:nth-of-type(odd) {\r\n    background-color: #fcfcfc;\r\n}\r\n#crud table.table-striped.table-hover tbody tr:hover {\r\n    background: #f5f5f5;\r\n}\r\n#crud table.table th i {\r\n    font-size: 13px;\r\n    margin: 0 5px;\r\n    cursor: pointer;\r\n}\r\n#crud table.table td:last-child i {\r\n    opacity: 0.9;\r\n    font-size: 18px;\r\n    margin: 0 5px;\r\n}\r\n#crud table.table td a {\r\n    font-weight: bold;\r\n    color: #566787;\r\n    display: inline-block;\r\n    text-decoration: none;\r\n    outline: none !important;\r\n}\r\n#crud table.table td a:hover {\r\n    color: #2196F3;\r\n}\r\n#crud table.table td a.edit {\r\n    color: #FFC107;\r\n}\r\n#crud table.table td a.delete {\r\n    color: #F44336;\r\n}\r\n#crud table.table td i {\r\n    font-size: 13px;\r\n}\r\n#crud table.table .avatar {\r\n    border-radius: 50%;\r\n    vertical-align: middle;\r\n    margin-right: 10px;\r\n}\r\n#crud .pagination {\r\n    float: right;\r\n    margin: 0 0 5px;\r\n}\r\n#crud .pagination li a {\r\n    border: none;\r\n    font-size: 13px;\r\n    min-width: 30px;\r\n    min-height: 30px;\r\n    color: #999;\r\n    margin: 0 2px;\r\n    line-height: 30px;\r\n    border-radius: 2px !important;\r\n    text-align: center;\r\n    padding: 0 6px;\r\n}\r\n#crud .pagination li a:hover {\r\n    color: #666;\r\n}\r\n#crud .pagination li.active a, #crud .pagination li.active a.page-link {\r\n    background: #03A9F4;\r\n}\r\n#crud .pagination li.active a:hover {\r\n    background: #0397d6;\r\n}\r\n#crud .pagination li.disabled i {\r\n    color: #ccc;\r\n}\r\n#crud .pagination li i {\r\n    font-size: 16px;\r\n    padding-top: 6px\r\n}\r\n#crud .hint-text {\r\n    float: left;\r\n    margin-top: 10px;\r\n    font-size: 13px;\r\n}\r\n/* Custom checkbox */\r\n#crud .custom-checkbox {\r\n    position: relative;\r\n}\r\n#crud .custom-checkbox input[type=\"checkbox\"] {\r\n    opacity: 0;\r\n    position: absolute;\r\n    margin: 5px 0 0 3px;\r\n    z-index: 9;\r\n}\r\n#crud .custom-checkbox label:before{\r\n    width: 18px;\r\n    height: 18px;\r\n}\r\n#crud .custom-checkbox label:before {\r\n    content: '';\r\n    margin-right: 10px;\r\n    display: inline-block;\r\n    vertical-align: text-top;\r\n    background: white;\r\n    border: 1px solid #bbb;\r\n    border-radius: 2px;\r\n    box-sizing: border-box;\r\n    z-index: 2;\r\n}\r\n#crud .custom-checkbox input[type=\"checkbox\"]:checked + label:after {\r\n    content: '';\r\n    position: absolute;\r\n    left: 6px;\r\n    top: 3px;\r\n    width: 6px;\r\n    height: 11px;\r\n    border: solid #000;\r\n    border-width: 0 3px 3px 0;\r\n    -webkit-transform: inherit;\r\n            transform: inherit;\r\n    z-index: 3;\r\n    -webkit-transform: rotateZ(45deg);\r\n            transform: rotateZ(45deg);\r\n}\r\n#crud .custom-checkbox input[type=\"checkbox\"]:checked + label:before {\r\n    border-color: #03A9F4;\r\n    background: #03A9F4;\r\n}\r\n#crud .custom-checkbox input[type=\"checkbox\"]:checked + label:after {\r\n    border-color: #fff;\r\n}\r\n#crud .custom-checkbox input[type=\"checkbox\"]:disabled + label:before {\r\n    color: #b8b8b8;\r\n    cursor: auto;\r\n    box-shadow: none;\r\n    background: #ddd;\r\n}\r\n/* Modal styles */\r\n#crud .modal .modal-dialog {\r\n    max-width: 400px;\r\n}\r\n#crud .modal .modal-header, #crud .modal .modal-body, .modal .modal-footer {\r\n    padding: 20px 30px;\r\n}\r\n#crud .modal .modal-content {\r\n    border-radius: 3px;\r\n}\r\n#crud .modal .modal-footer {\r\n    background: #333333;\r\n    border-radius: 0 0 3px 3px;\r\n}\r\n#crud .modal .modal-title {\r\n    display: inline-block;\r\n}\r\n#crud .modal .form-control {\r\n    border-radius: 2px;\r\n    box-shadow: none;\r\n    border-color: #dddddd;\r\n}\r\n#crud .modal textarea.form-control {\r\n    resize: vertical;\r\n}\r\n#crud .modal .btn {\r\n    border-radius: 2px;\r\n    min-width: 100px;\r\n}\r\n#crud .modal form label {\r\n    font-weight: normal;\r\n}\r\n\r\n.pac-container {\r\n    background-color: #FFF;\r\n    z-index: 3001;\r\n    position: fixed;\r\n    display: inline-block;\r\n    float: left;\r\n}\r\n#crud .modal{\r\n    z-index: 2000;\r\n}\r\n#crud .addBtn,.actionBtn{\r\n    background: #fdc600 !important;\r\n    color: #333333 !important;\r\n}\r\n\r\n#crud .cancelBtn{\r\n    background: #333333;\r\n    color: #fdc600;\r\n}\r\n\r\n#crud .cancelBtn:hover{\r\n    background: #333333;\r\n    color: #fdc600;\r\n}", ""]);
 
 // exports
 
@@ -71320,6 +71320,13 @@ var defaultOphtho = {
   specialties: [],
   formatted_address: ''
 };
+var defaultSelectedAddress = {
+  adresse_line2: '',
+  ville: '',
+  cp: undefined,
+  lat: undefined,
+  lng: undefined
+};
 
 var Admin =
 /*#__PURE__*/
@@ -71343,7 +71350,7 @@ function (_React$Component) {
       total: 0
     };
     _this.specialties = [];
-    _this.selectedAddress = undefined;
+    _this.selectedAddress = defaultSelectedAddress;
     return _this;
   }
 
@@ -71430,13 +71437,7 @@ function (_React$Component) {
   }, {
     key: "_formatAddress",
     value: function _formatAddress(addressComponents, location) {
-      var address = {
-        adresse_line2: '',
-        ville: '',
-        cp: undefined,
-        lat: undefined,
-        lng: undefined
-      };
+      var address = defaultSelectedAddress;
       addressComponents.map(function (item) {
         item.types.map(function (type) {
           if (type.localeCompare('street_number') === 0) address.adresse_line2 = item['long_name'];else if (type.localeCompare('route') === 0) address.adresse_line2 = address.adresse_line2.concat(' '.concat(item['long_name']));else if (type.localeCompare('locality') === 0) {
@@ -71478,8 +71479,10 @@ function (_React$Component) {
       var _this5 = this;
 
       e.preventDefault();
+      console.log(this.selectedAddress);
       this.setState({
-        loading: true
+        loading: true,
+        errors: []
       });
 
       var ophtho = _objectSpread({}, this.state.selectedOphthalmologist, this.selectedAddress);
@@ -71627,11 +71630,19 @@ function (_React$Component) {
   }, {
     key: "_handleFormattedAddressChange",
     value: function _handleFormattedAddressChange(event) {
+      this.selectedAddress = {
+        adresse_line2: '',
+        ville: '',
+        cp: undefined,
+        lat: undefined,
+        lng: undefined
+      };
       this.setState({
         selectedOphthalmologist: _objectSpread({}, this.state.selectedOphthalmologist, {
           formatted_address: event.target.value
         })
       });
+      console.log(this.selectedAddress);
     }
   }, {
     key: "_handleCheckSpecialtiesChange",
@@ -71654,7 +71665,9 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "crud"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }, this.state.globalMessage.length > 0 && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "alert alert-success"
@@ -71830,7 +71843,7 @@ function (_Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         "data-dismiss": "modal",
         type: "submit",
-        className: "btn btn-danger",
+        className: "btn actionBtn",
         value: "Delete",
         onClick: this.props.onDeleteClick
       }))))));
@@ -71984,11 +71997,13 @@ function (_Component) {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Adresse"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
-        className: "form-control ".concat(hasErrorFor('ophthalmologist.adresse_line2') ? 'is-invalid' : ''),
+        className: "form-control ".concat(hasErrorFor('ophthalmologist.adresse_line2') || hasErrorFor('ophthalmologist.cp') || hasErrorFor('ophthalmologist.ville') ? 'is-invalid' : ''),
         value: ophthalmologist.formatted_address,
         ref: "searchBox",
         onChange: onFormattedAddressChange
-      }), renderErrorFor('ophthalmologist.adresse_line2')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), (hasErrorFor('ophthalmologist.adresse_line2') || hasErrorFor('ophthalmologist.cp') || hasErrorFor('ophthalmologist.ville')) && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "invalid-feedback"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Désolé, Vous devez selectionné une adresse suggéré"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Nom"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
@@ -72118,21 +72133,21 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, ophthalmologist.nom), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, ophthalmologist.email), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, ophthalmologist.adresse_line2, ", ", ophthalmologist.ville, ", FR"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, ophthalmologist.tele), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#editEmployeeModal",
         className: "edit",
-        "data-toggle": "modal"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        "data-toggle": "tooltip",
-        title: "Edit",
-        className: "far fa-edit",
+        "data-toggle": "modal",
         onClick: onActionBtnClick
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-pen",
+        "data-toggle": "tooltip",
+        title: "Editer"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#deleteEmployeeModal",
         className: "delete",
-        "data-toggle": "modal"
+        "data-toggle": "modal",
+        onClick: onActionBtnClick
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         "data-toggle": "tooltip",
         title: "Delete",
-        className: "fas fa-trash",
-        onClick: onActionBtnClick
+        className: "fas fa-trash"
       }))));
     }
   }]);
