@@ -3,7 +3,7 @@
     height: 100%;
     position: absolute;
     background: white;
-    z-index: 4000;
+    z-index: 1000;
     pointer-events:none !important;
 }
 

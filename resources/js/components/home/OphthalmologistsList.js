@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import OphthalmologistItem from './OphthalmologistItem';
 import axios from 'axios';
 import {changeCenterAction, setErrorMessage} from "../../Actions/mapActions";
-import Alert from "./Alert";
+import Alert from "../admin/Alert";
 
 class OphthalmologistsList extends Component {
 

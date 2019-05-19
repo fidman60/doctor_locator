@@ -5,6 +5,7 @@ import Item from "./Item";
 import AddItem from "./AddItem";
 import EditItem from "./EditItem";
 import DeleteItem from "./DeleteItem";
+import LoadingLayer from "./LoadingLayer";
 
 const defaultOphtho = {
     id: 0,
@@ -44,11 +45,11 @@ export default class Admin extends React.Component {
             message: '',
             globalMessage: '',
             total: 0,
+            loadingList: false,
         };
 
         this.specialties = [];
         this.selectedAddress = defaultSelectedAddress;
-
     }
 
     componentWillMount() {
@@ -163,8 +164,6 @@ export default class Admin extends React.Component {
     _handleEditForm(e){
          e.preventDefault();
 
-         console.log(this.selectedAddress);
-
          this.setState({
              loading: true,
              errors: []
@@ -255,18 +254,19 @@ export default class Admin extends React.Component {
     _handleDeleteClick(e){
          e.preventDefault();
          const id = this.state.selectedOphthalmologist.id;
+
+         this.setState({
+             loadingList: true
+         });
+
          axio.delete('api/ophthalmologists/'+id)
              .then((response) => {
-                 axio.get("api/count")
-                     .then(response => {
-                         const newList = this.state.ophthalmologists.filter((ophthalmologist) => ophthalmologist.id !== id);
-                         this.setState({
-                             globalMessage: "L'ophthalmologiste a été supprimé",
-                             ophthalmologists: newList,
-                             total: response.data.count,
-                         });
-                     })
-                     .catch(error => console.log(error));
+                 this.setState({
+                     globalMessage: "L'ophthalmologiste a été supprimé",
+                     ophthalmologists: response.data.ophthalmologists,
+                     total: response.data.count,
+                     loadingList: false,
+                 });
              })
              .catch((error) => console.log(error));
     }
@@ -366,11 +366,13 @@ export default class Admin extends React.Component {
                                     <h2>Doctor <b>Locator</b></h2>
                                 </div>
                                 <div className="col-sm-6">
-                                    <a href="#addEmployeeModal" className="btn actionBtn" data-toggle="modal"><i className="fas fa-plus-circle material-icons" /> <span>Add New Employee</span></a>
+                                    <a href="#addEmployeeModal" className="btn actionBtn" data-toggle="modal"><i className="fas fa-plus-circle material-icons" /> <span>Ajouter</span></a>
+                                    <a className="btn cancelBtn" onClick={this.props.onLogout}><i className="fas fa-sign-out-alt" /> <span>Se déconnecter</span></a>
                                 </div>
                             </div>
                         </div>
-                        <table className="table table-striped table-hover">
+                        <table style={{position: 'relative'}} className="table table-striped table-hover">
+                            {this.state.loadingList && <LoadingLayer/>}
                             <thead>
                             <tr>
                                 <th style={{minWidth: "200px"}}>Name</th>

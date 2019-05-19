@@ -21,10 +21,19 @@ Route::apiResource('/ophthalmologists','OphthalmologistController');
 
 Route::get('/paginate/ophthalmologists','OphthalmologistController@indexPerPage');
 
-Route::get('/specialities','SpecialityController@index');
-
 Route::post('/ophthalmologists/toggle_favorite/','OphthalmologistController@toggleFavorite');
 
 Route::post('/ophthalmologists/get_favorites/','OphthalmologistController@getFavorites');
 
 Route::get('/count/','OphthalmologistController@countOphtho');
+
+Route::get('/specialities','SpecialityController@index');
+
+
+
+Route::post('login', 'API\UserController@login');
+Route::post('register', 'API\UserController@register');
+Route::group(['middleware' => 'auth:api'], function(){
+    Route::post('details', 'API\UserController@details');
+    Route::post('logout','API\UserController@logout');
+});

@@ -76,7 +76,10 @@ class OphthalmologistController extends Controller{
      */
     public function destroy($id){
         $this->ophthalmologistRepository->delete($id);
-        return response()->json("L'ophtholmologist a été bien supprimé");
+        return response()->json([
+            'ophthalmologists' => $this->ophthalmologistRepository->getOphthalmologistsWithSpecialities(),
+            'count' => $this->ophthalmologistRepository->total()
+        ]);
     }
 
     public function toggleFavorite(Request $request) {
