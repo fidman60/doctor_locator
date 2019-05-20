@@ -4400,6 +4400,68 @@ var createChangeEmitter = exports.createChangeEmitter = function createChangeEmi
 
 /***/ }),
 
+/***/ "./node_modules/classnames/index.js":
+/*!******************************************!*\
+  !*** ./node_modules/classnames/index.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+  Copyright (c) 2017 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+/* global define */
+
+(function () {
+	'use strict';
+
+	var hasOwn = {}.hasOwnProperty;
+
+	function classNames () {
+		var classes = [];
+
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (!arg) continue;
+
+			var argType = typeof arg;
+
+			if (argType === 'string' || argType === 'number') {
+				classes.push(arg);
+			} else if (Array.isArray(arg) && arg.length) {
+				var inner = classNames.apply(null, arg);
+				if (inner) {
+					classes.push(inner);
+				}
+			} else if (argType === 'object') {
+				for (var key in arg) {
+					if (hasOwn.call(arg, key) && arg[key]) {
+						classes.push(key);
+					}
+				}
+			}
+		}
+
+		return classes.join(' ');
+	}
+
+	if ( true && module.exports) {
+		classNames.default = classNames;
+		module.exports = classNames;
+	} else if (true) {
+		// register as 'classnames', consistent with npm package name
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+			return classNames;
+		}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+}());
+
+
+/***/ }),
+
 /***/ "./node_modules/create-react-context/lib/implementation.js":
 /*!*****************************************************************!*\
   !*** ./node_modules/create-react-context/lib/implementation.js ***!
@@ -4646,7 +4708,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#crud {\r\n    color: #566787;\r\n    background: #f5f5f5;\r\n    font-family: 'Varela Round', sans-serif;\r\n    font-size: 13px;\r\n}\r\n#crud .table-wrapper {\r\n    background: #fff;\r\n    padding: 20px 25px;\r\n    margin: 30px 0;\r\n    border-radius: 3px;\r\n    box-shadow: 0 1px 1px rgba(0,0,0,.05);\r\n}\r\n#crud .table-title {\r\n    padding-bottom: 15px;\r\n    background: #333333;\r\n    color: #fff;\r\n    padding: 16px 30px;\r\n    margin: -20px -25px 10px;\r\n    border-radius: 3px 3px 0 0;\r\n}\r\n#crud .table-title h2 {\r\n    margin: 5px 0 0;\r\n    font-size: 24px;\r\n}\r\n#crud .table-title .btn-group {\r\n    float: right;\r\n}\r\n#crud .table-title .btn {\r\n    color: #fff;\r\n    float: right;\r\n    font-size: 13px;\r\n    border: none;\r\n    min-width: 50px;\r\n    border-radius: 2px;\r\n    border: none;\r\n    outline: none !important;\r\n    margin-left: 10px;\r\n}\r\n#crud .table-title .btn i {\r\n    float: left;\r\n    font-size: 21px;\r\n    margin-right: 5px;\r\n}\r\n#crud .table-title .btn span {\r\n    float: left;\r\n    margin-top: 2px;\r\n}\r\n#crud table.table tr th, table.table tr td {\r\n    border-color: #e9e9e9;\r\n    padding: 12px 15px;\r\n    vertical-align: middle;\r\n}\r\n#crud table.table tr th:first-child {\r\n    width: 60px;\r\n}\r\n#crud table.table tr th:last-child {\r\n    width: 100px;\r\n}\r\n#crud table.table-striped tbody tr:nth-of-type(odd) {\r\n    background-color: #fcfcfc;\r\n}\r\n#crud table.table-striped.table-hover tbody tr:hover {\r\n    background: #f5f5f5;\r\n}\r\n#crud table.table th i {\r\n    font-size: 13px;\r\n    margin: 0 5px;\r\n    cursor: pointer;\r\n}\r\n#crud table.table td:last-child i {\r\n    opacity: 0.9;\r\n    font-size: 18px;\r\n    margin: 0 5px;\r\n}\r\n#crud table.table td a {\r\n    font-weight: bold;\r\n    color: #566787;\r\n    display: inline-block;\r\n    text-decoration: none;\r\n    outline: none !important;\r\n}\r\n#crud table.table td a:hover {\r\n    color: #2196F3;\r\n}\r\n#crud table.table td a.edit {\r\n    color: #FFC107;\r\n}\r\n#crud table.table td a.delete {\r\n    color: #F44336;\r\n}\r\n#crud table.table td i {\r\n    font-size: 13px;\r\n}\r\n#crud table.table .avatar {\r\n    border-radius: 50%;\r\n    vertical-align: middle;\r\n    margin-right: 10px;\r\n}\r\n#crud .pagination {\r\n    float: right;\r\n    margin: 0 0 5px;\r\n}\r\n#crud .pagination li a {\r\n    border: none;\r\n    font-size: 13px;\r\n    min-width: 30px;\r\n    min-height: 30px;\r\n    color: #999;\r\n    margin: 0 2px;\r\n    line-height: 30px;\r\n    border-radius: 2px !important;\r\n    text-align: center;\r\n    padding: 0 6px;\r\n}\r\n#crud .pagination li a:hover {\r\n    color: #666;\r\n}\r\n#crud .pagination li.active a, #crud .pagination li.active a.page-link {\r\n    background: #03A9F4;\r\n}\r\n#crud .pagination li.active a:hover {\r\n    background: #0397d6;\r\n}\r\n#crud .pagination li.disabled i {\r\n    color: #ccc;\r\n}\r\n#crud .pagination li i {\r\n    font-size: 16px;\r\n    padding-top: 6px\r\n}\r\n#crud .hint-text {\r\n    float: left;\r\n    margin-top: 10px;\r\n    font-size: 13px;\r\n}\r\n/* Custom checkbox */\r\n#crud .custom-checkbox {\r\n    position: relative;\r\n}\r\n#crud .custom-checkbox input[type=\"checkbox\"] {\r\n    opacity: 0;\r\n    position: absolute;\r\n    margin: 5px 0 0 3px;\r\n    z-index: 9;\r\n}\r\n#crud .custom-checkbox label:before{\r\n    width: 18px;\r\n    height: 18px;\r\n}\r\n#crud .custom-checkbox label:before {\r\n    content: '';\r\n    margin-right: 10px;\r\n    display: inline-block;\r\n    vertical-align: text-top;\r\n    background: white;\r\n    border: 1px solid #bbb;\r\n    border-radius: 2px;\r\n    box-sizing: border-box;\r\n    z-index: 2;\r\n}\r\n#crud .custom-checkbox input[type=\"checkbox\"]:checked + label:after {\r\n    content: '';\r\n    position: absolute;\r\n    left: 6px;\r\n    top: 3px;\r\n    width: 6px;\r\n    height: 11px;\r\n    border: solid #000;\r\n    border-width: 0 3px 3px 0;\r\n    -webkit-transform: inherit;\r\n            transform: inherit;\r\n    z-index: 3;\r\n    -webkit-transform: rotateZ(45deg);\r\n            transform: rotateZ(45deg);\r\n}\r\n#crud .custom-checkbox input[type=\"checkbox\"]:checked + label:before {\r\n    border-color: #03A9F4;\r\n    background: #03A9F4;\r\n}\r\n#crud .custom-checkbox input[type=\"checkbox\"]:checked + label:after {\r\n    border-color: #fff;\r\n}\r\n#crud .custom-checkbox input[type=\"checkbox\"]:disabled + label:before {\r\n    color: #b8b8b8;\r\n    cursor: auto;\r\n    box-shadow: none;\r\n    background: #ddd;\r\n}\r\n/* Modal styles */\r\n#crud .modal .modal-dialog {\r\n    max-width: 400px;\r\n}\r\n#crud .modal .modal-header, #crud .modal .modal-body, .modal .modal-footer {\r\n    padding: 20px 30px;\r\n}\r\n#crud .modal .modal-content {\r\n    border-radius: 3px;\r\n}\r\n#crud .modal .modal-footer {\r\n    background: #333333;\r\n    border-radius: 0 0 3px 3px;\r\n}\r\n#crud .modal .modal-title {\r\n    display: inline-block;\r\n}\r\n#crud .modal .form-control {\r\n    border-radius: 2px;\r\n    box-shadow: none;\r\n    border-color: #dddddd;\r\n}\r\n#crud .modal textarea.form-control {\r\n    resize: vertical;\r\n}\r\n#crud .modal .btn {\r\n    border-radius: 2px;\r\n    min-width: 100px;\r\n}\r\n#crud .modal form label {\r\n    font-weight: normal;\r\n}\r\n\r\n.pac-container {\r\n    background-color: #FFF;\r\n    z-index: 3001;\r\n    position: fixed;\r\n    display: inline-block;\r\n    float: left;\r\n}\r\n#crud .modal{\r\n    z-index: 2000;\r\n}\r\n#crud .addBtn,.actionBtn{\r\n    background: #fdc600 !important;\r\n    color: #333333 !important;\r\n}\r\n\r\n#crud .cancelBtn{\r\n    background: #333333;\r\n    color: #fdc600;\r\n}\r\n\r\n#crud .cancelBtn:hover{\r\n    background: #333333;\r\n    color: #fdc600;\r\n}", ""]);
+exports.push([module.i, "#crud {\r\n    color: #566787;\r\n    background: #f5f5f5;\r\n    font-family: 'Varela Round', sans-serif;\r\n    font-size: 13px;\r\n}\r\n#crud .table-wrapper {\r\n    background: #fff;\r\n    padding: 20px 25px;\r\n    margin: 30px 0;\r\n    border-radius: 3px;\r\n    box-shadow: 0 1px 1px rgba(0,0,0,.05);\r\n}\r\n#crud .table-title {\r\n    padding-bottom: 15px;\r\n    background: #333333;\r\n    color: #fff;\r\n    padding: 16px 30px;\r\n    margin: -20px -25px 10px;\r\n    border-radius: 3px 3px 0 0;\r\n}\r\n#crud .table-title h2 {\r\n    margin: 5px 0 0;\r\n    font-size: 24px;\r\n}\r\n#crud .table-title .btn-group {\r\n    float: right;\r\n}\r\n#crud .table-title .btn {\r\n    color: #fff;\r\n    float: right;\r\n    font-size: 13px;\r\n    border: none;\r\n    min-width: 50px;\r\n    border-radius: 2px;\r\n    border: none;\r\n    outline: none !important;\r\n    margin-left: 10px;\r\n}\r\n#crud .table-title .btn i {\r\n    float: left;\r\n    font-size: 21px;\r\n    margin-right: 5px;\r\n}\r\n#crud .table-title .btn span {\r\n    float: left;\r\n    margin-top: 2px;\r\n}\r\n#crud table.table tr th, #crud table.table tr td {\r\n    border-color: #e9e9e9;\r\n    padding: 12px 15px;\r\n    vertical-align: middle;\r\n}\r\n#crud table.table tr th:first-child {\r\n    width: 60px;\r\n}\r\n#crud table.table tr th:last-child {\r\n    width: 100px;\r\n}\r\n#crud table.table-striped tbody tr:nth-of-type(odd) {\r\n    background-color: #fcfcfc;\r\n}\r\n#crud table.table-striped.table-hover tbody tr:hover {\r\n    background: #f5f5f5;\r\n}\r\n#crud table.table th i {\r\n    font-size: 13px;\r\n    margin: 0 5px;\r\n    cursor: pointer;\r\n}\r\n#crud table.table td:last-child i {\r\n    opacity: 0.9;\r\n    font-size: 18px;\r\n    margin: 0 5px;\r\n}\r\n#crud table.table td a {\r\n    font-weight: bold;\r\n    color: #566787;\r\n    display: inline-block;\r\n    text-decoration: none;\r\n    outline: none !important;\r\n}\r\n#crud table.table td a:hover {\r\n    color: #2196F3;\r\n}\r\n#crud table.table td a.edit {\r\n    color: #FFC107;\r\n}\r\n#crud table.table td a.delete {\r\n    color: #F44336;\r\n}\r\n#crud table.table td i {\r\n    font-size: 13px;\r\n}\r\n#crud table.table .avatar {\r\n    border-radius: 50%;\r\n    vertical-align: middle;\r\n    margin-right: 10px;\r\n}\r\n#crud .pagination {\r\n    float: right;\r\n    margin: 0 0 5px;\r\n}\r\n#crud .pagination li a {\r\n    border: none;\r\n    font-size: 13px;\r\n    min-width: 30px;\r\n    min-height: 30px;\r\n    color: #999;\r\n    margin: 0 2px;\r\n    line-height: 30px;\r\n    border-radius: 2px !important;\r\n    text-align: center;\r\n    padding: 6px;\r\n}\r\n#crud .pagination li a:hover {\r\n    color: #666;\r\n    text-decoration: none;\r\n}\r\n#crud .pagination li.active a, #crud .pagination li.active a.page-link {\r\n    background: #03A9F4;\r\n    color: white !important;\r\n}\r\n#crud .pagination li.active a:hover {\r\n    background: #0397d6;\r\n}\r\n#crud .pagination li.disabled i {\r\n    color: #ccc;\r\n}\r\n#crud .pagination li i {\r\n    font-size: 16px;\r\n    padding-top: 6px\r\n}\r\n#crud .hint-text {\r\n    float: left;\r\n    margin-top: 10px;\r\n    font-size: 13px;\r\n}\r\n/* Custom checkbox */\r\n#crud .custom-checkbox {\r\n    position: relative;\r\n}\r\n#crud .custom-checkbox input[type=\"checkbox\"] {\r\n    opacity: 0;\r\n    position: absolute;\r\n    margin: 5px 0 0 3px;\r\n    z-index: 9;\r\n}\r\n#crud .custom-checkbox label:before{\r\n    width: 18px;\r\n    height: 18px;\r\n}\r\n#crud .custom-checkbox label:before {\r\n    content: '';\r\n    margin-right: 10px;\r\n    display: inline-block;\r\n    vertical-align: text-top;\r\n    background: white;\r\n    border: 1px solid #bbb;\r\n    border-radius: 2px;\r\n    box-sizing: border-box;\r\n    z-index: 2;\r\n}\r\n#crud .custom-checkbox input[type=\"checkbox\"]:checked + label:after {\r\n    content: '';\r\n    position: absolute;\r\n    left: 6px;\r\n    top: 3px;\r\n    width: 6px;\r\n    height: 11px;\r\n    border: solid #000;\r\n    border-width: 0 3px 3px 0;\r\n    -webkit-transform: inherit;\r\n            transform: inherit;\r\n    z-index: 3;\r\n    -webkit-transform: rotateZ(45deg);\r\n            transform: rotateZ(45deg);\r\n}\r\n#crud .custom-checkbox input[type=\"checkbox\"]:checked + label:before {\r\n    border-color: #03A9F4;\r\n    background: #03A9F4;\r\n}\r\n#crud .custom-checkbox input[type=\"checkbox\"]:checked + label:after {\r\n    border-color: #fff;\r\n}\r\n#crud .custom-checkbox input[type=\"checkbox\"]:disabled + label:before {\r\n    color: #b8b8b8;\r\n    cursor: auto;\r\n    box-shadow: none;\r\n    background: #ddd;\r\n}\r\n/* Modal styles */\r\n#crud .modal .modal-dialog {\r\n    max-width: 400px;\r\n}\r\n#crud .modal .modal-header, #crud .modal .modal-body, .modal .modal-footer {\r\n    padding: 20px 30px;\r\n}\r\n#crud .modal .modal-content {\r\n    border-radius: 3px;\r\n}\r\n#crud .modal .modal-footer {\r\n    background: #333333;\r\n    border-radius: 0 0 3px 3px;\r\n}\r\n#crud .modal .modal-title {\r\n    display: inline-block;\r\n}\r\n#crud .modal .form-control {\r\n    border-radius: 2px;\r\n    box-shadow: none;\r\n    border-color: #dddddd;\r\n}\r\n#crud .modal textarea.form-control {\r\n    resize: vertical;\r\n}\r\n#crud .modal .btn {\r\n    border-radius: 2px;\r\n    min-width: 100px;\r\n}\r\n#crud .modal form label {\r\n    font-weight: normal;\r\n}\r\n\r\n.pac-container {\r\n    background-color: #FFF;\r\n    z-index: 3001;\r\n    position: fixed;\r\n    display: inline-block;\r\n    float: left;\r\n}\r\n#crud .modal{\r\n    z-index: 2000;\r\n}\r\n#crud .addBtn,.actionBtn{\r\n    background: #fdc600 !important;\r\n    color: #333333 !important;\r\n}\r\n\r\n#crud .cancelBtn{\r\n    background: #333333;\r\n    color: #fdc600;\r\n}\r\n\r\n#crud .cancelBtn:hover{\r\n    background: #333333;\r\n    color: #fdc600;\r\n}", ""]);
 
 // exports
 
@@ -4723,7 +4785,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\r\n\r\n\r\n\r\n/*//////////////////////////////////////////////////////////////////\r\n[ FONT ]*/\r\n\r\n@font-face {\r\n  font-family: Poppins-Regular;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/poppins/Poppins-Regular.ttf */ "./resources/js/styles/fonts/poppins/Poppins-Regular.ttf")) + "); \r\n}\r\n\r\n@font-face {\r\n  font-family: Poppins-Medium;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/poppins/Poppins-Medium.ttf */ "./resources/js/styles/fonts/poppins/Poppins-Medium.ttf")) + "); \r\n}\r\n\r\n@font-face {\r\n  font-family: Poppins-Bold;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/poppins/Poppins-Bold.ttf */ "./resources/js/styles/fonts/poppins/Poppins-Bold.ttf")) + "); \r\n}\r\n\r\n@font-face {\r\n  font-family: Poppins-SemiBold;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/poppins/Poppins-SemiBold.ttf */ "./resources/js/styles/fonts/poppins/Poppins-SemiBold.ttf")) + "); \r\n}\r\n\r\n@font-face {\r\n  font-family: Montserrat-Bold;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/montserrat/Montserrat-Bold.ttf */ "./resources/js/styles/fonts/montserrat/Montserrat-Bold.ttf")) + ");\r\n}\r\n\r\n@font-face {\r\n  font-family: Montserrat-SemiBold;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/montserrat/Montserrat-SemiBold.ttf */ "./resources/js/styles/fonts/montserrat/Montserrat-SemiBold.ttf")) + "); \r\n}\r\n\r\n@font-face {\r\n  font-family: Montserrat-Regular;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/montserrat/Montserrat-Regular.ttf */ "./resources/js/styles/fonts/montserrat/Montserrat-Regular.ttf")) + "); \r\n}\r\n\r\n\r\n/*//////////////////////////////////////////////////////////////////\r\n[ RESTYLE TAG ]*/\r\n\r\n* {\r\n\tmargin: 0px; \r\n\tpadding: 0px; \r\n\tbox-sizing: border-box;\r\n}\r\n\r\nbody, html {\r\n\theight: 100%;\r\n\tfont-family: Poppins-Regular, sans-serif;\r\n}\r\n\r\n/*---------------------------------------------*/\r\na {\r\n\tfont-family: Poppins-Regular;\r\n\tfont-size: 14px;\r\n\tline-height: 1.7;\r\n\tcolor: #666666;\r\n\tmargin: 0px;\r\n\ttransition: all 0.4s;\r\n\t-webkit-transition: all 0.4s;\r\n  -o-transition: all 0.4s;\r\n  -moz-transition: all 0.4s;\r\n}\r\n\r\na:focus {\r\n\toutline: none !important;\r\n}\r\n\r\na:hover {\r\n\ttext-decoration: none;\r\n  color: #6675df;\r\n}\r\n\r\n/*---------------------------------------------*/\r\nh1,h2,h3,h4,h5,h6 {\r\n\tmargin: 0px;\r\n}\r\n\r\n#loginSection p {\r\n\tfont-family: Poppins-Regular;\r\n\tfont-size: 14px;\r\n\tline-height: 1.7;\r\n\tcolor: #666666;\r\n\tmargin: 0px;\r\n}\r\n\r\nul, li {\r\n\tmargin: 0px;\r\n\tlist-style-type: none;\r\n}\r\n\r\n\r\n/*---------------------------------------------*/\r\ninput {\r\n\toutline: none;\r\n\tborder: none;\r\n}\r\n\r\ntextarea {\r\n  outline: none;\r\n  border: none;\r\n}\r\n\r\ntextarea:focus, input:focus {\r\n  border-color: transparent !important;\r\n}\r\n\r\ninput:focus::-webkit-input-placeholder { color:transparent; }\r\ninput:focus:-moz-placeholder { color:transparent; }\r\ninput:focus::-moz-placeholder { color:transparent; }\r\ninput:focus:-ms-input-placeholder { color:transparent; }\r\n\r\ntextarea:focus::-webkit-input-placeholder { color:transparent; }\r\ntextarea:focus:-moz-placeholder { color:transparent; }\r\ntextarea:focus::-moz-placeholder { color:transparent; }\r\ntextarea:focus:-ms-input-placeholder { color:transparent; }\r\n\r\ninput::-webkit-input-placeholder { color: #999999;}\r\ninput:-moz-placeholder { color: #999999;}\r\ninput::-moz-placeholder { color: #999999;}\r\ninput:-ms-input-placeholder { color: #999999;}\r\n\r\ntextarea::-webkit-input-placeholder { color: #999999;}\r\ntextarea:-moz-placeholder { color: #999999;}\r\ntextarea::-moz-placeholder { color: #999999;}\r\ntextarea:-ms-input-placeholder { color: #999999;}\r\n\r\n\r\n#loginSection label {\r\n  display: block;\r\n  margin: 0;\r\n}\r\n\r\n/*---------------------------------------------*/\r\nbutton {\r\n\toutline: none !important;\r\n\tborder: none;\r\n\tbackground: transparent;\r\n}\r\n\r\nbutton:hover {\r\n\tcursor: pointer;\r\n}\r\n\r\niframe {\r\n\tborder: none !important;\r\n}\r\n\r\n/*//////////////////////////////////////////////////////////////////\r\n[ utility ]*/\r\n\r\n/*==================================================================\r\n[ Text ]*/\r\n.txt1 {\r\n  font-family: Montserrat-Regular;\r\n  font-size: 13px;\r\n  line-height: 1.4;\r\n  color: #555555;\r\n}\r\n\r\n.txt2 {\r\n  font-family: Montserrat-Regular;\r\n  font-size: 13px;\r\n  line-height: 1.4;\r\n  color: #999999;\r\n}\r\n\r\n\r\n/*==================================================================\r\n[ Size ]*/\r\n.size1 {\r\n  width: 355px;\r\n  max-width: 100%;\r\n}\r\n\r\n.size2 {\r\n  width: calc(100% - 43px);\r\n}\r\n\r\n/*==================================================================\r\n[ Background ]*/\r\n.bg1 {background: #3b5998;}\r\n.bg2 {background: #1da1f2;}\r\n.bg3 {background: #cd201f;}\r\n\r\n\r\n/*//////////////////////////////////////////////////////////////////\r\n[ login ]*/\r\n.limiter {\r\n  width: 100%;\r\n  margin: 0 auto;\r\n}\r\n\r\n.container-login100 {\r\n  width: 100%;  \r\n  min-height: 100vh;\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  justify-content: center;\r\n  align-items: center;\r\n  background: #f2f2f2;\r\n}\r\n\r\n\r\n.wrap-login100 {\r\n  width: 100%;\r\n  background: #fff;\r\n  overflow: hidden;\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  align-items: stretch;\r\n  flex-direction: row-reverse;\r\n\r\n}\r\n\r\n/*==================================================================\r\n[ login more ]*/\r\n.login100-more {\r\n  width: calc(100% - 560px);\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n  background-position: center;\r\n  position: relative;\r\n  z-index: 1;\r\n}\r\n\r\n.login100-more::before {\r\n  content: \"\";\r\n  display: block;\r\n  position: absolute;\r\n  z-index: -1;\r\n  width: 100%;\r\n  height: 100%;\r\n  top: 0;\r\n  left: 0;\r\n  background: rgba(0,0,0,0.1);\r\n}\r\n\r\n\r\n\r\n/*==================================================================\r\n[ Form ]*/\r\n\r\n.login100-form {\r\n  width: 560px;\r\n  min-height: 100vh;\r\n  display: block;\r\n  background-color: #f7f7f7;\r\n  padding: 173px 55px 55px 55px;\r\n}\r\n\r\n.login100-form-title {\r\n  width: 100%;\r\n  display: block;\r\n  font-family: Poppins-Regular;\r\n  font-size: 30px;\r\n  color: #333333;\r\n  line-height: 1.2;\r\n  text-align: center;\r\n}\r\n\r\n\r\n\r\n/*------------------------------------------------------------------\r\n[ Input ]*/\r\n\r\n.wrap-input100 {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  align-items: flex-end;\r\n  width: 100%;\r\n  height: 80px;\r\n  position: relative;\r\n  border: 1px solid #e6e6e6;\r\n  border-radius: 10px;\r\n  margin-bottom: 10px;\r\n}\r\n\r\n.label-input100 {\r\n  font-family: Montserrat-Regular;\r\n  font-size: 18px;\r\n  color: #999999;\r\n  line-height: 1.2;\r\n\r\n  display: block;\r\n  position: absolute;\r\n  pointer-events: none;\r\n  width: 100%;\r\n  padding-left: 24px;\r\n  left: 0;\r\n  top: 30px;\r\n  transition: all 0.4s;\r\n}\r\n\r\n.input100 {\r\n  display: block;\r\n  width: 100%;\r\n  background: transparent;\r\n  font-family: Montserrat-Regular;\r\n  font-size: 18px;\r\n  color: #555555;\r\n  line-height: 1.2;\r\n  padding: 0 26px;\r\n}\r\n\r\ninput.input100 {\r\n  height: 100%;\r\n  transition: all 0.4s;\r\n}\r\n\r\n/*---------------------------------------------*/\r\n\r\n.focus-input100 {\r\n  position: absolute;\r\n  display: block;\r\n  width: calc(100% + 2px);\r\n  height: calc(100% + 2px);\r\n  top: -1px;\r\n  left: -1px;\r\n  pointer-events: none;\r\n  border: 1px solid #6675df;\r\n  border-radius: 10px;\r\n\r\n  visibility: hidden;\r\n  opacity: 0;\r\n  transition: all 0.4s;\r\n\r\n  -webkit-transform: scaleX(1.1) scaleY(1.3);\r\n  transform: scaleX(1.1) scaleY(1.3);\r\n}\r\n\r\n.input100:focus + .focus-input100 {\r\n  visibility: visible;\r\n  opacity: 1;\r\n\r\n  -webkit-transform: scale(1);\r\n  transform: scale(1);\r\n}\r\n\r\n.eff-focus-selection {\r\n  visibility: visible;\r\n  opacity: 1;\r\n\r\n  -webkit-transform: scale(1);\r\n  transform: scale(1);\r\n}\r\n\r\n.input100:focus {\r\n  height: 48px;\r\n}\r\n\r\n.input100:focus + .focus-input100 + .label-input100 {\r\n  top: 14px;\r\n  font-size: 13px;\r\n}\r\n\r\n.has-val {\r\n  height: 48px !important;\r\n}\r\n\r\n.has-val + .focus-input100 + .label-input100 {\r\n  top: 14px;\r\n  font-size: 13px;\r\n}\r\n\r\n/*==================================================================\r\n[ Restyle Checkbox ]*/\r\n\r\n.input-checkbox100 {\r\n  display: none;\r\n}\r\n\r\n.label-checkbox100 {\r\n  font-family: Poppins-Regular;\r\n  font-size: 13px;\r\n  color: #999999;\r\n  line-height: 1.4;\r\n\r\n  display: block;\r\n  position: relative;\r\n  padding-left: 26px;\r\n  cursor: pointer;\r\n}\r\n\r\n.label-checkbox100::before {\r\n  content: \"\\F00C\";\r\n  font-family: FontAwesome;\r\n  font-size: 13px;\r\n  color: transparent;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  position: absolute;\r\n  width: 18px;\r\n  height: 18px;\r\n  border-radius: 2px;\r\n  background: #fff;\r\n  border: 1px solid #6675df;\r\n  left: 0;\r\n  top: 50%;\r\n  -webkit-transform: translateY(-50%);\r\n  transform: translateY(-50%);\r\n}\r\n\r\n.input-checkbox100:checked + .label-checkbox100::before {\r\n  color: #6675df;\r\n}\r\n\r\n\r\n/*------------------------------------------------------------------\r\n[ Button ]*/\r\n.container-login100-form-btn {\r\n  width: 100%;\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  justify-content: center;\r\n}\r\n\r\n.login100-form-btn {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  padding: 0 20px;\r\n  width: 100%;\r\n  height: 50px;\r\n  border-radius: 10px;\r\n  background: #6675df;\r\n\r\n  font-family: Montserrat-Bold;\r\n  font-size: 12px;\r\n  color: #fff;\r\n  line-height: 1.2;\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  transition: all 0.4s;\r\n}\r\n\r\n.login100-form-btn:hover {\r\n  background: #333333;\r\n}\r\n\r\n\r\n\r\n/*------------------------------------------------------------------\r\n[ Responsive ]*/\r\n\r\n@media (max-width: 992px) {\r\n  .login100-form {\r\n    width: 50%;\r\n    padding-left: 30px;\r\n    padding-right: 30px;\r\n  }\r\n\r\n  .login100-more {\r\n    width: 50%;\r\n  }\r\n}\r\n\r\n@media (max-width: 768px) {\r\n  .login100-form {\r\n    width: 100%;\r\n  }\r\n\r\n  .login100-more {\r\n    display: none;\r\n  }\r\n}\r\n\r\n@media (max-width: 576px) {\r\n  .login100-form {\r\n    padding-left: 15px;\r\n    padding-right: 15px;\r\n    padding-top: 70px;\r\n  }\r\n}\r\n\r\n\r\n/*------------------------------------------------------------------\r\n[ Alert validate ]*/\r\n\r\n.validate-input {\r\n  position: relative;\r\n}\r\n\r\n.alert-validate::before {\r\n  content: attr(data-validate);\r\n  position: absolute;\r\n  z-index: 100;\r\n  max-width: 70%;\r\n  background-color: #fff;\r\n  border: 1px solid #c80000;\r\n  border-radius: 2px;\r\n  padding: 4px 25px 4px 10px;\r\n  top: 50%;\r\n  -webkit-transform: translateY(-50%);\r\n  transform: translateY(-50%);\r\n  right: 12px;\r\n  pointer-events: none;\r\n\r\n  font-family: Poppins-Regular;\r\n  color: #c80000;\r\n  font-size: 13px;\r\n  line-height: 1.4;\r\n  text-align: left;\r\n\r\n  visibility: hidden;\r\n  opacity: 0;\r\n  transition: opacity 0.4s;\r\n}\r\n\r\n.alert-validate::after {\r\n  content: \"\\F12A\";\r\n  font-family: FontAwesome;\r\n  display: block;\r\n  position: absolute;\r\n  z-index: 110;\r\n  color: #c80000;\r\n  font-size: 16px;\r\n  top: 50%;\r\n  -webkit-transform: translateY(-50%);\r\n  transform: translateY(-50%);\r\n  right: 18px;\r\n}\r\n\r\n.alert-validate:hover:before {\r\n  visibility: visible;\r\n  opacity: 1;\r\n}\r\n\r\n@media (max-width: 992px) {\r\n  .alert-validate::before {\r\n    visibility: visible;\r\n    opacity: 1;\r\n  }\r\n}\r\n", ""]);
+exports.push([module.i, "\r\n\r\n\r\n\r\n/*//////////////////////////////////////////////////////////////////\r\n[ FONT ]*/\r\n\r\n@font-face {\r\n  font-family: Poppins-Regular;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/poppins/Poppins-Regular.ttf */ "./resources/js/styles/fonts/poppins/Poppins-Regular.ttf")) + "); \r\n}\r\n\r\n@font-face {\r\n  font-family: Poppins-Medium;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/poppins/Poppins-Medium.ttf */ "./resources/js/styles/fonts/poppins/Poppins-Medium.ttf")) + "); \r\n}\r\n\r\n@font-face {\r\n  font-family: Poppins-Bold;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/poppins/Poppins-Bold.ttf */ "./resources/js/styles/fonts/poppins/Poppins-Bold.ttf")) + "); \r\n}\r\n\r\n@font-face {\r\n  font-family: Poppins-SemiBold;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/poppins/Poppins-SemiBold.ttf */ "./resources/js/styles/fonts/poppins/Poppins-SemiBold.ttf")) + "); \r\n}\r\n\r\n@font-face {\r\n  font-family: Montserrat-Bold;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/montserrat/Montserrat-Bold.ttf */ "./resources/js/styles/fonts/montserrat/Montserrat-Bold.ttf")) + ");\r\n}\r\n\r\n@font-face {\r\n  font-family: Montserrat-SemiBold;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/montserrat/Montserrat-SemiBold.ttf */ "./resources/js/styles/fonts/montserrat/Montserrat-SemiBold.ttf")) + "); \r\n}\r\n\r\n@font-face {\r\n  font-family: Montserrat-Regular;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/montserrat/Montserrat-Regular.ttf */ "./resources/js/styles/fonts/montserrat/Montserrat-Regular.ttf")) + "); \r\n}\r\n\r\n\r\n/*//////////////////////////////////////////////////////////////////\r\n[ RESTYLE TAG ]*/\r\n\r\n.limiter * {\r\n\tmargin: 0px; \r\n\tpadding: 0px; \r\n\tbox-sizing: border-box;\r\n}\r\n\r\nbody, html {\r\n\theight: 100%;\r\n\tfont-family: Poppins-Regular, sans-serif;\r\n}\r\n\r\n/*---------------------------------------------*/\r\n.limiter  a {\r\n\tfont-family: Poppins-Regular;\r\n\tfont-size: 14px;\r\n\tline-height: 1.7;\r\n\tcolor: #666666;\r\n\tmargin: 0px;\r\n\ttransition: all 0.4s;\r\n\t-webkit-transition: all 0.4s;\r\n  -o-transition: all 0.4s;\r\n  -moz-transition: all 0.4s;\r\n}\r\n\r\n.limiter  a:focus {\r\n\toutline: none !important;\r\n}\r\n\r\n.limiter  a:hover {\r\n\ttext-decoration: none;\r\n  color: #6675df;\r\n}\r\n\r\n/*---------------------------------------------*/\r\n.limiter  h1,.limiter  h2,.limiter  h3,.limiter  h4,.limiter  h5,.limiter  h6 {\r\n\tmargin: 0px;\r\n}\r\n\r\n.limiter  p {\r\n\tfont-family: Poppins-Regular;\r\n\tfont-size: 14px;\r\n\tline-height: 1.7;\r\n\tcolor: #666666;\r\n\tmargin: 0px;\r\n}\r\n\r\n.limiter ul, .limiter li {\r\n\tmargin: 0px;\r\n\tlist-style-type: none;\r\n}\r\n\r\n\r\n/*---------------------------------------------*/\r\n.limiter input {\r\n\toutline: none;\r\n\tborder: none;\r\n}\r\n\r\n.limiter textarea {\r\n  outline: none;\r\n  border: none;\r\n}\r\n\r\n.limiter textarea:focus, .limiter input:focus {\r\n  border-color: transparent !important;\r\n}\r\n\r\n.limiter input:focus::-webkit-input-placeholder { color:transparent; }\r\n.limiter input:focus:-moz-placeholder { color:transparent; }\r\n.limiter input:focus::-moz-placeholder { color:transparent; }\r\n.limiter input:focus:-ms-input-placeholder { color:transparent; }\r\n\r\n.limiter textarea:focus::-webkit-input-placeholder { color:transparent; }\r\n.limiter textarea:focus:-moz-placeholder { color:transparent; }\r\n.limiter textarea:focus::-moz-placeholder { color:transparent; }\r\n.limiter textarea:focus:-ms-input-placeholder { color:transparent; }\r\n\r\n.limiter input::-webkit-input-placeholder { color: #999999;}\r\n.limiter input:-moz-placeholder { color: #999999;}\r\n.limiter input::-moz-placeholder { color: #999999;}\r\n.limiter input:-ms-input-placeholder { color: #999999;}\r\n\r\n.limiter textarea::-webkit-input-placeholder { color: #999999;}\r\n.limiter textarea:-moz-placeholder { color: #999999;}\r\n.limiter textarea::-moz-placeholder { color: #999999;}\r\n.limiter textarea:-ms-input-placeholder { color: #999999;}\r\n\r\n\r\n.limiter label {\r\n  display: block;\r\n  margin: 0;\r\n}\r\n\r\n/*---------------------------------------------*/\r\n\r\n\r\n.limiter button:hover {\r\n\tcursor: pointer;\r\n}\r\n\r\n.limiter iframe {\r\n\tborder: none !important;\r\n}\r\n\r\n/*//////////////////////////////////////////////////////////////////\r\n[ utility ]*/\r\n\r\n/*==================================================================\r\n[ Text ]*/\r\n.txt1 {\r\n  font-family: Montserrat-Regular;\r\n  font-size: 13px;\r\n  line-height: 1.4;\r\n  color: #555555;\r\n}\r\n\r\n.txt2 {\r\n  font-family: Montserrat-Regular;\r\n  font-size: 13px;\r\n  line-height: 1.4;\r\n  color: #999999;\r\n}\r\n\r\n\r\n/*==================================================================\r\n[ Size ]*/\r\n.size1 {\r\n  width: 355px;\r\n  max-width: 100%;\r\n}\r\n\r\n.size2 {\r\n  width: calc(100% - 43px);\r\n}\r\n\r\n/*==================================================================\r\n[ Background ]*/\r\n.bg1 {background: #3b5998;}\r\n.bg2 {background: #1da1f2;}\r\n.bg3 {background: #cd201f;}\r\n\r\n\r\n/*//////////////////////////////////////////////////////////////////\r\n[ login ]*/\r\n.limiter {\r\n  width: 100%;\r\n  margin: 0 auto;\r\n}\r\n\r\n.container-login100 {\r\n  width: 100%;  \r\n  min-height: 100vh;\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  justify-content: center;\r\n  align-items: center;\r\n  background: #f2f2f2;\r\n}\r\n\r\n\r\n.wrap-login100 {\r\n  width: 100%;\r\n  background: #fff;\r\n  overflow: hidden;\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  align-items: stretch;\r\n  flex-direction: row-reverse;\r\n\r\n}\r\n\r\n/*==================================================================\r\n[ login more ]*/\r\n.login100-more {\r\n  width: calc(100% - 560px);\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n  background-position: center;\r\n  position: relative;\r\n  z-index: 1;\r\n}\r\n\r\n.login100-more::before {\r\n  content: \"\";\r\n  display: block;\r\n  position: absolute;\r\n  z-index: -1;\r\n  width: 100%;\r\n  height: 100%;\r\n  top: 0;\r\n  left: 0;\r\n  background: rgba(0,0,0,0.1);\r\n}\r\n\r\n\r\n\r\n/*==================================================================\r\n[ Form ]*/\r\n\r\n.login100-form {\r\n  width: 560px;\r\n  min-height: 100vh;\r\n  display: block;\r\n  background-color: #f7f7f7;\r\n  padding: 173px 55px 55px 55px;\r\n}\r\n\r\n.login100-form-title {\r\n  width: 100%;\r\n  display: block;\r\n  font-family: Poppins-Regular;\r\n  font-size: 30px;\r\n  color: #333333;\r\n  line-height: 1.2;\r\n  text-align: center;\r\n}\r\n\r\n\r\n\r\n/*------------------------------------------------------------------\r\n[ Input ]*/\r\n\r\n.wrap-input100 {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  align-items: flex-end;\r\n  width: 100%;\r\n  height: 80px;\r\n  position: relative;\r\n  border: 1px solid #e6e6e6;\r\n  border-radius: 10px;\r\n  margin-bottom: 10px;\r\n}\r\n\r\n.label-input100 {\r\n  font-family: Montserrat-Regular;\r\n  font-size: 18px;\r\n  color: #999999;\r\n  line-height: 1.2;\r\n\r\n  display: block;\r\n  position: absolute;\r\n  pointer-events: none;\r\n  width: 100%;\r\n  padding-left: 24px;\r\n  left: 0;\r\n  top: 30px;\r\n  transition: all 0.4s;\r\n}\r\n\r\n.input100 {\r\n  display: block;\r\n  width: 100%;\r\n  background: transparent;\r\n  font-family: Montserrat-Regular;\r\n  font-size: 18px;\r\n  color: #555555;\r\n  line-height: 1.2;\r\n  padding: 0 26px;\r\n}\r\n\r\ninput.input100 {\r\n  height: 100%;\r\n  transition: all 0.4s;\r\n}\r\n\r\n/*---------------------------------------------*/\r\n\r\n.focus-input100 {\r\n  position: absolute;\r\n  display: block;\r\n  width: calc(100% + 2px);\r\n  height: calc(100% + 2px);\r\n  top: -1px;\r\n  left: -1px;\r\n  pointer-events: none;\r\n  border: 1px solid #6675df;\r\n  border-radius: 10px;\r\n\r\n  visibility: hidden;\r\n  opacity: 0;\r\n  transition: all 0.4s;\r\n\r\n  -webkit-transform: scaleX(1.1) scaleY(1.3);\r\n  transform: scaleX(1.1) scaleY(1.3);\r\n}\r\n\r\n.input100:focus + .focus-input100 {\r\n  visibility: visible;\r\n  opacity: 1;\r\n\r\n  -webkit-transform: scale(1);\r\n  transform: scale(1);\r\n}\r\n\r\n.eff-focus-selection {\r\n  visibility: visible;\r\n  opacity: 1;\r\n\r\n  -webkit-transform: scale(1);\r\n  transform: scale(1);\r\n}\r\n\r\n.input100:focus {\r\n  height: 48px;\r\n}\r\n\r\n.input100:focus + .focus-input100 + .label-input100 {\r\n  top: 14px;\r\n  font-size: 13px;\r\n}\r\n\r\n.has-val {\r\n  height: 48px !important;\r\n}\r\n\r\n.has-val + .focus-input100 + .label-input100 {\r\n  top: 14px;\r\n  font-size: 13px;\r\n}\r\n\r\n/*==================================================================\r\n[ Restyle Checkbox ]*/\r\n\r\n.input-checkbox100 {\r\n  display: none;\r\n}\r\n\r\n.label-checkbox100 {\r\n  font-family: Poppins-Regular;\r\n  font-size: 13px;\r\n  color: #999999;\r\n  line-height: 1.4;\r\n\r\n  display: block;\r\n  position: relative;\r\n  padding-left: 26px;\r\n  cursor: pointer;\r\n}\r\n\r\n.label-checkbox100::before {\r\n  content: \"\\F00C\";\r\n  font-family: FontAwesome;\r\n  font-size: 13px;\r\n  color: transparent;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  position: absolute;\r\n  width: 18px;\r\n  height: 18px;\r\n  border-radius: 2px;\r\n  background: #fff;\r\n  border: 1px solid #6675df;\r\n  left: 0;\r\n  top: 50%;\r\n  -webkit-transform: translateY(-50%);\r\n  transform: translateY(-50%);\r\n}\r\n\r\n.input-checkbox100:checked + .label-checkbox100::before {\r\n  color: #6675df;\r\n}\r\n\r\n\r\n/*------------------------------------------------------------------\r\n[ Button ]*/\r\n.container-login100-form-btn {\r\n  width: 100%;\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  justify-content: center;\r\n}\r\n\r\n.login100-form-btn {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  padding: 0 20px;\r\n  width: 100%;\r\n  height: 50px;\r\n  border-radius: 10px;\r\n  background: #6675df;\r\n\r\n  font-family: Montserrat-Bold;\r\n  font-size: 12px;\r\n  color: #fff;\r\n  line-height: 1.2;\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  transition: all 0.4s;\r\n}\r\n\r\n.login100-form-btn:hover {\r\n  background: #333333;\r\n}\r\n\r\n\r\n\r\n/*------------------------------------------------------------------\r\n[ Responsive ]*/\r\n\r\n@media (max-width: 992px) {\r\n  .login100-form {\r\n    width: 50%;\r\n    padding-left: 30px;\r\n    padding-right: 30px;\r\n  }\r\n\r\n  .login100-more {\r\n    width: 50%;\r\n  }\r\n}\r\n\r\n@media (max-width: 768px) {\r\n  .login100-form {\r\n    width: 100%;\r\n  }\r\n\r\n  .login100-more {\r\n    display: none;\r\n  }\r\n}\r\n\r\n@media (max-width: 576px) {\r\n  .login100-form {\r\n    padding-left: 15px;\r\n    padding-right: 15px;\r\n    padding-top: 70px;\r\n  }\r\n}\r\n\r\n\r\n/*------------------------------------------------------------------\r\n[ Alert validate ]*/\r\n\r\n.validate-input {\r\n  position: relative;\r\n}\r\n\r\n.alert-validate::before {\r\n  content: attr(data-validate);\r\n  position: absolute;\r\n  z-index: 100;\r\n  max-width: 70%;\r\n  background-color: #fff;\r\n  border: 1px solid #c80000;\r\n  border-radius: 2px;\r\n  padding: 4px 25px 4px 10px;\r\n  top: 50%;\r\n  -webkit-transform: translateY(-50%);\r\n  transform: translateY(-50%);\r\n  right: 12px;\r\n  pointer-events: none;\r\n\r\n  font-family: Poppins-Regular;\r\n  color: #c80000;\r\n  font-size: 13px;\r\n  line-height: 1.4;\r\n  text-align: left;\r\n\r\n  visibility: hidden;\r\n  opacity: 0;\r\n  transition: opacity 0.4s;\r\n}\r\n\r\n.alert-validate::after {\r\n  content: \"\\F12A\";\r\n  font-family: FontAwesome;\r\n  display: block;\r\n  position: absolute;\r\n  z-index: 110;\r\n  color: #c80000;\r\n  font-size: 16px;\r\n  top: 50%;\r\n  -webkit-transform: translateY(-50%);\r\n  transform: translateY(-50%);\r\n  right: 18px;\r\n}\r\n\r\n.alert-validate:hover:before {\r\n  visibility: visible;\r\n  opacity: 1;\r\n}\r\n\r\n@media (max-width: 992px) {\r\n  .alert-validate::before {\r\n    visibility: visible;\r\n    opacity: 1;\r\n  }\r\n}\r\n", ""]);
 
 // exports
 
@@ -32698,6 +32760,105 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 	}
 
 	return to;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/paginator/index.js":
+/*!*****************************************!*\
+  !*** ./node_modules/paginator/index.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = Paginator;
+
+// Paginator constructor
+//
+// `per_page` is the number of results per page, `length` is the number of
+// pages to display. They default to `25` and `10` respectively.
+function Paginator(per_page, length) {
+  // You really should be calling this with `new Paginator`, but WHATEVER.
+  if (!(this instanceof Paginator)) {
+    return new Paginator(per_page, length);
+  }
+
+  // Woo, defaults!
+  this.per_page = per_page || 25;
+  this.length = length || 10;
+}
+
+// Build an object with all the necessary information for outputting pagination
+// controls.
+//
+// (new Paginator(paginator.build(100, 2)
+Paginator.prototype.build = function(total_results, current_page) {
+  // We want the number of pages, rounded up to the nearest page.
+  var total_pages = Math.ceil(total_results / this.per_page);
+
+  // Ensure both total_results and current_page are treated as Numbers
+  total_results = parseInt(total_results, 10);
+  current_page  = parseInt(current_page, 10) || 1;
+
+  // Obviously we can't be on a negative or 0 page.
+  if (current_page < 1) { current_page = 1; }
+  // If the user has done something like /page/99999 we want to clamp that back
+  // down.
+  if (current_page > total_pages) { current_page = total_pages; }
+
+  // This is the first page to be displayed as a numbered link.
+  var first_page = Math.max(1, current_page - Math.floor(this.length / 2));
+
+  // And here's the last page to be displayed specifically.
+  var last_page = Math.min(total_pages, current_page + Math.floor(this.length / 2));
+
+  // This is triggered if we're at or near one of the extremes; we won't have
+  // enough page links. We need to adjust our bounds accordingly.
+  if (last_page - first_page + 1 < this.length) {
+    if (current_page < (total_pages / 2)) {
+      last_page = Math.min(total_pages, last_page + (this.length - (last_page - first_page)));
+    } else {
+      first_page = Math.max(1, first_page - (this.length - (last_page - first_page)));
+    }
+  }
+
+  // This can be triggered if the user wants an odd number of pages.
+  if (last_page - first_page + 1 > this.length) {
+    // We want to move towards whatever extreme we're closest to at the time.
+    if (current_page > (total_pages / 2)) {
+      first_page++;
+    } else {
+      last_page--;
+    }
+  }
+
+  // First result on the page. This, along with the field below, can be used to
+  // do "showing x to y of z results" style things.
+  var first_result = this.per_page * (current_page - 1);
+  if (first_result < 0) { first_result = 0; }
+
+  // Last result on the page.
+  var last_result = (this.per_page * current_page) - 1;
+  if (last_result < 0) { last_result = 0; }
+  if (last_result > Math.max(total_results - 1, 0)) { last_result = Math.max(total_results - 1, 0); }
+
+  // GIMME THAT OBJECT
+  return {
+    total_pages: total_pages,
+    pages: Math.min(last_page - first_page + 1, total_pages),
+    current_page: current_page,
+    first_page: first_page,
+    last_page: last_page,
+    previous_page: current_page - 1,
+    next_page: current_page + 1,
+    has_previous_page: current_page > 1,
+    has_next_page: current_page < total_pages,
+    total_results: total_results,
+    results: Math.min(last_result - first_result + 1, total_results),
+    first_result: first_result,
+    last_result: last_result,
+  };
 };
 
 
@@ -61753,6 +61914,30 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/react-js-pagination/dist/Page.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/react-js-pagination/dist/Page.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports,"__esModule",{value:!0});var _createClass=function(){function e(e,t){for(var r=0;r<t.length;r++){var a=t[r];a.enumerable=a.enumerable||!1,a.configurable=!0,"value"in a&&(a.writable=!0),Object.defineProperty(e,a.key,a)}}return function(t,r,a){return r&&e(t.prototype,r),a&&e(t,a),t}}(),_react=__webpack_require__(/*! react */ "./node_modules/react/index.js"),_react2=_interopRequireDefault(_react),_propTypes=__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"),_propTypes2=_interopRequireDefault(_propTypes),_classnames=__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"),_classnames2=_interopRequireDefault(_classnames);function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function _defineProperty(e,t,r){return t in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r,e}function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function _inherits(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}var Page=function(e){function t(){return _classCallCheck(this,t),_possibleConstructorReturn(this,(t.__proto__||Object.getPrototypeOf(t)).apply(this,arguments))}return _inherits(t,_react.Component),_createClass(t,[{key:"handleClick",value:function(e){var t=this.props,r=t.isDisabled,a=t.pageNumber;e.preventDefault(),r||this.props.onClick(a)}},{key:"render",value:function(){var e,t=this.props,r=t.pageText,a=(t.pageNumber,t.activeClass),n=t.itemClass,s=t.linkClass,i=t.activeLinkClass,o=t.disabledClass,l=t.isActive,c=t.isDisabled,u=t.href,p=(0,_classnames2.default)(n,(_defineProperty(e={},a,l),_defineProperty(e,o,c),e)),f=(0,_classnames2.default)(s,_defineProperty({},i,l));return _react2.default.createElement("li",{className:p,onClick:this.handleClick.bind(this)},_react2.default.createElement("a",{className:f,href:u},r))}}]),t}();Page.defaultProps={activeClass:"active",disabledClass:"disabled",itemClass:void 0,linkClass:void 0,activeLinkCLass:void 0,isActive:!1,isDisabled:!1,href:"#"},exports.default=Page;
+
+/***/ }),
+
+/***/ "./node_modules/react-js-pagination/dist/Pagination.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/react-js-pagination/dist/Pagination.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports,"__esModule",{value:!0});var _createClass=function(){function e(e,a){for(var t=0;t<a.length;t++){var s=a[t];s.enumerable=s.enumerable||!1,s.configurable=!0,"value"in s&&(s.writable=!0),Object.defineProperty(e,s.key,s)}}return function(a,t,s){return t&&e(a.prototype,t),s&&e(a,s),a}}(),_react=__webpack_require__(/*! react */ "./node_modules/react/index.js"),_react2=_interopRequireDefault(_react),_propTypes=__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"),_propTypes2=_interopRequireDefault(_propTypes),_paginator=__webpack_require__(/*! paginator */ "./node_modules/paginator/index.js"),_paginator2=_interopRequireDefault(_paginator),_Page=__webpack_require__(/*! ./Page */ "./node_modules/react-js-pagination/dist/Page.js"),_Page2=_interopRequireDefault(_Page),_classnames=__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"),_classnames2=_interopRequireDefault(_classnames);function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function _classCallCheck(e,a){if(!(e instanceof a))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn(e,a){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!a||"object"!=typeof a&&"function"!=typeof a?e:a}function _inherits(e,a){if("function"!=typeof a&&null!==a)throw new TypeError("Super expression must either be null or a function, not "+typeof a);e.prototype=Object.create(a&&a.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),a&&(Object.setPrototypeOf?Object.setPrototypeOf(e,a):e.__proto__=a)}var Pagination=function(e){function a(){return _classCallCheck(this,a),_possibleConstructorReturn(this,(a.__proto__||Object.getPrototypeOf(a)).apply(this,arguments))}return _inherits(a,_react2.default.Component),_createClass(a,[{key:"isFirstPageVisible",value:function(e){var a=this.props,t=a.hideDisabled;a.hideNavigation;return!(a.hideFirstLastPages||t&&!e)}},{key:"isPrevPageVisible",value:function(e){var a=this.props,t=a.hideDisabled;return!(a.hideNavigation||t&&!e)}},{key:"isNextPageVisible",value:function(e){var a=this.props,t=a.hideDisabled;return!(a.hideNavigation||t&&!e)}},{key:"isLastPageVisible",value:function(e){var a=this.props,t=a.hideDisabled;a.hideNavigation;return!(a.hideFirstLastPages||t&&!e)}},{key:"buildPages",value:function(){for(var e=[],a=this.props,t=a.itemsCountPerPage,s=a.pageRangeDisplayed,i=a.activePage,r=a.prevPageText,l=a.nextPageText,n=a.firstPageText,u=a.lastPageText,o=a.totalItemsCount,p=a.onChange,c=a.activeClass,g=a.itemClass,_=a.itemClassFirst,f=a.itemClassPrev,d=a.itemClassNext,h=a.itemClassLast,C=a.activeLinkClass,P=a.disabledClass,b=(a.hideDisabled,a.hideNavigation,a.linkClass),v=a.linkClassFirst,m=a.linkClassPrev,k=a.linkClassNext,y=a.linkClassLast,x=(a.hideFirstLastPages,a.getPageUrl),T=new _paginator2.default(t,s).build(o,i),D=T.first_page;D<=T.last_page;D++)e.push(_react2.default.createElement(_Page2.default,{isActive:D===i,key:D,href:x(D),pageNumber:D,pageText:D+"",onClick:p,itemClass:g,linkClass:b,activeClass:c,activeLinkClass:C}));return this.isPrevPageVisible(T.has_previous_page)&&e.unshift(_react2.default.createElement(_Page2.default,{key:"prev"+T.previous_page,pageNumber:T.previous_page,onClick:p,pageText:r,isDisabled:!T.has_previous_page,itemClass:(0,_classnames2.default)(g,f),linkClass:(0,_classnames2.default)(b,m),disabledClass:P})),this.isFirstPageVisible(T.has_previous_page)&&e.unshift(_react2.default.createElement(_Page2.default,{key:"first",pageNumber:1,onClick:p,pageText:n,isDisabled:!T.has_previous_page,itemClass:(0,_classnames2.default)(g,_),linkClass:(0,_classnames2.default)(b,v),disabledClass:P})),this.isNextPageVisible(T.has_next_page)&&e.push(_react2.default.createElement(_Page2.default,{key:"next"+T.next_page,pageNumber:T.next_page,onClick:p,pageText:l,isDisabled:!T.has_next_page,itemClass:(0,_classnames2.default)(g,d),linkClass:(0,_classnames2.default)(b,k),disabledClass:P})),this.isLastPageVisible(T.has_next_page)&&e.push(_react2.default.createElement(_Page2.default,{key:"last",pageNumber:T.total_pages,onClick:p,pageText:u,isDisabled:T.current_page===T.total_pages,itemClass:(0,_classnames2.default)(g,h),linkClass:(0,_classnames2.default)(b,y),disabledClass:P})),e}},{key:"render",value:function(){var e=this.buildPages();return _react2.default.createElement("ul",{className:this.props.innerClass},e)}}]),a}();Pagination.defaultProps={itemsCountPerPage:10,pageRangeDisplayed:5,activePage:1,prevPageText:"⟨",firstPageText:"«",nextPageText:"⟩",lastPageText:"»",innerClass:"pagination",itemClass:void 0,linkClass:void 0,activeLinkClass:void 0,hideFirstLastPages:!1,getPageUrl:function(e){return"#"}},exports.default=Pagination;
+
+/***/ }),
+
 /***/ "./node_modules/react-redux/es/components/Context.js":
 /*!***********************************************************!*\
   !*** ./node_modules/react-redux/es/components/Context.js ***!
@@ -71022,7 +71207,7 @@ function filterMarkersByDistance(cord1, cord2, maxKMDistance) {
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 /**
  * Next, we will create a fresh React component instance and attach it to
- * the page. Then, you may begin adding components to this application
+ * the currentPage. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
@@ -71217,9 +71402,6 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log("from App render");
-      console.log(this.state);
-      console.log("path name: " + this.props.location.pathname);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         exact: true,
         path: "/",
@@ -71335,13 +71517,13 @@ function (_Component) {
       var autocomplete = new window.google.maps.places.Autocomplete(this.refs.searchBox, {
         types: ['geocode']
       });
-      autocomplete.setFields(['address_component', 'geometry']);
+      autocomplete.setFields(['address_component', 'geometry', 'formatted_address']);
       autocomplete.addListener('place_changed', function () {
         var location = autocomplete.getPlace().geometry.location;
 
         var address = _this.props.formatAddress(autocomplete.getPlace().address_components, location);
 
-        console.log(autocomplete.getPlace());
+        _this.props.onFormattedAddressChangeForAddingIssue(autocomplete.getPlace().formatted_address);
 
         _this.props.setSelectedAddress(address);
       });
@@ -71372,7 +71554,8 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-content"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        onSubmit: onAddForm
+        onSubmit: onAddForm,
+        autoComplete: "false"
       }, loading && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LoadingLayer__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
@@ -71396,7 +71579,8 @@ function (_Component) {
         className: "form-control ".concat(hasErrorFor('ophthalmologist.adresse_line2') || hasErrorFor('ophthalmologist.cp') || hasErrorFor('ophthalmologist.ville') ? 'is-invalid' : ''),
         value: ophthalmologist.formatted_address,
         ref: "searchBox",
-        onChange: onFormattedAddressChange
+        onChange: onFormattedAddressChange,
+        autoComplete: "off"
       }), (hasErrorFor('ophthalmologist.adresse_line2') || hasErrorFor('ophthalmologist.cp') || hasErrorFor('ophthalmologist.ville')) && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "invalid-feedback"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Désolé, Vous devez selectionné une adresse suggéré"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -71498,6 +71682,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _EditItem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./EditItem */ "./resources/js/components/admin/EditItem.js");
 /* harmony import */ var _DeleteItem__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./DeleteItem */ "./resources/js/components/admin/DeleteItem.js");
 /* harmony import */ var _LoadingLayer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./LoadingLayer */ "./resources/js/components/admin/LoadingLayer.js");
+/* harmony import */ var react_js_pagination__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-js-pagination */ "./node_modules/react-js-pagination/dist/Pagination.js");
+/* harmony import */ var react_js_pagination__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_js_pagination__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _MsgAlert__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./MsgAlert */ "./resources/js/components/admin/MsgAlert.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
@@ -71527,6 +71714,8 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
 
 
 
@@ -71572,19 +71761,20 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Admin).call(this, props));
     _this.state = {
       ophthalmologists: [],
-      page: 1,
+      currentPage: 1,
+      total: 0,
       selectedOphthalmologist: defaultOphtho,
       errors: [],
       loading: false,
       message: '',
       globalMessage: '',
-      total: 0,
       loadingList: false,
       insertLoading: false,
       insertMessage: ''
     };
     _this.specialties = [];
     _this.selectedAddress = defaultSelectedAddress;
+    _this.perPage = 0;
     return _this;
   }
 
@@ -71593,22 +71783,19 @@ function (_React$Component) {
     value: function componentWillMount() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("api/paginate/ophthalmologists?page=".concat(this.state.page)).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("api/paginate/ophthalmologists?page=".concat(this.state.currentPage)).then(function (response) {
+        _this2.perPage = response.data.per_page;
+
         _this2.setState({
-          ophthalmologists: response.data.data
+          ophthalmologists: response.data.data,
+          total: response.data.total,
+          currentPage: response.data.current_page
         });
       })["catch"](function (error) {
         return console.log(error);
       });
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("api/specialities").then(function (response) {
         return _this2.specialties = response.data;
-      })["catch"](function (error) {
-        return console.log(error);
-      });
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("api/count").then(function (response) {
-        _this2.setState({
-          total: response.data.count
-        });
       })["catch"](function (error) {
         return console.log(error);
       });
@@ -71638,7 +71825,7 @@ function (_React$Component) {
       var specialties = this._formatSpecialties(this.specialties, this.state.selectedOphthalmologist);
 
       this.setState({
-        selectedOphthalmologist: _objectSpread({}, this.state.selectedOphthalmologist, {
+        selectedOphthalmologist: _objectSpread({}, defaultOphtho, {
           specialties: specialties
         })
       });
@@ -71674,7 +71861,7 @@ function (_React$Component) {
               loading: false
             });
           } else {
-            alert("Désolé, l'adrsse n'est pas chargé merci de recharger vote page");
+            alert("Désolé, l'adrsse n'est pas chargé merci de recharger vote currentPage");
           }
         } else {
           alert("Désolé, quelque chose s'est mal passé");
@@ -71765,10 +71952,11 @@ function (_React$Component) {
 
         _this5.setState({
           insertMessage: "L'ophthalmologiste a été ajouté",
-          ophthalmologists: response.data.ophthalmologists,
-          total: response.data.count,
+          ophthalmologists: response.data.data,
+          total: response.data.total,
           insertLoading: false,
-          selectedOphthalmologist: defaultOphtho
+          selectedOphthalmologist: defaultOphtho,
+          currentPage: response.data.current_page
         });
       })["catch"](function (error) {
         _this5.setState({
@@ -71872,12 +72060,18 @@ function (_React$Component) {
       axios__WEBPACK_IMPORTED_MODULE_1___default.a["delete"]('api/ophthalmologists/' + id).then(function (response) {
         _this7.setState({
           globalMessage: "L'ophthalmologiste a été supprimé",
-          ophthalmologists: response.data.ophthalmologists,
-          total: response.data.count,
-          loadingList: false
+          ophthalmologists: response.data.data,
+          total: response.data.total,
+          loadingList: false,
+          selectedOphthalmologist: defaultOphtho,
+          currentPage: response.data.current_page
         });
       })["catch"](function (error) {
-        return console.log(error);
+        console.log(error);
+
+        _this7.setState({
+          loadingList: false
+        });
       });
     }
   }, {
@@ -71886,7 +72080,8 @@ function (_React$Component) {
       e.preventDefault();
       this.setState({
         message: '',
-        insertMessage: ''
+        insertMessage: '',
+        globalMessage: ''
       });
     } // inputs change
 
@@ -71942,7 +72137,6 @@ function (_React$Component) {
   }, {
     key: "_handleFormattedAddressChange",
     value: function _handleFormattedAddressChange(event) {
-      console.log("chenged formatted");
       this.selectedAddress = {
         adresse_line2: '',
         ville: '',
@@ -71953,6 +72147,15 @@ function (_React$Component) {
       this.setState({
         selectedOphthalmologist: _objectSpread({}, this.state.selectedOphthalmologist, {
           formatted_address: event.target.value
+        })
+      });
+    }
+  }, {
+    key: "_handleFormattedAddressChangeForAddingIssue",
+    value: function _handleFormattedAddressChangeForAddingIssue(value) {
+      this.setState({
+        selectedOphthalmologist: _objectSpread({}, this.state.selectedOphthalmologist, {
+          formatted_address: value
         })
       });
     }
@@ -71975,17 +72178,48 @@ function (_React$Component) {
       });
     }
   }, {
+    key: "_handlePageChange",
+    value: function _handlePageChange(pageNumber) {
+      var _this9 = this;
+
+      this.setState({
+        loadingList: true
+      });
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("api/paginate/ophthalmologists?page=".concat(pageNumber)).then(function (response) {
+        _this9.perPage = response.data.per_page;
+
+        _this9.setState({
+          ophthalmologists: response.data.data,
+          total: response.data.total,
+          currentPage: response.data.current_page,
+          loadingList: false
+        });
+      })["catch"](function (error) {
+        console.log(error);
+
+        _this9.setState({
+          loadingList: false
+        });
+      });
+      this.setState({
+        currentPage: pageNumber
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "crud"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MsgAlert__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        onAlertDismiss: this._handleDismissAlertClick.bind(this),
+        message: this.state.globalMessage,
+        render: this.state.globalMessage.length > 0,
+        global: true
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "table-wrapper"
-      }, this.state.globalMessage.length > 0 && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "alert alert-success"
-      }, this.state.globalMessage), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "table-title"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
@@ -72018,43 +72252,17 @@ function (_React$Component) {
         className: "clearfix"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "hint-text"
-      }, "Montrant ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, this.state.ophthalmologists.length), " sur ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, this.state.total), " entr\xE9es"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        className: "pagination"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "page-item disabled"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "Previous")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "page-item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#",
-        className: "page-link"
-      }, "1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "page-item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#",
-        className: "page-link"
-      }, "2")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "page-item active"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#",
-        className: "page-link"
-      }, "3")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "page-item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#",
-        className: "page-link"
-      }, "4")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "page-item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#",
-        className: "page-link"
-      }, "5")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "page-item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#",
-        className: "page-link"
-      }, "Next")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AddItem__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      }, "Montrant ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, this.state.ophthalmologists.length), " sur ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, this.state.total), " entr\xE9es"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_js_pagination__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        activePage: this.state.currentPage,
+        itemsCountPerPage: this.perPage,
+        totalItemsCount: this.state.total,
+        pageRangeDisplayed: 5,
+        onChange: this._handlePageChange.bind(this),
+        className: "pagination",
+        firstPageText: "",
+        lastPageText: "",
+        itemClass: "pageItem"
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AddItem__WEBPACK_IMPORTED_MODULE_4__["default"], {
         ophthalmologist: this.state.selectedOphthalmologist,
         specialties: this.specialties,
         activeSpecialties: this.state.selectedOphthalmologist.specialties,
@@ -72074,7 +72282,8 @@ function (_React$Component) {
         renderErrorFor: this._renderErrorFor.bind(this),
         loading: this.state.insertLoading,
         message: this.state.insertMessage,
-        onAlertDismiss: this._handleDismissAlertClick.bind(this)
+        onAlertDismiss: this._handleDismissAlertClick.bind(this),
+        onFormattedAddressChangeForAddingIssue: this._handleFormattedAddressChangeForAddingIssue.bind(this)
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EditItem__WEBPACK_IMPORTED_MODULE_5__["default"], {
         ophthalmologist: this.state.selectedOphthalmologist,
         specialties: this.specialties,
@@ -72704,7 +72913,8 @@ function (_Component) {
       var show = this.props.render ? 'block' : 'none';
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         style: {
-          display: show
+          display: show,
+          marginTop: this.props.global ? '30px' : 'auto'
         },
         ref: "dd",
         id: "msgAlert",
@@ -72712,7 +72922,7 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "closebtn",
         onClick: this.props.onAlertDismiss
-      }, "\xD7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Info!"), " ", this.props.message);
+      }, "\xD7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, this.props.message));
     }
   }]);
 
@@ -73099,7 +73309,7 @@ function (_Component) {
           specialties: response.data
         });
       })["catch"](function (error) {
-        return _this2.props.dispatch(Object(_Actions_mapActions__WEBPACK_IMPORTED_MODULE_4__["setErrorMessage"])("Le chargement des specialités a été echoué, svp rechargez la page"));
+        return _this2.props.dispatch(Object(_Actions_mapActions__WEBPACK_IMPORTED_MODULE_4__["setErrorMessage"])("Le chargement des specialités a été echoué, svp rechargez la currentPage"));
       });
     }
   }, {

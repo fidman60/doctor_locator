@@ -19,7 +19,7 @@ class Header extends Component {
     componentWillMount(){
         axio.get("api/specialities")
             .then(response => this.setState({specialties: response.data}))
-            .catch(error => this.props.dispatch(setErrorMessage("Le chargement des specialités a été echoué, svp rechargez la page")));
+            .catch(error => this.props.dispatch(setErrorMessage("Le chargement des specialités a été echoué, svp rechargez la currentPage")));
     }
 
     _handleFilterClick(){

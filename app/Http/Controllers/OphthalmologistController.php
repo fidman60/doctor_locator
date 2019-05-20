@@ -45,10 +45,7 @@ class OphthalmologistController extends Controller{
      */
     public function store(StoreOphtholmologistRequest $request){
         $this->ophthalmologistRepository->store($request->input('ophthalmologist'),$request->input('specialties'));
-        return response()->json([
-            'ophthalmologists' => $this->ophthalmologistRepository->getOphthalmologistsWithSpecialities(),
-            'count' => $this->ophthalmologistRepository->total()
-        ]);
+        return response()->json($this->ophthalmologistRepository->getOphthalmologistsWithSpecialitiesPaginate($this->perPage));
     }
 
     /**
@@ -81,10 +78,7 @@ class OphthalmologistController extends Controller{
      */
     public function destroy($id){
         $this->ophthalmologistRepository->delete($id);
-        return response()->json([
-            'ophthalmologists' => $this->ophthalmologistRepository->getOphthalmologistsWithSpecialities(),
-            'count' => $this->ophthalmologistRepository->total()
-        ]);
+        return response()->json($this->ophthalmologistRepository->getOphthalmologistsWithSpecialitiesPaginate($this->perPage));
     }
 
     public function toggleFavorite(Request $request) {

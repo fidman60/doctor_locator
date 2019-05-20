@@ -75,11 +75,6 @@ class App extends Component {
     }
 
     render() {
-        console.log("from App render");
-        console.log(this.state);
-
-        console.log("path name: " + this.props.location.pathname);
-
         return (
             <Switch>
                 <Route exact path="/" component={Home} />

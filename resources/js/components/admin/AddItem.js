@@ -31,14 +31,14 @@ export default class AddItem extends Component {
     initAutocomplete() {
         const autocomplete = new window.google.maps.places.Autocomplete(this.refs.searchBox, {types: ['geocode']});
 
-        autocomplete.setFields(['address_component','geometry']);
+        autocomplete.setFields(['address_component','geometry','formatted_address']);
 
         autocomplete.addListener('place_changed', () => {
             const location = autocomplete.getPlace().geometry.location;
 
             const address = this.props.formatAddress(autocomplete.getPlace().address_components, location);
 
-            console.log(autocomplete.getPlace());
+            this.props.onFormattedAddressChangeForAddingIssue(autocomplete.getPlace().formatted_address);
             this.props.setSelectedAddress(address);
 
         });
@@ -67,7 +67,7 @@ export default class AddItem extends Component {
             <div id="addEmployeeModal" className="modal fade">
                 <div className="modal-dialog">
                     <div className="modal-content">
-                        <form onSubmit={onAddForm}>
+                        <form onSubmit={onAddForm} autoComplete="false">
                             {loading && <LoadingLayer/>}
                             <div className="modal-header">
                                 <h4 className="modal-title">Add Employee</h4>
@@ -88,6 +88,7 @@ export default class AddItem extends Component {
                                         value={ophthalmologist.formatted_address}
                                         ref='searchBox'
                                         onChange={onFormattedAddressChange}
+                                        autoComplete="off"
                                     />
                                     {(hasErrorFor('ophthalmologist.adresse_line2') || hasErrorFor('ophthalmologist.cp') || hasErrorFor('ophthalmologist.ville'))
                                     && <span className='invalid-feedback'>

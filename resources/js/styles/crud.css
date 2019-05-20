@@ -46,7 +46,7 @@
     float: left;
     margin-top: 2px;
 }
-#crud table.table tr th, table.table tr td {
+#crud table.table tr th, #crud table.table tr td {
     border-color: #e9e9e9;
     padding: 12px 15px;
     vertical-align: middle;
@@ -111,13 +111,15 @@
     line-height: 30px;
     border-radius: 2px !important;
     text-align: center;
-    padding: 0 6px;
+    padding: 6px;
 }
 #crud .pagination li a:hover {
     color: #666;
+    text-decoration: none;
 }
 #crud .pagination li.active a, #crud .pagination li.active a.page-link {
     background: #03A9F4;
+    color: white !important;
 }
 #crud .pagination li.active a:hover {
     background: #0397d6;

@@ -14965,7 +14965,7 @@ namespace  {
              * @throws \InvalidArgumentException
              * @static 
              */ 
-            public static function paginate($perPage = null, $columns = array(), $pageName = 'page', $page = null)
+            public static function paginate($perPage = null, $columns = array(), $pageName = 'currentPage', $page = null)
             {
                                 /** @var \Illuminate\Database\Eloquent\Builder $instance */
                                 return $instance->paginate($perPage, $columns, $pageName, $page);
@@ -14981,7 +14981,7 @@ namespace  {
              * @return \Illuminate\Contracts\Pagination\Paginator 
              * @static 
              */ 
-            public static function simplePaginate($perPage = null, $columns = array(), $pageName = 'page', $page = null)
+            public static function simplePaginate($perPage = null, $columns = array(), $pageName = 'currentPage', $page = null)
             {
                                 /** @var \Illuminate\Database\Eloquent\Builder $instance */
                                 return $instance->simplePaginate($perPage, $columns, $pageName, $page);
@@ -16577,7 +16577,7 @@ namespace  {
             }
          
             /**
-             * Set the limit and offset for a given page.
+             * Set the limit and offset for a given currentPage.
              *
              * @param int $page
              * @param int $perPage
@@ -16591,7 +16591,7 @@ namespace  {
             }
          
             /**
-             * Constrain the query to the previous "page" of results before a given ID.
+             * Constrain the query to the previous "currentPage" of results before a given ID.
              *
              * @param int $perPage
              * @param int|null $lastId
@@ -16606,7 +16606,7 @@ namespace  {
             }
          
             /**
-             * Constrain the query to the next "page" of results after a given ID.
+             * Constrain the query to the next "currentPage" of results after a given ID.
              *
              * @param int $perPage
              * @param int|null $lastId

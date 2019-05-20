@@ -6,6 +6,8 @@ import AddItem from "./AddItem";
 import EditItem from "./EditItem";
 import DeleteItem from "./DeleteItem";
 import LoadingLayer from "./LoadingLayer";
+import Pagination from "react-js-pagination";
+import MsgAlert from "./MsgAlert";
 
 let defaultOphtho = {
     id: 0,
@@ -38,13 +40,13 @@ export default class Admin extends React.Component {
 
         this.state = {
             ophthalmologists: [],
-            page: 1,
+            currentPage: 1,
+            total: 0,
             selectedOphthalmologist: defaultOphtho,
             errors: [],
             loading: false,
             message: '',
             globalMessage: '',
-            total: 0,
             loadingList: false,
             insertLoading: false,
             insertMessage: '',
@@ -52,14 +54,18 @@ export default class Admin extends React.Component {
 
         this.specialties = [];
         this.selectedAddress = defaultSelectedAddress;
+        this.perPage = 0;
     }
 
     componentWillMount() {
-        axio.get(`api/paginate/ophthalmologists?page=${this.state.page}`)
+        axio.get(`api/paginate/ophthalmologists?page=${this.state.currentPage}`)
             .then(response => {
+                this.perPage = response.data.per_page;
                 this.setState({
-                    ophthalmologists: response.data.data
-                })
+                    ophthalmologists: response.data.data,
+                    total: response.data.total,
+                    currentPage: response.data.current_page
+                });
             })
             .catch(error => console.log(error));
 
@@ -67,13 +73,6 @@ export default class Admin extends React.Component {
             .then(response => this.specialties = response.data)
             .catch(error => console.log(error));
 
-        axio.get("api/count")
-            .then(response => {
-                this.setState({
-                    total: response.data.count,
-                })
-            })
-            .catch(error => console.log(error));
     }
 
     setSelectedAddress(addr){
@@ -92,7 +91,7 @@ export default class Admin extends React.Component {
         let specialties = this._formatSpecialties(this.specialties, this.state.selectedOphthalmologist);
         this.setState({
             selectedOphthalmologist: {
-                ...this.state.selectedOphthalmologist,
+                ...defaultOphtho,
                 specialties: specialties,
             }
         });
@@ -123,7 +122,7 @@ export default class Admin extends React.Component {
                         loading: false,
                     });
                 } else {
-                    alert("Désolé, l'adrsse n'est pas chargé merci de recharger vote page");
+                    alert("Désolé, l'adrsse n'est pas chargé merci de recharger vote currentPage");
                 }
             } else {
                 alert("Désolé, quelque chose s'est mal passé");
@@ -220,10 +219,11 @@ export default class Admin extends React.Component {
                 };
                 this.setState({
                     insertMessage: "L'ophthalmologiste a été ajouté",
-                    ophthalmologists: response.data.ophthalmologists,
-                    total: response.data.count,
+                    ophthalmologists: response.data.data,
+                    total: response.data.total,
                     insertLoading: false,
                     selectedOphthalmologist: defaultOphtho,
+                    currentPage: response.data.current_page
                 });
             })
             .catch(error => {
@@ -336,19 +336,27 @@ export default class Admin extends React.Component {
              .then((response) => {
                  this.setState({
                      globalMessage: "L'ophthalmologiste a été supprimé",
-                     ophthalmologists: response.data.ophthalmologists,
-                     total: response.data.count,
+                     ophthalmologists: response.data.data,
+                     total: response.data.total,
                      loadingList: false,
+                     selectedOphthalmologist: defaultOphtho,
+                     currentPage: response.data.current_page
                  });
              })
-             .catch((error) => console.log(error));
+             .catch((error) => {
+                 console.log(error);
+                 this.setState({
+                     loadingList: false,
+                 });
+             });
     }
 
     _handleDismissAlertClick(e){
         e.preventDefault();
         this.setState({
             message: '',
-            insertMessage: ''
+            insertMessage: '',
+            globalMessage: '',
         });
     }
 
@@ -399,7 +407,6 @@ export default class Admin extends React.Component {
     }
 
     _handleFormattedAddressChange(event){
-                console.log("chenged formatted");
         this.selectedAddress = {
             adresse_line2: '',
             ville: '',
@@ -411,6 +418,15 @@ export default class Admin extends React.Component {
             selectedOphthalmologist: {
                 ...this.state.selectedOphthalmologist,
                 formatted_address: event.target.value,
+            }
+        });
+    }
+
+    _handleFormattedAddressChangeForAddingIssue(value){
+        this.setState({
+            selectedOphthalmologist: {
+                ...this.state.selectedOphthalmologist,
+                formatted_address: value,
             }
         });
     }
@@ -434,11 +450,43 @@ export default class Admin extends React.Component {
         });
     }
 
+    _handlePageChange(pageNumber){
+
+        this.setState({
+            loadingList: true,
+        });
+
+        axio.get(`api/paginate/ophthalmologists?page=${pageNumber}`)
+            .then(response => {
+                this.perPage = response.data.per_page;
+                this.setState({
+                    ophthalmologists: response.data.data,
+                    total: response.data.total,
+                    currentPage: response.data.current_page,
+                    loadingList: false,
+                });
+            })
+            .catch(error => {
+                console.log(error);
+                this.setState({
+                    loadingList: false,
+                })
+            });
+
+        this.setState({currentPage: pageNumber});
+    }
+
     render(){
         return (
             <div id="crud">
                 <div className="container">
-                    {this.state.globalMessage.length > 0 && <div className="alert alert-success">{this.state.globalMessage}</div>}
+                    <MsgAlert
+                        onAlertDismiss={this._handleDismissAlertClick.bind(this)}
+                        message={this.state.globalMessage}
+                        render={this.state.globalMessage.length > 0}
+                        global={true}
+                    />
+
                     <div className="table-wrapper">
                         <div className="table-title">
                             <div className="row">
@@ -451,6 +499,7 @@ export default class Admin extends React.Component {
                                 </div>
                             </div>
                         </div>
+
                         <table style={{position: 'relative'}} className="table table-striped table-hover">
                             {this.state.loadingList && <LoadingLayer/>}
                             <thead>
@@ -470,15 +519,17 @@ export default class Admin extends React.Component {
                         </table>
                         <div className="clearfix">
                             <div className="hint-text">Montrant <b>{this.state.ophthalmologists.length}</b> sur <b>{this.state.total}</b> entrées</div>
-                            <ul className="pagination">
-                                <li className="page-item disabled"><a href="#">Previous</a></li>
-                                <li className="page-item"><a href="#" className="page-link">1</a></li>
-                                <li className="page-item"><a href="#" className="page-link">2</a></li>
-                                <li className="page-item active"><a href="#" className="page-link">3</a></li>
-                                <li className="page-item"><a href="#" className="page-link">4</a></li>
-                                <li className="page-item"><a href="#" className="page-link">5</a></li>
-                                <li className="page-item"><a href="#" className="page-link">Next</a></li>
-                            </ul>
+                            <Pagination
+                                activePage={this.state.currentPage}
+                                itemsCountPerPage={this.perPage}
+                                totalItemsCount={this.state.total}
+                                pageRangeDisplayed={5}
+                                onChange={this._handlePageChange.bind(this)}
+                                className="pagination"
+                                firstPageText=""
+                                lastPageText=""
+                                itemClass="pageItem"
+                            />
                         </div>
                     </div>
                 </div>
@@ -504,6 +555,7 @@ export default class Admin extends React.Component {
                     loading={this.state.insertLoading}
                     message={this.state.insertMessage}
                     onAlertDismiss={this._handleDismissAlertClick.bind(this)}
+                    onFormattedAddressChangeForAddingIssue={this._handleFormattedAddressChangeForAddingIssue.bind(this)}
                 />
 
                 <EditItem

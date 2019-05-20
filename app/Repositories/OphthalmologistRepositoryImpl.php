@@ -33,7 +33,7 @@ class OphthalmologistRepositoryImpl implements OphthalmologistRepository {
     }
 
     function getOphthalmologistsWithSpecialitiesPaginate($n){
-        return $this->ophthalmologist->with('specialties')->paginate($n);
+        return $this->ophthalmologist->orderBy('id','desc')->with('specialties')->paginate($n);
     }
 
     function update($id, $ophtho, $specialties){
