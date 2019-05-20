@@ -91,5 +91,33 @@ class OphthalmologistRepositoryImpl implements OphthalmologistRepository {
         return $this->ophthalmologist->count();
     }
 
+    function store($ophtho, $specialties){
+        DB::transaction(function () use ($ophtho,$specialties){
+
+            $ophotholmologist = $this->ophthalmologist;
+
+            $ophotholmologist->nom = $ophtho['nom'];
+            $ophotholmologist->adresse_line1 = $ophtho['adresse_line1'];
+            $ophotholmologist->adresse_line2 = $ophtho['adresse_line2'];
+            $ophotholmologist->cp = $ophtho['cp'];
+            $ophotholmologist->ville = $ophtho['ville'];
+            $ophotholmologist->tele = $ophtho['tele'];
+            $ophotholmologist->email = $ophtho['email'];
+            $ophotholmologist->lat = $ophtho['lat'];
+            $ophotholmologist->lng = $ophtho['lng'];
+            $ophotholmologist->partenaire_acuvue = $ophtho['partenaire_acuvue'];
+
+            $ophotholmologist->save();
+
+            $idSpecialties = [];
+
+            foreach ($specialties as $specialty){
+                $idSpecialties[] = $specialty['id'];
+            }
+
+            $ophotholmologist->specialties()->attach($idSpecialties);
+        });
+    }
+
 
 }

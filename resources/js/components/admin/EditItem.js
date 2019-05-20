@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import LoadingLayer from "./LoadingLayer";
+import MsgAlert from "./MsgAlert";
 
 export default class EditItem extends Component {
 
@@ -58,6 +59,7 @@ export default class EditItem extends Component {
             renderErrorFor,
             loading,
             message,
+            onAlertDismiss
         } = this.props;
 
         return (
@@ -72,7 +74,11 @@ export default class EditItem extends Component {
                                         aria-hidden="true" onClick={onCloseModal}>&times;</button>
                             </div>
                             <div className="modal-body">
-                                {message.length > 0 && <p className="alert alert-success">{message}</p>}
+                                <MsgAlert
+                                    render={message.length > 0}
+                                    message={message}
+                                    onAlertDismiss={onAlertDismiss}
+                                />
                                 <div className="form-group">
                                     <label>Adresse</label>
                                     <input
@@ -118,7 +124,6 @@ export default class EditItem extends Component {
                                         required
                                         onChange={onEmailChange}
                                     />
-
                                     {renderErrorFor('ophthalmologist.email')}
                                 </div>
                                 <div className="form-group">
@@ -140,7 +145,6 @@ export default class EditItem extends Component {
                                             checked={ophthalmologist.partenaire_acuvue}
                                             onChange={() => onCheckPartenaireACUVUEChange(ophthalmologist.partenaire_acuvue)}
                                             id="checkboxAcuvue"
-                                            value="1"
                                         />
 								        <label htmlFor="checkboxAcuvue" />
 							        </span>

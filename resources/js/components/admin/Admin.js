@@ -7,7 +7,7 @@ import EditItem from "./EditItem";
 import DeleteItem from "./DeleteItem";
 import LoadingLayer from "./LoadingLayer";
 
-const defaultOphtho = {
+let defaultOphtho = {
     id: 0,
     nom: '',
     adresse_line1: '',
@@ -46,6 +46,8 @@ export default class Admin extends React.Component {
             globalMessage: '',
             total: 0,
             loadingList: false,
+            insertLoading: false,
+            insertMessage: '',
         };
 
         this.specialties = [];
@@ -83,6 +85,17 @@ export default class Admin extends React.Component {
             specialty: specialty,
             checked: ophthalmologist.specialties.findIndex(ophthoSpecialty => specialty.id === ophthoSpecialty.id) > -1,
         }));
+    }
+
+    _handleAjoutBtnClick(e){
+        e.preventDefault();
+        let specialties = this._formatSpecialties(this.specialties, this.state.selectedOphthalmologist);
+        this.setState({
+            selectedOphthalmologist: {
+                ...this.state.selectedOphthalmologist,
+                specialties: specialties,
+            }
+        });
     }
 
     _handleActionBtnClick(ophthalmologist){
@@ -159,6 +172,66 @@ export default class Admin extends React.Component {
                 key={ophthalmologist.id+5}
             />
         ));
+    }
+
+    _handleAddForm(e){
+        e.preventDefault();
+
+        this.setState({
+            insertLoading: true,
+            errors: []
+        });
+
+        const ophtho = {
+            ...this.state.selectedOphthalmologist,
+            ...this.selectedAddress,
+        };
+
+        const ophthoToSend = {
+            ophthalmologist: {
+                adresse_line1: ophtho.adresse_line1,
+                adresse_line2: ophtho.adresse_line2,
+                cp: ophtho.cp,
+                email: ophtho.email,
+                id: ophtho.id,
+                lat: ophtho.lat,
+                lng: ophtho.lng,
+                nom: ophtho.nom,
+                ville: ophtho.ville,
+                tele: ophtho.tele,
+                partenaire_acuvue: ophtho.partenaire_acuvue,
+            },
+            specialties: [
+                ...ophtho.specialties.map(item => {
+                    if(item.checked) return item.specialty;
+                    return false;
+                }).filter(item => item)
+            ]
+        };
+
+        axio.post('api/ophthalmologists',ophthoToSend)
+            .then(response => {
+                this.selectedAddress = {
+                    adresse_line2: '',
+                    ville: '',
+                    cp: undefined,
+                    lat: undefined,
+                    lng: undefined,
+                };
+                this.setState({
+                    insertMessage: "L'ophthalmologiste a été ajouté",
+                    ophthalmologists: response.data.ophthalmologists,
+                    total: response.data.count,
+                    insertLoading: false,
+                    selectedOphthalmologist: defaultOphtho,
+                });
+            })
+            .catch(error => {
+                this.setState({
+                    errors: error.response.data.errors,
+                    insertLoading: false,
+                });
+            });
     }
 
     _handleEditForm(e){
@@ -271,6 +344,14 @@ export default class Admin extends React.Component {
              .catch((error) => console.log(error));
     }
 
+    _handleDismissAlertClick(e){
+        e.preventDefault();
+        this.setState({
+            message: '',
+            insertMessage: ''
+        });
+    }
+
     // inputs change
     _handleCheckPartenaireACUVUEChange(value){
         this.setState({
@@ -287,7 +368,7 @@ export default class Admin extends React.Component {
                 ...this.state.selectedOphthalmologist,
                 nom: event.target.value,
             }
-        });
+        }, () => console.log(this.state.selectedOphthalmologist));
     }
 
     _handleAdresseLine1Change(event){
@@ -318,6 +399,7 @@ export default class Admin extends React.Component {
     }
 
     _handleFormattedAddressChange(event){
+                console.log("chenged formatted");
         this.selectedAddress = {
             adresse_line2: '',
             ville: '',
@@ -331,8 +413,6 @@ export default class Admin extends React.Component {
                 formatted_address: event.target.value,
             }
         });
-
-        console.log(this.selectedAddress);
     }
 
     _handleCheckSpecialtiesChange(row){
@@ -366,7 +446,7 @@ export default class Admin extends React.Component {
                                     <h2>Doctor <b>Locator</b></h2>
                                 </div>
                                 <div className="col-sm-6">
-                                    <a href="#addEmployeeModal" className="btn actionBtn" data-toggle="modal"><i className="fas fa-plus-circle material-icons" /> <span>Ajouter</span></a>
+                                    <a href="#addEmployeeModal" onClick={this._handleAjoutBtnClick.bind(this)} className="btn actionBtn" data-toggle="modal"><i className="fas fa-plus-circle material-icons" /> <span>Ajouter</span></a>
                                     <a className="btn cancelBtn" onClick={this.props.onLogout}><i className="fas fa-sign-out-alt" /> <span>Se déconnecter</span></a>
                                 </div>
                             </div>
@@ -404,7 +484,26 @@ export default class Admin extends React.Component {
                 </div>
 
                 <AddItem
+                    ophthalmologist={this.state.selectedOphthalmologist}
                     specialties={this.specialties}
+                    activeSpecialties={this.state.selectedOphthalmologist.specialties}
+                    onCloseModal={this._handlCloseModal.bind(this)}
+                    onCheckSpecialtyChange={this._handleCheckSpecialtiesChange.bind(this)}
+                    onCheckPartenaireACUVUEChange={this._handleCheckPartenaireACUVUEChange.bind(this)}
+                    setSelectedAddress={this.setSelectedAddress.bind(this)}
+                    onNomChange={this._handleNomChange.bind(this)}
+                    onAdresseLine1Change={this._handleAdresseLine1Change.bind(this)}
+                    onEmailChange={this._handleEmailChange.bind(this)}
+                    onTeleChange={this._handleTeleChange.bind(this)}
+                    onFormattedAddressChange={this._handleFormattedAddressChange.bind(this)}
+                    formatAddress={this._formatAddress}
+                    onAddForm={this._handleAddForm.bind(this)}
+                    errors={this.state.errors}
+                    hasErrorFor={this._hasErrorFor.bind(this)}
+                    renderErrorFor={this._renderErrorFor.bind(this)}
+                    loading={this.state.insertLoading}
+                    message={this.state.insertMessage}
+                    onAlertDismiss={this._handleDismissAlertClick.bind(this)}
                 />
 
                 <EditItem
@@ -427,6 +526,7 @@ export default class Admin extends React.Component {
                     renderErrorFor={this._renderErrorFor.bind(this)}
                     loading={this.state.loading}
                     message={this.state.message}
+                    onAlertDismiss={this._handleDismissAlertClick.bind(this)}
                 />
 
                 <DeleteItem

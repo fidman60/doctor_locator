@@ -22,4 +22,6 @@ interface OphthalmologistRepository {
 
     function total();
 
+    function store($ophtho, $specialties);
+
 }

@@ -4710,6 +4710,25 @@ exports.push([module.i, "#charging {\r\n    width: 100%;\r\n    height: 100%;\r\
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/styles/msgAlert.css":
+/*!**************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/styles/msgAlert.css ***!
+  \**************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".alert {\r\n    padding: 20px;\r\n    background-color: #f44336;\r\n    color: white;\r\n    opacity: 1;\r\n    transition: opacity 0.6s;\r\n    margin-bottom: 15px;\r\n}\r\n\r\n.alert.success {background-color: #4CAF50;}\r\n.alert.info {background-color: #2196F3;}\r\n.alert.warning {background-color: #ff9800;}\r\n\r\n.closebtn {\r\n    margin-left: 15px;\r\n    color: white;\r\n    font-weight: bold;\r\n    float: right;\r\n    font-size: 22px;\r\n    line-height: 20px;\r\n    cursor: pointer;\r\n    transition: 0.3s;\r\n}\r\n\r\n.closebtn:hover {\r\n    color: black;\r\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/lib/css-base.js":
 /*!*************************************************!*\
   !*** ./node_modules/css-loader/lib/css-base.js ***!
@@ -71178,6 +71197,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _LoadingLayer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LoadingLayer */ "./resources/js/components/admin/LoadingLayer.js");
+/* harmony import */ var _MsgAlert__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MsgAlert */ "./resources/js/components/admin/MsgAlert.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -71195,6 +71215,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -71218,37 +71239,65 @@ function (_Component) {
   }, {
     key: "_renderSpecialties",
     value: function _renderSpecialties() {
-      var specialties = this.props.specialties;
-      return specialties.map(function (specialty) {
+      var _this$props = this.props,
+          ophthalmologist = _this$props.ophthalmologist,
+          onCheckSpecialtyChange = _this$props.onCheckSpecialtyChange;
+      return ophthalmologist.specialties.map(function (row) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          key: specialty.id
+          key: row.specialty.id
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
           className: "custom-checkbox"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
           type: "checkbox",
-          id: "checkboxAdd" + specialty.id
+          checked: row.checked,
+          onChange: function onChange() {
+            return onCheckSpecialtyChange(row);
+          },
+          id: "checkboxAdd" + row.specialty.id
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-          htmlFor: "checkboxAdd" + specialty.id
+          htmlFor: "checkbox1"
         })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-          htmlFor: "checkbox" + specialty.id
-        }, specialty.label));
+          htmlFor: "checkboxAdd" + row.specialty.id
+        }, row.specialty.label));
       });
     }
   }, {
     key: "initAutocomplete",
     value: function initAutocomplete() {
+      var _this = this;
+
       var autocomplete = new window.google.maps.places.Autocomplete(this.refs.searchBox, {
         types: ['geocode']
       });
       autocomplete.setFields(['address_component', 'geometry']);
       autocomplete.addListener('place_changed', function () {
         var location = autocomplete.getPlace().geometry.location;
+
+        var address = _this.props.formatAddress(autocomplete.getPlace().address_components, location);
+
         console.log(autocomplete.getPlace());
+
+        _this.props.setSelectedAddress(address);
       });
     }
   }, {
     key: "render",
     value: function render() {
+      var _this$props2 = this.props,
+          ophthalmologist = _this$props2.ophthalmologist,
+          onCheckPartenaireACUVUEChange = _this$props2.onCheckPartenaireACUVUEChange,
+          onNomChange = _this$props2.onNomChange,
+          onAdresseLine1Change = _this$props2.onAdresseLine1Change,
+          onEmailChange = _this$props2.onEmailChange,
+          onTeleChange = _this$props2.onTeleChange,
+          onFormattedAddressChange = _this$props2.onFormattedAddressChange,
+          onCloseModal = _this$props2.onCloseModal,
+          hasErrorFor = _this$props2.hasErrorFor,
+          renderErrorFor = _this$props2.renderErrorFor,
+          onAddForm = _this$props2.onAddForm,
+          loading = _this$props2.loading,
+          message = _this$props2.message,
+          onAlertDismiss = _this$props2.onAlertDismiss;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "addEmployeeModal",
         className: "modal fade"
@@ -71256,7 +71305,9 @@ function (_Component) {
         className: "modal-dialog"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-content"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        onSubmit: onAddForm
+      }, loading && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_LoadingLayer__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
         className: "modal-title"
@@ -71264,51 +71315,72 @@ function (_Component) {
         type: "button",
         className: "close",
         "data-dismiss": "modal",
-        "aria-hidden": "true"
+        "aria-hidden": "true",
+        onClick: onCloseModal
       }, "\xD7")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-body"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MsgAlert__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        render: message.length > 0,
+        message: message,
+        onAlertDismiss: onAlertDismiss
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Adresse"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
-        className: "form-control",
-        ref: "searchBox"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-control ".concat(hasErrorFor('ophthalmologist.adresse_line2') || hasErrorFor('ophthalmologist.cp') || hasErrorFor('ophthalmologist.ville') ? 'is-invalid' : ''),
+        value: ophthalmologist.formatted_address,
+        ref: "searchBox",
+        onChange: onFormattedAddressChange
+      }), (hasErrorFor('ophthalmologist.adresse_line2') || hasErrorFor('ophthalmologist.cp') || hasErrorFor('ophthalmologist.ville')) && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "invalid-feedback"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Désolé, Vous devez selectionné une adresse suggéré"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Nom"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
-        className: "form-control",
-        required: true
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-control ".concat(hasErrorFor('ophthalmologist.nom') ? 'is-invalid' : ''),
+        value: ophthalmologist.nom,
+        required: true,
+        onChange: onNomChange
+      }), renderErrorFor('ophthalmologist.nom')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Adresse ligne 1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
-        className: "form-control",
-        required: true
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-control ".concat(hasErrorFor('ophthalmologist.adresse_line1') ? 'is-invalid' : ''),
+        value: ophthalmologist.adresse_line1,
+        required: true,
+        onChange: onAdresseLine1Change
+      }), renderErrorFor('ophthalmologist.adresse_line1')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Email"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "email",
-        className: "form-control",
-        required: true
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-control ".concat(hasErrorFor('ophthalmologist.email') ? 'is-invalid' : ''),
+        value: ophthalmologist.email,
+        required: true,
+        onChange: onEmailChange
+      }), renderErrorFor('ophthalmologist.email')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "T\xE9l\xE9phone"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
-        className: "form-control",
-        required: true
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        value: ophthalmologist.tele,
+        className: "form-control ".concat(hasErrorFor('ophthalmologist.tele') ? 'is-invalid' : ''),
+        required: true,
+        onChange: onTeleChange
+      }), renderErrorFor('ophthalmologist.tele')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "custom-checkbox"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "checkbox",
-        id: "checkboxAcuvueAdd",
+        checked: ophthalmologist.partenaire_acuvue,
+        onChange: function onChange() {
+          return onCheckPartenaireACUVUEChange(ophthalmologist.partenaire_acuvue);
+        },
+        id: "checkboxAcuvue",
         value: "1"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        htmlFor: "checkboxAcuvueAdd"
+        htmlFor: "checkboxAcuvue"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        htmlFor: "checkboxAcuvueAdd"
+        htmlFor: "checkboxAcuvue"
       }, "Partenaire ACUVUE")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Sp\xE9cialit\xE9s"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
@@ -71316,17 +71388,18 @@ function (_Component) {
           listStyleType: 'none',
           padding: 0
         }
-      }, this._renderSpecialties()))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, this._renderSpecialties()), renderErrorFor('specialties'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-footer"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "button",
         className: "btn cancelBtn",
         "data-dismiss": "modal",
-        value: "Cancel"
+        value: "Cancel",
+        onClick: onCloseModal
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "submit",
         className: "btn actionBtn",
-        value: "Save"
+        value: "Ajouter"
       }))))));
     }
   }]);
@@ -71440,7 +71513,9 @@ function (_React$Component) {
       message: '',
       globalMessage: '',
       total: 0,
-      loadingList: false
+      loadingList: false,
+      insertLoading: false,
+      insertMessage: ''
     };
     _this.specialties = [];
     _this.selectedAddress = defaultSelectedAddress;
@@ -71487,6 +71562,19 @@ function (_React$Component) {
             return specialty.id === ophthoSpecialty.id;
           }) > -1
         };
+      });
+    }
+  }, {
+    key: "_handleAjoutBtnClick",
+    value: function _handleAjoutBtnClick(e) {
+      e.preventDefault();
+
+      var specialties = this._formatSpecialties(this.specialties, this.state.selectedOphthalmologist);
+
+      this.setState({
+        selectedOphthalmologist: _objectSpread({}, this.state.selectedOphthalmologist, {
+          specialties: specialties
+        })
       });
     }
   }, {
@@ -71567,9 +71655,66 @@ function (_React$Component) {
       });
     }
   }, {
+    key: "_handleAddForm",
+    value: function _handleAddForm(e) {
+      var _this5 = this;
+
+      e.preventDefault();
+      this.setState({
+        insertLoading: true,
+        errors: []
+      });
+
+      var ophtho = _objectSpread({}, this.state.selectedOphthalmologist, this.selectedAddress);
+
+      var ophthoToSend = {
+        ophthalmologist: {
+          adresse_line1: ophtho.adresse_line1,
+          adresse_line2: ophtho.adresse_line2,
+          cp: ophtho.cp,
+          email: ophtho.email,
+          id: ophtho.id,
+          lat: ophtho.lat,
+          lng: ophtho.lng,
+          nom: ophtho.nom,
+          ville: ophtho.ville,
+          tele: ophtho.tele,
+          partenaire_acuvue: ophtho.partenaire_acuvue
+        },
+        specialties: _toConsumableArray(ophtho.specialties.map(function (item) {
+          if (item.checked) return item.specialty;
+          return false;
+        }).filter(function (item) {
+          return item;
+        }))
+      };
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('api/ophthalmologists', ophthoToSend).then(function (response) {
+        _this5.selectedAddress = {
+          adresse_line2: '',
+          ville: '',
+          cp: undefined,
+          lat: undefined,
+          lng: undefined
+        };
+
+        _this5.setState({
+          insertMessage: "L'ophthalmologiste a été ajouté",
+          ophthalmologists: response.data.ophthalmologists,
+          total: response.data.count,
+          insertLoading: false,
+          selectedOphthalmologist: defaultOphtho
+        });
+      })["catch"](function (error) {
+        _this5.setState({
+          errors: error.response.data.errors,
+          insertLoading: false
+        });
+      });
+    }
+  }, {
     key: "_handleEditForm",
     value: function _handleEditForm(e) {
-      var _this5 = this;
+      var _this6 = this;
 
       e.preventDefault();
       this.setState({
@@ -71617,18 +71762,18 @@ function (_React$Component) {
           specialties: data.specialties
         };
 
-        var newListOphtho = _this5.state.ophthalmologists.map(function (ophtholmologist) {
+        var newListOphtho = _this6.state.ophthalmologists.map(function (ophtholmologist) {
           if (ophtholmologist.id !== newOphto.id) return ophtholmologist;
           return newOphto;
         });
 
-        _this5.setState({
+        _this6.setState({
           ophthalmologists: newListOphtho,
           message: "L'ophthalmologiste a été bien modifié",
           loading: false
         });
       })["catch"](function (error) {
-        _this5.setState({
+        _this6.setState({
           errors: error.response.data.errors,
           loading: false
         });
@@ -71651,7 +71796,7 @@ function (_React$Component) {
   }, {
     key: "_handleDeleteClick",
     value: function _handleDeleteClick(e) {
-      var _this6 = this;
+      var _this7 = this;
 
       e.preventDefault();
       var id = this.state.selectedOphthalmologist.id;
@@ -71659,7 +71804,7 @@ function (_React$Component) {
         loadingList: true
       });
       axios__WEBPACK_IMPORTED_MODULE_1___default.a["delete"]('api/ophthalmologists/' + id).then(function (response) {
-        _this6.setState({
+        _this7.setState({
           globalMessage: "L'ophthalmologiste a été supprimé",
           ophthalmologists: response.data.ophthalmologists,
           total: response.data.count,
@@ -71667,6 +71812,15 @@ function (_React$Component) {
         });
       })["catch"](function (error) {
         return console.log(error);
+      });
+    }
+  }, {
+    key: "_handleDismissAlertClick",
+    value: function _handleDismissAlertClick(e) {
+      e.preventDefault();
+      this.setState({
+        message: '',
+        insertMessage: ''
       });
     } // inputs change
 
@@ -71682,10 +71836,14 @@ function (_React$Component) {
   }, {
     key: "_handleNomChange",
     value: function _handleNomChange(event) {
+      var _this8 = this;
+
       this.setState({
         selectedOphthalmologist: _objectSpread({}, this.state.selectedOphthalmologist, {
           nom: event.target.value
         })
+      }, function () {
+        return console.log(_this8.state.selectedOphthalmologist);
       });
     }
   }, {
@@ -71718,6 +71876,7 @@ function (_React$Component) {
   }, {
     key: "_handleFormattedAddressChange",
     value: function _handleFormattedAddressChange(event) {
+      console.log("chenged formatted");
       this.selectedAddress = {
         adresse_line2: '',
         ville: '',
@@ -71730,7 +71889,6 @@ function (_React$Component) {
           formatted_address: event.target.value
         })
       });
-      console.log(this.selectedAddress);
     }
   }, {
     key: "_handleCheckSpecialtiesChange",
@@ -71771,6 +71929,7 @@ function (_React$Component) {
         className: "col-sm-6"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#addEmployeeModal",
+        onClick: this._handleAjoutBtnClick.bind(this),
         className: "btn actionBtn",
         "data-toggle": "modal"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -71830,7 +71989,26 @@ function (_React$Component) {
         href: "#",
         className: "page-link"
       }, "Next")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AddItem__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        specialties: this.specialties
+        ophthalmologist: this.state.selectedOphthalmologist,
+        specialties: this.specialties,
+        activeSpecialties: this.state.selectedOphthalmologist.specialties,
+        onCloseModal: this._handlCloseModal.bind(this),
+        onCheckSpecialtyChange: this._handleCheckSpecialtiesChange.bind(this),
+        onCheckPartenaireACUVUEChange: this._handleCheckPartenaireACUVUEChange.bind(this),
+        setSelectedAddress: this.setSelectedAddress.bind(this),
+        onNomChange: this._handleNomChange.bind(this),
+        onAdresseLine1Change: this._handleAdresseLine1Change.bind(this),
+        onEmailChange: this._handleEmailChange.bind(this),
+        onTeleChange: this._handleTeleChange.bind(this),
+        onFormattedAddressChange: this._handleFormattedAddressChange.bind(this),
+        formatAddress: this._formatAddress,
+        onAddForm: this._handleAddForm.bind(this),
+        errors: this.state.errors,
+        hasErrorFor: this._hasErrorFor.bind(this),
+        renderErrorFor: this._renderErrorFor.bind(this),
+        loading: this.state.insertLoading,
+        message: this.state.insertMessage,
+        onAlertDismiss: this._handleDismissAlertClick.bind(this)
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_EditItem__WEBPACK_IMPORTED_MODULE_5__["default"], {
         ophthalmologist: this.state.selectedOphthalmologist,
         specialties: this.specialties,
@@ -71850,7 +72028,8 @@ function (_React$Component) {
         hasErrorFor: this._hasErrorFor.bind(this),
         renderErrorFor: this._renderErrorFor.bind(this),
         loading: this.state.loading,
-        message: this.state.message
+        message: this.state.message,
+        onAlertDismiss: this._handleDismissAlertClick.bind(this)
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_DeleteItem__WEBPACK_IMPORTED_MODULE_6__["default"], {
         ophthalmologist: this.state.selectedOphthalmologist,
         onDeleteClick: this._handleDeleteClick.bind(this)
@@ -72041,6 +72220,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _LoadingLayer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LoadingLayer */ "./resources/js/components/admin/LoadingLayer.js");
+/* harmony import */ var _MsgAlert__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MsgAlert */ "./resources/js/components/admin/MsgAlert.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -72058,6 +72238,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -72136,7 +72317,8 @@ function (_Component) {
           hasErrorFor = _this$props2.hasErrorFor,
           renderErrorFor = _this$props2.renderErrorFor,
           loading = _this$props2.loading,
-          message = _this$props2.message;
+          message = _this$props2.message,
+          onAlertDismiss = _this$props2.onAlertDismiss;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "editEmployeeModal",
         className: "modal fade",
@@ -72162,9 +72344,11 @@ function (_Component) {
         onClick: onCloseModal
       }, "\xD7")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-body"
-      }, message.length > 0 && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "alert alert-success"
-      }, message), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MsgAlert__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        render: message.length > 0,
+        message: message,
+        onAlertDismiss: onAlertDismiss
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Adresse"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
@@ -72216,8 +72400,7 @@ function (_Component) {
         onChange: function onChange() {
           return onCheckPartenaireACUVUEChange(ophthalmologist.partenaire_acuvue);
         },
-        id: "checkboxAcuvue",
-        value: "1"
+        id: "checkboxAcuvue"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "checkboxAcuvue"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
@@ -72400,6 +72583,77 @@ function LoginRoute(_ref) {
     }
   }));
 }
+
+/***/ }),
+
+/***/ "./resources/js/components/admin/MsgAlert.js":
+/*!***************************************************!*\
+  !*** ./resources/js/components/admin/MsgAlert.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return MsgAlert; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _styles_msgAlert_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../styles/msgAlert.css */ "./resources/js/styles/msgAlert.css");
+/* harmony import */ var _styles_msgAlert_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_msgAlert_css__WEBPACK_IMPORTED_MODULE_1__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+var MsgAlert =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(MsgAlert, _Component);
+
+  function MsgAlert() {
+    _classCallCheck(this, MsgAlert);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(MsgAlert).apply(this, arguments));
+  }
+
+  _createClass(MsgAlert, [{
+    key: "render",
+    value: function render() {
+      var show = this.props.render ? 'block' : 'none';
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          display: show
+        },
+        ref: "dd",
+        id: "msgAlert",
+        className: "alert info"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "closebtn",
+        onClick: this.props.onAlertDismiss
+      }, "\xD7"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Info!"), " ", this.props.message);
+    }
+  }]);
+
+  return MsgAlert;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+
 
 /***/ }),
 
@@ -73710,6 +73964,36 @@ if(false) {}
 
 
 var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/postcss-loader/src??ref--6-2!./loadingLayer.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/styles/loadingLayer.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/styles/msgAlert.css":
+/*!******************************************!*\
+  !*** ./resources/js/styles/msgAlert.css ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/postcss-loader/src??ref--6-2!./msgAlert.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/styles/msgAlert.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 

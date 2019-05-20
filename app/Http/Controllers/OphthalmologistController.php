@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreOphtholmologistRequest;
 use App\Http\Requests\UpdateOphtholmologistRequest;
 use App\Repositories\OphthalmologistRepository;
 use Illuminate\Http\Request;
@@ -42,8 +43,12 @@ class OphthalmologistController extends Controller{
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request){
-        //
+    public function store(StoreOphtholmologistRequest $request){
+        $this->ophthalmologistRepository->store($request->input('ophthalmologist'),$request->input('specialties'));
+        return response()->json([
+            'ophthalmologists' => $this->ophthalmologistRepository->getOphthalmologistsWithSpecialities(),
+            'count' => $this->ophthalmologistRepository->total()
+        ]);
     }
 
     /**
