@@ -4761,7 +4761,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".alert {\r\n    padding: 20px;\r\n    background-color: #f44336;\r\n    color: white;\r\n    opacity: 1;\r\n    transition: opacity 0.6s;\r\n    margin-bottom: 15px;\r\n}\r\n\r\n.alert.success {background-color: #4CAF50;}\r\n.alert.info {background-color: #2196F3;}\r\n.alert.warning {background-color: #ff9800;}\r\n\r\n.closebtn {\r\n    margin-left: 15px;\r\n    color: white;\r\n    font-weight: bold;\r\n    float: right;\r\n    font-size: 22px;\r\n    line-height: 20px;\r\n    cursor: pointer;\r\n    transition: 0.3s;\r\n}\r\n\r\n.closebtn:hover {\r\n    color: black;\r\n}", ""]);
+exports.push([module.i, ".alert.success {background-color: #4CAF50;}\r\n.alert.info {background-color: #2196F3;}\r\n.alert.warning {background-color: #ff9800;}\r\n\r\n.closebtn {\r\n    margin-left: 15px;\r\n    color: white;\r\n    font-weight: bold;\r\n    float: right;\r\n    font-size: 22px;\r\n    line-height: 20px;\r\n    cursor: pointer;\r\n    transition: 0.3s;\r\n}\r\n\r\n.closebtn:hover {\r\n    color: black;\r\n}\r\n\r\n.actionAlert{\r\n    color: white;\r\n}", ""]);
 
 // exports
 
@@ -71981,11 +71981,11 @@ function (_React$Component) {
         id: "crud"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "table-wrapper"
       }, this.state.globalMessage.length > 0 && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "alert alert-success"
       }, this.state.globalMessage), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "table-wrapper"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "table-title"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
@@ -72708,7 +72708,7 @@ function (_Component) {
         },
         ref: "dd",
         id: "msgAlert",
-        className: "alert info"
+        className: "alert info actionAlert"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "closebtn",
         onClick: this.props.onAlertDismiss
