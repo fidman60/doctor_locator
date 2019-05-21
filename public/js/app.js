@@ -4785,7 +4785,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\r\n\r\n\r\n\r\n/*//////////////////////////////////////////////////////////////////\r\n[ FONT ]*/\r\n\r\n@font-face {\r\n  font-family: Poppins-Regular;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/poppins/Poppins-Regular.ttf */ "./resources/js/styles/fonts/poppins/Poppins-Regular.ttf")) + "); \r\n}\r\n\r\n@font-face {\r\n  font-family: Poppins-Medium;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/poppins/Poppins-Medium.ttf */ "./resources/js/styles/fonts/poppins/Poppins-Medium.ttf")) + "); \r\n}\r\n\r\n@font-face {\r\n  font-family: Poppins-Bold;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/poppins/Poppins-Bold.ttf */ "./resources/js/styles/fonts/poppins/Poppins-Bold.ttf")) + "); \r\n}\r\n\r\n@font-face {\r\n  font-family: Poppins-SemiBold;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/poppins/Poppins-SemiBold.ttf */ "./resources/js/styles/fonts/poppins/Poppins-SemiBold.ttf")) + "); \r\n}\r\n\r\n@font-face {\r\n  font-family: Montserrat-Bold;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/montserrat/Montserrat-Bold.ttf */ "./resources/js/styles/fonts/montserrat/Montserrat-Bold.ttf")) + ");\r\n}\r\n\r\n@font-face {\r\n  font-family: Montserrat-SemiBold;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/montserrat/Montserrat-SemiBold.ttf */ "./resources/js/styles/fonts/montserrat/Montserrat-SemiBold.ttf")) + "); \r\n}\r\n\r\n@font-face {\r\n  font-family: Montserrat-Regular;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/montserrat/Montserrat-Regular.ttf */ "./resources/js/styles/fonts/montserrat/Montserrat-Regular.ttf")) + "); \r\n}\r\n\r\n\r\n/*//////////////////////////////////////////////////////////////////\r\n[ RESTYLE TAG ]*/\r\n\r\n.limiter * {\r\n\tmargin: 0px; \r\n\tpadding: 0px; \r\n\tbox-sizing: border-box;\r\n}\r\n\r\nbody, html {\r\n\theight: 100%;\r\n\tfont-family: Poppins-Regular, sans-serif;\r\n}\r\n\r\n/*---------------------------------------------*/\r\n.limiter  a {\r\n\tfont-family: Poppins-Regular;\r\n\tfont-size: 14px;\r\n\tline-height: 1.7;\r\n\tcolor: #666666;\r\n\tmargin: 0px;\r\n\ttransition: all 0.4s;\r\n\t-webkit-transition: all 0.4s;\r\n  -o-transition: all 0.4s;\r\n  -moz-transition: all 0.4s;\r\n}\r\n\r\n.limiter  a:focus {\r\n\toutline: none !important;\r\n}\r\n\r\n.limiter  a:hover {\r\n\ttext-decoration: none;\r\n  color: #6675df;\r\n}\r\n\r\n/*---------------------------------------------*/\r\n.limiter  h1,.limiter  h2,.limiter  h3,.limiter  h4,.limiter  h5,.limiter  h6 {\r\n\tmargin: 0px;\r\n}\r\n\r\n.limiter  p {\r\n\tfont-family: Poppins-Regular;\r\n\tfont-size: 14px;\r\n\tline-height: 1.7;\r\n\tcolor: #666666;\r\n\tmargin: 0px;\r\n}\r\n\r\n.limiter ul, .limiter li {\r\n\tmargin: 0px;\r\n\tlist-style-type: none;\r\n}\r\n\r\n\r\n/*---------------------------------------------*/\r\n.limiter input {\r\n\toutline: none;\r\n\tborder: none;\r\n}\r\n\r\n.limiter textarea {\r\n  outline: none;\r\n  border: none;\r\n}\r\n\r\n.limiter textarea:focus, .limiter input:focus {\r\n  border-color: transparent !important;\r\n}\r\n\r\n.limiter input:focus::-webkit-input-placeholder { color:transparent; }\r\n.limiter input:focus:-moz-placeholder { color:transparent; }\r\n.limiter input:focus::-moz-placeholder { color:transparent; }\r\n.limiter input:focus:-ms-input-placeholder { color:transparent; }\r\n\r\n.limiter textarea:focus::-webkit-input-placeholder { color:transparent; }\r\n.limiter textarea:focus:-moz-placeholder { color:transparent; }\r\n.limiter textarea:focus::-moz-placeholder { color:transparent; }\r\n.limiter textarea:focus:-ms-input-placeholder { color:transparent; }\r\n\r\n.limiter input::-webkit-input-placeholder { color: #999999;}\r\n.limiter input:-moz-placeholder { color: #999999;}\r\n.limiter input::-moz-placeholder { color: #999999;}\r\n.limiter input:-ms-input-placeholder { color: #999999;}\r\n\r\n.limiter textarea::-webkit-input-placeholder { color: #999999;}\r\n.limiter textarea:-moz-placeholder { color: #999999;}\r\n.limiter textarea::-moz-placeholder { color: #999999;}\r\n.limiter textarea:-ms-input-placeholder { color: #999999;}\r\n\r\n\r\n.limiter label {\r\n  display: block;\r\n  margin: 0;\r\n}\r\n\r\n/*---------------------------------------------*/\r\n\r\n\r\n.limiter button:hover {\r\n\tcursor: pointer;\r\n}\r\n\r\n.limiter iframe {\r\n\tborder: none !important;\r\n}\r\n\r\n/*//////////////////////////////////////////////////////////////////\r\n[ utility ]*/\r\n\r\n/*==================================================================\r\n[ Text ]*/\r\n.txt1 {\r\n  font-family: Montserrat-Regular;\r\n  font-size: 13px;\r\n  line-height: 1.4;\r\n  color: #555555;\r\n}\r\n\r\n.txt2 {\r\n  font-family: Montserrat-Regular;\r\n  font-size: 13px;\r\n  line-height: 1.4;\r\n  color: #999999;\r\n}\r\n\r\n\r\n/*==================================================================\r\n[ Size ]*/\r\n.size1 {\r\n  width: 355px;\r\n  max-width: 100%;\r\n}\r\n\r\n.size2 {\r\n  width: calc(100% - 43px);\r\n}\r\n\r\n/*==================================================================\r\n[ Background ]*/\r\n.bg1 {background: #3b5998;}\r\n.bg2 {background: #1da1f2;}\r\n.bg3 {background: #cd201f;}\r\n\r\n\r\n/*//////////////////////////////////////////////////////////////////\r\n[ login ]*/\r\n.limiter {\r\n  width: 100%;\r\n  margin: 0 auto;\r\n}\r\n\r\n.container-login100 {\r\n  width: 100%;  \r\n  min-height: 100vh;\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  justify-content: center;\r\n  align-items: center;\r\n  background: #f2f2f2;\r\n}\r\n\r\n\r\n.wrap-login100 {\r\n  width: 100%;\r\n  background: #fff;\r\n  overflow: hidden;\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  align-items: stretch;\r\n  flex-direction: row-reverse;\r\n\r\n}\r\n\r\n/*==================================================================\r\n[ login more ]*/\r\n.login100-more {\r\n  width: calc(100% - 560px);\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n  background-position: center;\r\n  position: relative;\r\n  z-index: 1;\r\n}\r\n\r\n.login100-more::before {\r\n  content: \"\";\r\n  display: block;\r\n  position: absolute;\r\n  z-index: -1;\r\n  width: 100%;\r\n  height: 100%;\r\n  top: 0;\r\n  left: 0;\r\n  background: rgba(0,0,0,0.1);\r\n}\r\n\r\n\r\n\r\n/*==================================================================\r\n[ Form ]*/\r\n\r\n.login100-form {\r\n  width: 560px;\r\n  min-height: 100vh;\r\n  display: block;\r\n  background-color: #f7f7f7;\r\n  padding: 173px 55px 55px 55px;\r\n}\r\n\r\n.login100-form-title {\r\n  width: 100%;\r\n  display: block;\r\n  font-family: Poppins-Regular;\r\n  font-size: 30px;\r\n  color: #333333;\r\n  line-height: 1.2;\r\n  text-align: center;\r\n}\r\n\r\n\r\n\r\n/*------------------------------------------------------------------\r\n[ Input ]*/\r\n\r\n.wrap-input100 {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  align-items: flex-end;\r\n  width: 100%;\r\n  height: 80px;\r\n  position: relative;\r\n  border: 1px solid #e6e6e6;\r\n  border-radius: 10px;\r\n  margin-bottom: 10px;\r\n}\r\n\r\n.label-input100 {\r\n  font-family: Montserrat-Regular;\r\n  font-size: 18px;\r\n  color: #999999;\r\n  line-height: 1.2;\r\n\r\n  display: block;\r\n  position: absolute;\r\n  pointer-events: none;\r\n  width: 100%;\r\n  padding-left: 24px;\r\n  left: 0;\r\n  top: 30px;\r\n  transition: all 0.4s;\r\n}\r\n\r\n.input100 {\r\n  display: block;\r\n  width: 100%;\r\n  background: transparent;\r\n  font-family: Montserrat-Regular;\r\n  font-size: 18px;\r\n  color: #555555;\r\n  line-height: 1.2;\r\n  padding: 0 26px;\r\n}\r\n\r\ninput.input100 {\r\n  height: 100%;\r\n  transition: all 0.4s;\r\n}\r\n\r\n/*---------------------------------------------*/\r\n\r\n.focus-input100 {\r\n  position: absolute;\r\n  display: block;\r\n  width: calc(100% + 2px);\r\n  height: calc(100% + 2px);\r\n  top: -1px;\r\n  left: -1px;\r\n  pointer-events: none;\r\n  border: 1px solid #6675df;\r\n  border-radius: 10px;\r\n\r\n  visibility: hidden;\r\n  opacity: 0;\r\n  transition: all 0.4s;\r\n\r\n  -webkit-transform: scaleX(1.1) scaleY(1.3);\r\n  transform: scaleX(1.1) scaleY(1.3);\r\n}\r\n\r\n.input100:focus + .focus-input100 {\r\n  visibility: visible;\r\n  opacity: 1;\r\n\r\n  -webkit-transform: scale(1);\r\n  transform: scale(1);\r\n}\r\n\r\n.eff-focus-selection {\r\n  visibility: visible;\r\n  opacity: 1;\r\n\r\n  -webkit-transform: scale(1);\r\n  transform: scale(1);\r\n}\r\n\r\n.input100:focus {\r\n  height: 48px;\r\n}\r\n\r\n.input100:focus + .focus-input100 + .label-input100 {\r\n  top: 14px;\r\n  font-size: 13px;\r\n}\r\n\r\n.has-val {\r\n  height: 48px !important;\r\n}\r\n\r\n.has-val + .focus-input100 + .label-input100 {\r\n  top: 14px;\r\n  font-size: 13px;\r\n}\r\n\r\n/*==================================================================\r\n[ Restyle Checkbox ]*/\r\n\r\n.input-checkbox100 {\r\n  display: none;\r\n}\r\n\r\n.label-checkbox100 {\r\n  font-family: Poppins-Regular;\r\n  font-size: 13px;\r\n  color: #999999;\r\n  line-height: 1.4;\r\n\r\n  display: block;\r\n  position: relative;\r\n  padding-left: 26px;\r\n  cursor: pointer;\r\n}\r\n\r\n.label-checkbox100::before {\r\n  content: \"\\F00C\";\r\n  font-family: FontAwesome;\r\n  font-size: 13px;\r\n  color: transparent;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  position: absolute;\r\n  width: 18px;\r\n  height: 18px;\r\n  border-radius: 2px;\r\n  background: #fff;\r\n  border: 1px solid #6675df;\r\n  left: 0;\r\n  top: 50%;\r\n  -webkit-transform: translateY(-50%);\r\n  transform: translateY(-50%);\r\n}\r\n\r\n.input-checkbox100:checked + .label-checkbox100::before {\r\n  color: #6675df;\r\n}\r\n\r\n\r\n/*------------------------------------------------------------------\r\n[ Button ]*/\r\n.container-login100-form-btn {\r\n  width: 100%;\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  justify-content: center;\r\n}\r\n\r\n.login100-form-btn {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  padding: 0 20px;\r\n  width: 100%;\r\n  height: 50px;\r\n  border-radius: 10px;\r\n  background: #6675df;\r\n\r\n  font-family: Montserrat-Bold;\r\n  font-size: 12px;\r\n  color: #fff;\r\n  line-height: 1.2;\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  transition: all 0.4s;\r\n}\r\n\r\n.login100-form-btn:hover {\r\n  background: #333333;\r\n}\r\n\r\n\r\n\r\n/*------------------------------------------------------------------\r\n[ Responsive ]*/\r\n\r\n@media (max-width: 992px) {\r\n  .login100-form {\r\n    width: 50%;\r\n    padding-left: 30px;\r\n    padding-right: 30px;\r\n  }\r\n\r\n  .login100-more {\r\n    width: 50%;\r\n  }\r\n}\r\n\r\n@media (max-width: 768px) {\r\n  .login100-form {\r\n    width: 100%;\r\n  }\r\n\r\n  .login100-more {\r\n    display: none;\r\n  }\r\n}\r\n\r\n@media (max-width: 576px) {\r\n  .login100-form {\r\n    padding-left: 15px;\r\n    padding-right: 15px;\r\n    padding-top: 70px;\r\n  }\r\n}\r\n\r\n\r\n/*------------------------------------------------------------------\r\n[ Alert validate ]*/\r\n\r\n.validate-input {\r\n  position: relative;\r\n}\r\n\r\n.alert-validate::before {\r\n  content: attr(data-validate);\r\n  position: absolute;\r\n  z-index: 100;\r\n  max-width: 70%;\r\n  background-color: #fff;\r\n  border: 1px solid #c80000;\r\n  border-radius: 2px;\r\n  padding: 4px 25px 4px 10px;\r\n  top: 50%;\r\n  -webkit-transform: translateY(-50%);\r\n  transform: translateY(-50%);\r\n  right: 12px;\r\n  pointer-events: none;\r\n\r\n  font-family: Poppins-Regular;\r\n  color: #c80000;\r\n  font-size: 13px;\r\n  line-height: 1.4;\r\n  text-align: left;\r\n\r\n  visibility: hidden;\r\n  opacity: 0;\r\n  transition: opacity 0.4s;\r\n}\r\n\r\n.alert-validate::after {\r\n  content: \"\\F12A\";\r\n  font-family: FontAwesome;\r\n  display: block;\r\n  position: absolute;\r\n  z-index: 110;\r\n  color: #c80000;\r\n  font-size: 16px;\r\n  top: 50%;\r\n  -webkit-transform: translateY(-50%);\r\n  transform: translateY(-50%);\r\n  right: 18px;\r\n}\r\n\r\n.alert-validate:hover:before {\r\n  visibility: visible;\r\n  opacity: 1;\r\n}\r\n\r\n@media (max-width: 992px) {\r\n  .alert-validate::before {\r\n    visibility: visible;\r\n    opacity: 1;\r\n  }\r\n}\r\n", ""]);
+exports.push([module.i, "\r\n\r\n\r\n\r\n/*//////////////////////////////////////////////////////////////////\r\n[ FONT ]*/\r\n\r\n@font-face {\r\n  font-family: Poppins-Regular;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/poppins/Poppins-Regular.ttf */ "./resources/js/styles/fonts/poppins/Poppins-Regular.ttf")) + "); \r\n}\r\n\r\n@font-face {\r\n  font-family: Poppins-Medium;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/poppins/Poppins-Medium.ttf */ "./resources/js/styles/fonts/poppins/Poppins-Medium.ttf")) + "); \r\n}\r\n\r\n@font-face {\r\n  font-family: Poppins-Bold;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/poppins/Poppins-Bold.ttf */ "./resources/js/styles/fonts/poppins/Poppins-Bold.ttf")) + "); \r\n}\r\n\r\n@font-face {\r\n  font-family: Poppins-SemiBold;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/poppins/Poppins-SemiBold.ttf */ "./resources/js/styles/fonts/poppins/Poppins-SemiBold.ttf")) + "); \r\n}\r\n\r\n@font-face {\r\n  font-family: Montserrat-Bold;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/montserrat/Montserrat-Bold.ttf */ "./resources/js/styles/fonts/montserrat/Montserrat-Bold.ttf")) + ");\r\n}\r\n\r\n@font-face {\r\n  font-family: Montserrat-SemiBold;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/montserrat/Montserrat-SemiBold.ttf */ "./resources/js/styles/fonts/montserrat/Montserrat-SemiBold.ttf")) + "); \r\n}\r\n\r\n@font-face {\r\n  font-family: Montserrat-Regular;\r\n  src: url(" + escape(__webpack_require__(/*! ../fonts/montserrat/Montserrat-Regular.ttf */ "./resources/js/styles/fonts/montserrat/Montserrat-Regular.ttf")) + "); \r\n}\r\n\r\n\r\n/*//////////////////////////////////////////////////////////////////\r\n[ RESTYLE TAG ]*/\r\n\r\n\r\nbody, html {\r\n\theight: 100%;\r\n\tfont-family: Poppins-Regular, sans-serif;\r\n}\r\n\r\n/*---------------------------------------------*/\r\n.limiter  a {\r\n\tfont-family: Poppins-Regular;\r\n\tfont-size: 14px;\r\n\tline-height: 1.7;\r\n\tcolor: #666666;\r\n\tmargin: 0px;\r\n\ttransition: all 0.4s;\r\n\t-webkit-transition: all 0.4s;\r\n  -o-transition: all 0.4s;\r\n  -moz-transition: all 0.4s;\r\n}\r\n\r\n.limiter  a:focus {\r\n\toutline: none !important;\r\n}\r\n\r\n.limiter  a:hover {\r\n\ttext-decoration: none;\r\n  color: #6675df;\r\n}\r\n\r\n/*---------------------------------------------*/\r\n.limiter  h1,.limiter  h2,.limiter  h3,.limiter  h4,.limiter  h5,.limiter  h6 {\r\n\tmargin: 0px;\r\n}\r\n\r\n.limiter  p {\r\n\tfont-family: Poppins-Regular;\r\n\tfont-size: 14px;\r\n\tline-height: 1.7;\r\n\tcolor: #666666;\r\n\tmargin: 0px;\r\n}\r\n\r\n.limiter ul, .limiter li {\r\n\tmargin: 0px;\r\n\tlist-style-type: none;\r\n}\r\n\r\n\r\n/*---------------------------------------------*/\r\n.limiter input {\r\n\toutline: none;\r\n\tborder: none;\r\n}\r\n\r\n.limiter textarea {\r\n  outline: none;\r\n  border: none;\r\n}\r\n\r\n.limiter textarea:focus, .limiter input:focus {\r\n  border-color: transparent !important;\r\n}\r\n\r\n.limiter input:focus::-webkit-input-placeholder { color:transparent; }\r\n.limiter input:focus:-moz-placeholder { color:transparent; }\r\n.limiter input:focus::-moz-placeholder { color:transparent; }\r\n.limiter input:focus:-ms-input-placeholder { color:transparent; }\r\n\r\n.limiter textarea:focus::-webkit-input-placeholder { color:transparent; }\r\n.limiter textarea:focus:-moz-placeholder { color:transparent; }\r\n.limiter textarea:focus::-moz-placeholder { color:transparent; }\r\n.limiter textarea:focus:-ms-input-placeholder { color:transparent; }\r\n\r\n.limiter input::-webkit-input-placeholder { color: #999999;}\r\n.limiter input:-moz-placeholder { color: #999999;}\r\n.limiter input::-moz-placeholder { color: #999999;}\r\n.limiter input:-ms-input-placeholder { color: #999999;}\r\n\r\n.limiter textarea::-webkit-input-placeholder { color: #999999;}\r\n.limiter textarea:-moz-placeholder { color: #999999;}\r\n.limiter textarea::-moz-placeholder { color: #999999;}\r\n.limiter textarea:-ms-input-placeholder { color: #999999;}\r\n\r\n\r\n.limiter label {\r\n  display: block;\r\n  margin: 0;\r\n}\r\n\r\n/*---------------------------------------------*/\r\n\r\n\r\n.limiter button:hover {\r\n\tcursor: pointer;\r\n}\r\n\r\n.limiter iframe {\r\n\tborder: none !important;\r\n}\r\n\r\n/*//////////////////////////////////////////////////////////////////\r\n[ utility ]*/\r\n\r\n/*==================================================================\r\n[ Text ]*/\r\n.txt1 {\r\n  font-family: Montserrat-Regular;\r\n  font-size: 13px;\r\n  line-height: 1.4;\r\n  color: #555555;\r\n}\r\n\r\n.txt2 {\r\n  font-family: Montserrat-Regular;\r\n  font-size: 13px;\r\n  line-height: 1.4;\r\n  color: #999999;\r\n}\r\n\r\n\r\n/*==================================================================\r\n[ Size ]*/\r\n.size1 {\r\n  width: 355px;\r\n  max-width: 100%;\r\n}\r\n\r\n.size2 {\r\n  width: calc(100% - 43px);\r\n}\r\n\r\n/*==================================================================\r\n[ Background ]*/\r\n.bg1 {background: #3b5998;}\r\n.bg2 {background: #1da1f2;}\r\n.bg3 {background: #cd201f;}\r\n\r\n\r\n/*//////////////////////////////////////////////////////////////////\r\n[ login ]*/\r\n.limiter {\r\n  width: 100%;\r\n  margin: 0 auto;\r\n}\r\n\r\n.container-login100 {\r\n  width: 100%;  \r\n  min-height: 100vh;\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  justify-content: center;\r\n  align-items: center;\r\n  background: #f2f2f2;\r\n}\r\n\r\n\r\n.wrap-login100 {\r\n  width: 100%;\r\n  background: #fff;\r\n  overflow: hidden;\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  align-items: stretch;\r\n  flex-direction: row-reverse;\r\n\r\n}\r\n\r\n/*==================================================================\r\n[ login more ]*/\r\n.login100-more {\r\n  width: calc(100% - 560px);\r\n  background-repeat: no-repeat;\r\n  background-size: cover;\r\n  background-position: center;\r\n  position: relative;\r\n  z-index: 1;\r\n}\r\n\r\n.login100-more::before {\r\n  content: \"\";\r\n  display: block;\r\n  position: absolute;\r\n  z-index: -1;\r\n  width: 100%;\r\n  height: 100%;\r\n  top: 0;\r\n  left: 0;\r\n  background: rgba(0,0,0,0.1);\r\n}\r\n\r\n\r\n\r\n/*==================================================================\r\n[ Form ]*/\r\n\r\n.login100-form {\r\n  width: 560px;\r\n  min-height: 100vh;\r\n  display: block;\r\n  background-color: #f7f7f7;\r\n  padding: 173px 55px 55px 55px;\r\n}\r\n\r\n.login100-form-title {\r\n  width: 100%;\r\n  display: block;\r\n  font-family: Poppins-Regular;\r\n  font-size: 30px;\r\n  color: #333333;\r\n  line-height: 1.2;\r\n  text-align: center;\r\n}\r\n\r\n\r\n\r\n/*------------------------------------------------------------------\r\n[ Input ]*/\r\n\r\n.wrap-input100 {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  align-items: flex-end;\r\n  width: 100%;\r\n  height: 80px;\r\n  position: relative;\r\n  border: 1px solid #e6e6e6;\r\n  border-radius: 10px;\r\n  margin-bottom: 10px;\r\n}\r\n\r\n.label-input100 {\r\n  font-family: Montserrat-Regular;\r\n  font-size: 18px;\r\n  color: #999999;\r\n  line-height: 1.2;\r\n\r\n  display: block;\r\n  position: absolute;\r\n  pointer-events: none;\r\n  width: 100%;\r\n  padding-left: 24px;\r\n  left: 0;\r\n  top: 30px;\r\n  transition: all 0.4s;\r\n}\r\n\r\n.input100 {\r\n  display: block;\r\n  width: 100%;\r\n  background: transparent;\r\n  font-family: Montserrat-Regular;\r\n  font-size: 18px;\r\n  color: #555555;\r\n  line-height: 1.2;\r\n  padding: 0 26px;\r\n}\r\n\r\ninput.input100 {\r\n  height: 100%;\r\n  transition: all 0.4s;\r\n}\r\n\r\n/*---------------------------------------------*/\r\n\r\n.focus-input100 {\r\n  position: absolute;\r\n  display: block;\r\n  width: calc(100% + 2px);\r\n  height: calc(100% + 2px);\r\n  top: -1px;\r\n  left: -1px;\r\n  pointer-events: none;\r\n  border: 1px solid #6675df;\r\n  border-radius: 10px;\r\n\r\n  visibility: hidden;\r\n  opacity: 0;\r\n  transition: all 0.4s;\r\n\r\n  -webkit-transform: scaleX(1.1) scaleY(1.3);\r\n  transform: scaleX(1.1) scaleY(1.3);\r\n}\r\n\r\n.input100:focus + .focus-input100 {\r\n  visibility: visible;\r\n  opacity: 1;\r\n\r\n  -webkit-transform: scale(1);\r\n  transform: scale(1);\r\n}\r\n\r\n.eff-focus-selection {\r\n  visibility: visible;\r\n  opacity: 1;\r\n\r\n  -webkit-transform: scale(1);\r\n  transform: scale(1);\r\n}\r\n\r\n.input100:focus {\r\n  height: 48px;\r\n}\r\n\r\n.input100:focus + .focus-input100 + .label-input100 {\r\n  top: 14px;\r\n  font-size: 13px;\r\n}\r\n\r\n.has-val {\r\n  height: 48px !important;\r\n}\r\n\r\n.has-val + .focus-input100 + .label-input100 {\r\n  top: 14px;\r\n  font-size: 13px;\r\n}\r\n\r\n/*==================================================================\r\n[ Restyle Checkbox ]*/\r\n\r\n.input-checkbox100 {\r\n  display: none;\r\n}\r\n\r\n.label-checkbox100 {\r\n  font-family: Poppins-Regular;\r\n  font-size: 13px;\r\n  color: #999999;\r\n  line-height: 1.4;\r\n\r\n  display: block;\r\n  position: relative;\r\n  padding-left: 26px;\r\n  cursor: pointer;\r\n}\r\n\r\n.label-checkbox100::before {\r\n  content: \"\\F00C\";\r\n  font-family: FontAwesome;\r\n  font-size: 13px;\r\n  color: transparent;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  position: absolute;\r\n  width: 18px;\r\n  height: 18px;\r\n  border-radius: 2px;\r\n  background: #fff;\r\n  border: 1px solid #6675df;\r\n  left: 0;\r\n  top: 50%;\r\n  -webkit-transform: translateY(-50%);\r\n  transform: translateY(-50%);\r\n}\r\n\r\n.input-checkbox100:checked + .label-checkbox100::before {\r\n  color: #6675df;\r\n}\r\n\r\n\r\n/*------------------------------------------------------------------\r\n[ Button ]*/\r\n.container-login100-form-btn {\r\n  width: 100%;\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  justify-content: center;\r\n}\r\n\r\n.login100-form-btn {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  padding: 0 20px;\r\n  width: 100%;\r\n  height: 50px;\r\n  border-radius: 10px;\r\n  background: #6675df;\r\n\r\n  font-family: Montserrat-Bold;\r\n  font-size: 12px;\r\n  color: #fff;\r\n  line-height: 1.2;\r\n  text-transform: uppercase;\r\n  letter-spacing: 1px;\r\n  transition: all 0.4s;\r\n}\r\n\r\n.login100-form-btn:hover {\r\n  background: #333333;\r\n}\r\n\r\n\r\n\r\n/*------------------------------------------------------------------\r\n[ Responsive ]*/\r\n\r\n@media (max-width: 992px) {\r\n  .login100-form {\r\n    width: 50%;\r\n    padding-left: 30px;\r\n    padding-right: 30px;\r\n  }\r\n\r\n  .login100-more {\r\n    width: 50%;\r\n  }\r\n}\r\n\r\n@media (max-width: 768px) {\r\n  .login100-form {\r\n    width: 100%;\r\n  }\r\n\r\n  .login100-more {\r\n    display: none;\r\n  }\r\n}\r\n\r\n@media (max-width: 576px) {\r\n  .login100-form {\r\n    padding-left: 15px;\r\n    padding-right: 15px;\r\n    padding-top: 70px;\r\n  }\r\n}\r\n\r\n\r\n/*------------------------------------------------------------------\r\n[ Alert validate ]*/\r\n\r\n.validate-input {\r\n  position: relative;\r\n}\r\n\r\n.alert-validate::before {\r\n  content: attr(data-validate);\r\n  position: absolute;\r\n  z-index: 100;\r\n  max-width: 70%;\r\n  background-color: #fff;\r\n  border: 1px solid #c80000;\r\n  border-radius: 2px;\r\n  padding: 4px 25px 4px 10px;\r\n  top: 50%;\r\n  -webkit-transform: translateY(-50%);\r\n  transform: translateY(-50%);\r\n  right: 12px;\r\n  pointer-events: none;\r\n\r\n  font-family: Poppins-Regular;\r\n  color: #c80000;\r\n  font-size: 13px;\r\n  line-height: 1.4;\r\n  text-align: left;\r\n\r\n  visibility: hidden;\r\n  opacity: 0;\r\n  transition: opacity 0.4s;\r\n}\r\n\r\n.alert-validate::after {\r\n  content: \"\\F12A\";\r\n  font-family: FontAwesome;\r\n  display: block;\r\n  position: absolute;\r\n  z-index: 110;\r\n  color: #c80000;\r\n  font-size: 16px;\r\n  top: 50%;\r\n  -webkit-transform: translateY(-50%);\r\n  transform: translateY(-50%);\r\n  right: 18px;\r\n}\r\n\r\n.alert-validate:hover:before {\r\n  visibility: visible;\r\n  opacity: 1;\r\n}\r\n\r\n@media (max-width: 992px) {\r\n  .alert-validate::before {\r\n    visibility: visible;\r\n    opacity: 1;\r\n  }\r\n}\r\n", ""]);
 
 // exports
 
@@ -4823,7 +4823,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".alert.success {background-color: #4CAF50;}\r\n.alert.info {background-color: #2196F3;}\r\n.alert.warning {background-color: #ff9800;}\r\n\r\n.closebtn {\r\n    margin-left: 15px;\r\n    color: white;\r\n    font-weight: bold;\r\n    float: right;\r\n    font-size: 22px;\r\n    line-height: 20px;\r\n    cursor: pointer;\r\n    transition: 0.3s;\r\n}\r\n\r\n.closebtn:hover {\r\n    color: black;\r\n}\r\n\r\n.actionAlert{\r\n    color: white;\r\n}", ""]);
+exports.push([module.i, ".alert.success {background-color: #4CAF50;}\r\n.alert.info {background-color: #2196F3;}\r\n.alert.warning {background-color: #ff9800;}\r\n.alert.error {background-color: #ff0f3c;}\r\n\r\n.closebtn {\r\n    margin-left: 15px;\r\n    color: white;\r\n    font-weight: bold;\r\n    float: right;\r\n    font-size: 22px;\r\n    line-height: 20px;\r\n    cursor: pointer;\r\n    transition: 0.3s;\r\n}\r\n\r\n.closebtn:hover {\r\n    color: black;\r\n}\r\n\r\n.actionAlert{\r\n    color: white;\r\n}", ""]);
 
 // exports
 
@@ -71721,7 +71721,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _admin_login_Login__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./admin/login/Login */ "./resources/js/components/admin/login/Login.js");
 /* harmony import */ var _admin_AdminRoute__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./admin/AdminRoute */ "./resources/js/components/admin/AdminRoute.js");
 /* harmony import */ var _admin_LoginRoute__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./admin/LoginRoute */ "./resources/js/components/admin/LoginRoute.js");
-/* harmony import */ var _admin_login_ResetPassForm__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./admin/login/ResetPassForm */ "./resources/js/components/admin/login/ResetPassForm.js");
+/* harmony import */ var _admin_login_ResetFormParent__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./admin/login/ResetFormParent */ "./resources/js/components/admin/login/ResetFormParent.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -71768,7 +71768,9 @@ function (_Component) {
     _this.state = {
       loggedIn: false,
       token: '',
-      user: undefined
+      user: undefined,
+      loginMessage: '',
+      connecting: false
     };
     return _this;
   }
@@ -71796,12 +71798,13 @@ function (_Component) {
     value: function _handleLoginClick(email, password) {
       var _this2 = this;
 
+      this.setState({
+        connecting: true
+      });
       axios__WEBPACK_IMPORTED_MODULE_7___default.a.post('api/login', {
         email: email,
         password: password
       }).then(function (rep) {
-        console.log("from _handleLoginClick");
-        console.log(rep.data);
         var data = rep.data.success;
 
         if (data) {
@@ -71816,7 +71819,11 @@ function (_Component) {
         }
       })["catch"](function (error) {
         console.log(error);
-        alert("Login failed");
+
+        _this2.setState({
+          loginMessage: "Vous avez saisi un email ou un mot de passe invalide",
+          connecting: false
+        });
       });
     }
   }, {
@@ -71833,6 +71840,14 @@ function (_Component) {
       this.setState(appState);
     }
   }, {
+    key: "_handleLoginAlertDismiss",
+    value: function _handleLoginAlertDismiss(e) {
+      e.preventDefault();
+      this.setState({
+        loginMessage: ''
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
@@ -71841,7 +71856,7 @@ function (_Component) {
         component: _home_Home__WEBPACK_IMPORTED_MODULE_5__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         path: "/reset",
-        component: _admin_login_ResetPassForm__WEBPACK_IMPORTED_MODULE_11__["default"]
+        component: _admin_login_ResetFormParent__WEBPACK_IMPORTED_MODULE_11__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_admin_AdminRoute__WEBPACK_IMPORTED_MODULE_9__["default"], {
         loggedIn: this.state.loggedIn,
         path: "/admin",
@@ -71849,9 +71864,12 @@ function (_Component) {
         onLogout: this._handleLogout.bind(this)
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_admin_LoginRoute__WEBPACK_IMPORTED_MODULE_10__["default"], {
         loggedIn: this.state.loggedIn,
+        connecting: this.state.connecting,
         path: "/login",
         component: _admin_login_Login__WEBPACK_IMPORTED_MODULE_8__["default"],
-        onLogin: this._handleLoginClick.bind(this)
+        onLogin: this._handleLoginClick.bind(this),
+        loginMessage: this.state.loginMessage,
+        onAlertDismiss: this._handleLoginAlertDismiss.bind(this)
       }));
     }
   }]);
@@ -73282,7 +73300,10 @@ function LoginRoute(_ref) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], _extends({}, rest, {
     render: function render(props) {
       return loggedIn === false ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Component, _extends({}, props, {
-        onLogin: rest.onLogin
+        onLogin: rest.onLogin,
+        loginMessage: rest.loginMessage,
+        connecting: rest.connecting,
+        onAlertDismiss: rest.onAlertDismiss
       })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
         to: {
           pathname: '/admin',
@@ -73354,7 +73375,7 @@ function (_Component) {
         },
         ref: "dd",
         id: "msgAlert",
-        className: "alert info actionAlert"
+        className: "alert ".concat(this.props.error ? 'error' : 'info', " actionAlert")
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "closebtn",
         onClick: this.props.onAlertDismiss
@@ -73430,7 +73451,8 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Login).call(this, props));
     _this.state = {
       loading: false,
-      message: ''
+      message: '',
+      error: false
     };
     return _this;
   }
@@ -73439,6 +73461,7 @@ function (_React$Component) {
     key: "_handleSubmit",
     value: function _handleSubmit(e) {
       e.preventDefault();
+      if (this.props.connecting) return;
       var email = this.refs.email;
       var password = this.refs.password;
       this.props.onLogin(email.value, password.value);
@@ -73515,6 +73538,7 @@ function (_React$Component) {
       var _this2 = this;
 
       e.preventDefault();
+      if (this.state.loading) return;
       this.setState({
         loading: true
       });
@@ -73525,14 +73549,16 @@ function (_React$Component) {
 
         _this2.setState({
           message: 'Nous avons envoyé votre lien de réinitialisation de mot de passe par e-mail!',
-          loading: false
+          loading: false,
+          error: false
         });
       })["catch"](function (error) {
         console.log(error);
 
         _this2.setState({
           message: 'Nous ne pouvons pas trouver un utilisateur avec cette adresse e-mail',
-          loading: false
+          loading: false,
+          error: true
         });
       });
     }
@@ -73560,14 +73586,20 @@ function (_React$Component) {
         onSubmit: this._handleSubmit.bind(this)
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "login100-form-title p-b-43"
-      }, "S'authentifier"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "S'authentifier"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MsgAlert__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        render: this.props.loginMessage.length > 0,
+        message: this.props.loginMessage,
+        onAlertDismiss: this.props.onAlertDismiss,
+        error: true
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "wrap-input100 validate-input",
         "data-validate": "Valid email is required: ex@abc.xyz"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         ref: "email",
         className: "input100",
         type: "text",
-        name: "email"
+        name: "email",
+        required: true
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "focus-input100"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -73579,7 +73611,8 @@ function (_React$Component) {
         ref: "password",
         className: "input100",
         type: "password",
-        name: "password"
+        name: "password",
+        required: true
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "focus-input100"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -73596,7 +73629,12 @@ function (_React$Component) {
         className: "container-login100-form-btn"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "login100-form-btn"
-      }, "Se connecter"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, this.props.connecting && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-circle-notch fa-spin",
+        style: {
+          marginRight: '5px'
+        }
+      }), " Se connecter"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "login100-more",
         style: {
           backgroundImage: "url('images/bg-01.jpg')"
@@ -73625,7 +73663,8 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MsgAlert__WEBPACK_IMPORTED_MODULE_5__["default"], {
         render: this.state.message.length > 0,
         message: this.state.message,
-        onAlertDismiss: this._handleAlertDismiss.bind(this)
+        onAlertDismiss: this._handleAlertDismiss.bind(this),
+        error: this.state.error
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
@@ -73647,7 +73686,12 @@ function (_React$Component) {
         value: "Annuler"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "submit",
-        className: "btn actionBtn"
+        className: "btn",
+        style: {
+          background: '#6675df',
+          color: 'white',
+          padding: "10px"
+        }
       }, this.state.loading && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fas fa-circle-notch fa-spin"
       }), " R\xE9initialiser")))))));
@@ -73661,24 +73705,237 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/admin/login/ResetPassForm.js":
-/*!**************************************************************!*\
-  !*** ./resources/js/components/admin/login/ResetPassForm.js ***!
-  \**************************************************************/
+/***/ "./resources/js/components/admin/login/ResetForm.js":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/admin/login/ResetForm.js ***!
+  \**********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ResetPassForm; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ResetForm; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _MsgAlert__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../MsgAlert */ "./resources/js/components/admin/MsgAlert.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+var ResetForm =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(ResetForm, _React$Component);
+
+  function ResetForm(props) {
+    var _this;
+
+    _classCallCheck(this, ResetForm);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(ResetForm).call(this, props));
+    _this.state = {
+      errors: [],
+      message: '',
+      loadingForm: '',
+      error: false
+    };
+    return _this;
+  }
+
+  _createClass(ResetForm, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {}
+  }, {
+    key: "_handleSendForm",
+    value: function _handleSendForm(e) {
+      var _this2 = this;
+
+      e.preventDefault();
+      this.setState({
+        loadingForm: true,
+        errors: []
+      });
+      var data = {
+        email: this.refs.email.value,
+        password: this.refs.password.value,
+        password_confirmation: this.refs.c_password.value,
+        token: this.props.token
+      };
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.post('api/password/reset', data).then(function (response) {
+        _this2.setState({
+          message: "Le mot de passe a été bien reinitiallisé !",
+          loadingForm: false,
+          error: false
+        });
+
+        _this2.refs.email.value = '';
+        _this2.refs.password.value = '';
+        _this2.refs.c_password.value = '';
+        console.log(response);
+      })["catch"](function (error) {
+        if (error.response.data.errors) {
+          _this2.setState({
+            errors: error.response.data.errors,
+            loadingForm: false
+          });
+        } else {
+          _this2.setState({
+            message: "Le jeton de réinitialisation de mot de passe ou l'email sont invalides",
+            loadingForm: false,
+            error: true
+          });
+        }
+      });
+    }
+  }, {
+    key: "_renderAlertDismiss",
+    value: function _renderAlertDismiss(e) {
+      e.preventDefault();
+      this.setState({
+        message: ''
+      });
+    }
+  }, {
+    key: "_hasErrorFor",
+    value: function _hasErrorFor(field) {
+      return !!this.state.errors[field];
+    }
+  }, {
+    key: "_renderErrorFor",
+    value: function _renderErrorFor(field) {
+      if (this._hasErrorFor(field)) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+          style: {
+            fontFamily: 'arial',
+            color: '#FF5581',
+            fontWeight: 'normal',
+            fontSize: '11px',
+            marginBottom: '20px',
+            display: 'block'
+          }
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, this.state.errors[field][0]));
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "loginSection",
+        className: "limiter"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container-login100"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "wrap-login100"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        className: "login100-form validate-form",
+        autoComplete: "off",
+        onSubmit: this._handleSendForm.bind(this)
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "login100-form-title p-b-43"
+      }, "R\xE9initialiser le mot de passe"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MsgAlert__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        render: this.state.message.length > 0,
+        message: this.state.message,
+        onAlertDismiss: this._renderAlertDismiss.bind(this),
+        error: this.state.error
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "wrap-input100 validate-input",
+        "data-validate": "L'email est n\xE9cessaire: ex@abc.xyz"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "email",
+        className: "input100 has-val",
+        required: true,
+        ref: "email"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "focus-input100"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "label-input100"
+      }, "Email")), this._renderErrorFor('email'), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "wrap-input100 validate-input",
+        "data-validate": "Le mot de passe est n\xE9cessaire"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "password",
+        className: "input100 has-val",
+        required: true,
+        ref: "password"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "focus-input100"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "label-input100"
+      }, "Le nouveau mot de passe")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "wrap-input100 validate-input",
+        "data-validate": "Vous devez confirmer le mot de passe"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "password",
+        className: "input100 has-val",
+        required: true,
+        ref: "c_password"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "focus-input100"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "label-input100"
+      }, "Confirmer le mot de passe")), this._renderErrorFor('password'), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container-login100-form-btn"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "login100-form-btn"
+      }, this.state.loadingForm && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-circle-notch fa-spin",
+        style: {
+          display: 'inline-block',
+          marginRight: '5px'
+        }
+      }), " R\xE9initialiser"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "login100-more",
+        style: {
+          backgroundImage: "url('images/bg-01.jpg')"
+        }
+      }))));
+    }
+  }]);
+
+  return ResetForm;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/admin/login/ResetFormParent.js":
+/*!****************************************************************!*\
+  !*** ./resources/js/components/admin/login/ResetFormParent.js ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ResetFormParent; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var query_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! query-string */ "./node_modules/query-string/index.js");
 /* harmony import */ var query_string__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(query_string__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _MsgAlert__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../MsgAlert */ "./resources/js/components/admin/MsgAlert.js");
+/* harmony import */ var _ResetForm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ResetForm */ "./resources/js/components/admin/login/ResetForm.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -73702,164 +73959,53 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-
-var ResetPassForm =
+var ResetFormParent =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(ResetPassForm, _React$Component);
+  _inherits(ResetFormParent, _React$Component);
 
-  function ResetPassForm(props) {
+  function ResetFormParent(props) {
     var _this;
 
-    _classCallCheck(this, ResetPassForm);
+    _classCallCheck(this, ResetFormParent);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(ResetPassForm).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(ResetFormParent).call(this, props));
     _this.params = query_string__WEBPACK_IMPORTED_MODULE_1___default.a.parse(_this.props.location.search);
     _this.state = {
       found: false,
-      loading: true,
-      errors: [],
-      message: '',
-      loadingForm: ''
+      loading: true
     };
     return _this;
   }
 
-  _createClass(ResetPassForm, [{
-    key: "_handleSendForm",
-    value: function _handleSendForm(e) {
-      var _this2 = this;
-
-      e.preventDefault();
-      this.setState({
-        loadingForm: true,
-        errors: []
-      });
-      var data = {
-        email: this.refs.email.value,
-        password: this.refs.password.value,
-        password_confirmation: this.refs.c_password.value,
-        token: this.params.token
-      };
-      axios__WEBPACK_IMPORTED_MODULE_2___default.a.post('api/password/reset', data).then(function (response) {
-        _this2.setState({
-          message: "Le mot de passe a été bien reinitiallisé",
-          loadingForm: false
-        });
-
-        console.log(response);
-      })["catch"](function (error) {
-        if (error.response.data.errors) {
-          _this2.setState({
-            errors: error.response.data.errors,
-            loadingForm: false
-          });
-        } else {
-          _this2.setState({
-            message: "Le jeton de réinitialisation de mot de passe ou l'email sont invalides",
-            loadingForm: false
-          });
-        }
-      });
-    }
-  }, {
+  _createClass(ResetFormParent, [{
     key: "componentWillMount",
     value: function componentWillMount() {
-      var _this3 = this;
+      var _this2 = this;
 
       if (this.params.token.length > 0) {
         axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("api/password/find/" + this.params.token).then(function (response) {
-          _this3.setState({
+          _this2.setState({
             found: true,
             loading: false
           });
         })["catch"](function (error) {
-          _this3.setState({
+          _this2.setState({
             loading: false
           });
         });
-      }
-    }
-  }, {
-    key: "_renderAlertDismiss",
-    value: function _renderAlertDismiss(e) {
-      e.preventDefault();
-      this.setState({
-        message: ''
-      });
-    }
-  }, {
-    key: "_renderForm",
-    value: function _renderForm() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        className: "col-sm-6 offset-sm-3",
-        onSubmit: this._handleSendForm.bind(this)
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MsgAlert__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        render: this.state.message.length > 0,
-        message: this.state.message,
-        onAlertDismiss: this._renderAlertDismiss.bind(this),
-        global: true
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "modal-header"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
-        className: "modal-title"
-      }, "R\xE9initialiser le mot de passe")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "modal-body"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form-group"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Email"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "text",
-        className: "form-control ".concat(this._hasErrorFor('email') ? 'is-invalid' : ''),
-        required: true,
-        ref: "email"
-      }), this._renderErrorFor('email'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "modal-body"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form-group"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Mot de passe"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "password",
-        className: "form-control ".concat(this._hasErrorFor('password') ? 'is-invalid' : ''),
-        required: true,
-        ref: "password"
-      }), this._renderErrorFor('password'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "modal-body"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form-group"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Confirmer mot de passe"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "password",
-        className: "form-control",
-        required: true,
-        ref: "c_password"
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "modal-footer"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "btn actionBtn"
-      }, this.state.loadingForm && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-circle-notch fa-spin"
-      }), " R\xE9initialiser"))));
-    }
-  }, {
-    key: "_hasErrorFor",
-    value: function _hasErrorFor(field) {
-      return !!this.state.errors[field];
-    }
-  }, {
-    key: "_renderErrorFor",
-    value: function _renderErrorFor(field) {
-      if (this._hasErrorFor(field)) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-          className: "invalid-feedback"
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, this.state.errors[field][0]));
       }
     }
   }, {
     key: "render",
     value: function render() {
-      return this.state.loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading...") : this.state.found ? this._renderForm() : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Invalid token");
+      return this.state.loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading...") : this.state.found ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ResetForm__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        token: this.params.token
+      }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Invalid token");
     }
   }]);
 
-  return ResetPassForm;
+  return ResetFormParent;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 

@@ -6,7 +6,7 @@ export default function LoginRoute ({component: Component, loggedIn, ...rest}) {
         <Route
             {...rest}
             render={(props) => loggedIn === false
-                ? <Component {...props} onLogin={rest.onLogin} />
+                ? <Component {...props} onLogin={rest.onLogin} loginMessage={rest.loginMessage} connecting={rest.connecting} onAlertDismiss={rest.onAlertDismiss} />
                 : <Redirect to={{pathname: '/admin', state: {from: props.location}}} />}
         />
     )

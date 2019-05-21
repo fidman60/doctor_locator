@@ -12,12 +12,15 @@ export default class Login extends React.Component {
         super(props);
         this.state = {
             loading: false,
-            message: ''
+            message: '',
+            error: false,
         }
     }
 
     _handleSubmit(e){
         e.preventDefault();
+
+        if (this.props.connecting) return;
         const email = this.refs.email;
         const password = this.refs.password;
         this.props.onLogin(email.value,password.value);
@@ -101,6 +104,8 @@ export default class Login extends React.Component {
     _handleReset(e){
         e.preventDefault();
 
+        if (this.state.loading) return;
+
         this.setState({
             loading: true
         });
@@ -110,7 +115,8 @@ export default class Login extends React.Component {
                 this.refs.emailReset.value = '';
                 this.setState({
                     message: 'Nous avons envoyé votre lien de réinitialisation de mot de passe par e-mail!',
-                    loading: false
+                    loading: false,
+                    error: false,
                 })
             })
             .catch(error => {
@@ -118,6 +124,7 @@ export default class Login extends React.Component {
                 this.setState({
                     message: 'Nous ne pouvons pas trouver un utilisateur avec cette adresse e-mail',
                     loading: false,
+                    error: true
                 })
             });
     }
@@ -144,6 +151,12 @@ export default class Login extends React.Component {
                                     S'authentifier
                                 </span>
 
+                                <MsgAlert
+                                    render={this.props.loginMessage.length > 0}
+                                    message={this.props.loginMessage}
+                                    onAlertDismiss={this.props.onAlertDismiss}
+                                    error={true}
+                                />
 
                                 <div className="wrap-input100 validate-input"
                                      data-validate="Valid email is required: ex@abc.xyz">
@@ -152,6 +165,7 @@ export default class Login extends React.Component {
                                         className="input100"
                                         type="text"
                                         name="email"
+                                        required
                                     />
                                     <span className="focus-input100" />
                                     <span className="label-input100">Email</span>
@@ -164,6 +178,7 @@ export default class Login extends React.Component {
                                         className="input100"
                                         type="password"
                                         name="password"
+                                        required
                                     />
                                     <span className="focus-input100" />
                                     <span className="label-input100">Mot de passe</span>
@@ -180,7 +195,7 @@ export default class Login extends React.Component {
 
                                 <div className="container-login100-form-btn">
                                     <button className="login100-form-btn">
-                                        Se connecter
+                                        {this.props.connecting && <i className="fas fa-circle-notch fa-spin" style={{marginRight: '5px'}} />} Se connecter
                                     </button>
                                 </div>
 
@@ -210,6 +225,7 @@ export default class Login extends React.Component {
                                         render={this.state.message.length > 0}
                                         message={this.state.message}
                                         onAlertDismiss={this._handleAlertDismiss.bind(this)}
+                                        error={this.state.error}
                                     />
                                     <div className="form-row">
                                         <label className="col-sm-2 col-form-label">Email</label>
@@ -224,7 +240,7 @@ export default class Login extends React.Component {
                                 <div className="modal-footer" style={{padding: "20px 0"}}>
                                     <input type="button" className="btn cancelBtn" data-dismiss="modal"
                                            value="Annuler" />
-                                    <button type="submit" className="btn actionBtn">
+                                    <button type="submit" className="btn" style={{background: '#6675df',color: 'white',padding: "10px"}}>
                                         {this.state.loading && <i className="fas fa-circle-notch fa-spin" />} Réinitialiser
                                     </button>
                                 </div>

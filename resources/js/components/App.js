@@ -9,7 +9,7 @@ import axio from 'axios';
 import Login from "./admin/login/Login";
 import AdminRoute from "./admin/AdminRoute";
 import LoginRoute from "./admin/LoginRoute";
-import ResetPassForm from "./admin/login/ResetPassForm";
+import ResetFormParent from "./admin/login/ResetFormParent";
 
 const redirectTo = '/admin';
 
@@ -21,6 +21,8 @@ class App extends Component {
             loggedIn: false,
             token: '',
             user: undefined,
+            loginMessage: '',
+            connecting: false,
         }
     }
 
@@ -38,13 +40,16 @@ class App extends Component {
     }
 
     _handleLoginClick(email, password){
+
+        this.setState({
+            connecting: true,
+        });
+
         axio.post('api/login',{
             email: email,
             password: password
         })
             .then(rep => {
-                console.log("from _handleLoginClick");
-                console.log(rep.data);
                 const data = rep.data.success;
                 if (data) {
                     let appState = {
@@ -59,7 +64,10 @@ class App extends Component {
             })
             .catch(error => {
                 console.log(error);
-                alert("Login failed");
+                this.setState({
+                    loginMessage: "Vous avez saisi un email ou un mot de passe invalide",
+                    connecting: false,
+                })
             });
     }
 
@@ -75,13 +83,20 @@ class App extends Component {
         this.setState(appState);
     }
 
+    _handleLoginAlertDismiss(e){
+        e.preventDefault();
+        this.setState({
+            loginMessage: ''
+        });
+    }
+
     render() {
         return (
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route
                     path="/reset"
-                    component={ResetPassForm}
+                    component={ResetFormParent}
                 />
                 <AdminRoute
                     loggedIn={this.state.loggedIn}
@@ -91,9 +106,12 @@ class App extends Component {
                 />
                 <LoginRoute
                     loggedIn={this.state.loggedIn}
+                    connecting={this.state.connecting}
                     path="/login"
                     component={Login}
                     onLogin={this._handleLoginClick.bind(this)}
+                    loginMessage={this.state.loginMessage}
+                    onAlertDismiss={this._handleLoginAlertDismiss.bind(this)}
                 />
             </Switch>
         );
