@@ -9,6 +9,7 @@ import axio from 'axios';
 import Login from "./admin/login/Login";
 import AdminRoute from "./admin/AdminRoute";
 import LoginRoute from "./admin/LoginRoute";
+import ResetPassForm from "./admin/login/ResetPassForm";
 
 const redirectTo = '/admin';
 
@@ -78,6 +79,10 @@ class App extends Component {
         return (
             <Switch>
                 <Route exact path="/" component={Home} />
+                <Route
+                    path="/reset"
+                    component={ResetPassForm}
+                />
                 <AdminRoute
                     loggedIn={this.state.loggedIn}
                     path="/admin"
