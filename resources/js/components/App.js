@@ -55,11 +55,16 @@ class App extends Component {
                     let appState = {
                         loggedIn: true,
                         token: data.token,
-                        user: data.user
+                        user: data.user,
+
                     };
                     localStorage["appState"] = JSON.stringify(appState);
 
-                    this.setState(appState);
+                    this.setState({
+                        ...appState,
+                        loginMessage: '',
+                        connecting: false,
+                    });
                 }
             })
             .catch(error => {
@@ -78,7 +83,6 @@ class App extends Component {
             token: '',
             user: undefined
         };
-        console.log("log out");
         localStorage["appState"] = JSON.stringify(appState);
         this.setState(appState);
     }

@@ -24,4 +24,6 @@ interface OphthalmologistRepository {
 
     function store($ophtho, $specialties);
 
+    function getOpthalsNomByQuery($query);
+
 }

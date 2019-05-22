@@ -29,7 +29,7 @@ Route::get('/count/','OphthalmologistController@countOphtho');
 
 Route::get('/specialities','SpecialityController@index');
 
-
+Route::post('/search/ophthalmologists','OphthalmologistController@getOpthosNomByQuery');
 
 Route::post('login', 'API\UserController@login');
 Route::post('register', 'API\UserController@register');

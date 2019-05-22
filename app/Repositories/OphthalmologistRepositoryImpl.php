@@ -119,5 +119,15 @@ class OphthalmologistRepositoryImpl implements OphthalmologistRepository {
         });
     }
 
+    function getOpthalsNomByQuery($query){
+
+        return $this->ophthalmologist
+            ->orderBy('nom','asc')
+            ->where('nom','like',$query.'%')
+            ->select(['id','nom'])
+            ->get();
+
+    }
+
 
 }

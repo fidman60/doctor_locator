@@ -244,3 +244,7 @@
     background: #333333;
     color: #fdc600;
 }
+
+.rbt-input-main {
+    width: 400px !important;
+}

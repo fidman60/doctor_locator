@@ -55,7 +55,7 @@ class OphthalmologistController extends Controller{
      * @return \Illuminate\Http\Response
      */
     public function show($id){
-        //
+        return response()->json($this->ophthalmologistRepository->getWithSpecialties($id));
     }
 
     /**
@@ -108,6 +108,14 @@ class OphthalmologistController extends Controller{
 
     public function countOphtho(){
         return response()->json(['count' => $this->ophthalmologistRepository->total()]);
+    }
+
+    public function getOpthosNomByQuery(Request $request){
+        $query =  $request->input('searchQuery');
+        if ($query)
+            return response()->json($this->ophthalmologistRepository->getOpthalsNomByQuery($query));
+        else
+            return response()->json([]);
     }
 
 }

@@ -187,7 +187,7 @@ export default class Login extends React.Component {
                                 <div className="flex-sb-m w-full p-t-3 p-b-32">
                                     <div>
                                         <a href="#resetPassModel" className="txt1" data-toggle="modal">
-                                            <i className="fas fa-sync-alt" /> <span>Mot de passe oublier?</span>
+                                            <i className="fas fa-sync-alt" style={{marginRight: '5px'}} /> <span>Mot de passe oublier?</span>
                                         </a>
                                     </div>
                                 </div>

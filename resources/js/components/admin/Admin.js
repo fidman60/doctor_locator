@@ -8,6 +8,7 @@ import DeleteItem from "./DeleteItem";
 import LoadingLayer from "./LoadingLayer";
 import Pagination from "react-js-pagination";
 import MsgAlert from "./MsgAlert";
+import Typeahead from "react-bootstrap-typeahead/es/components/AsyncTypeahead.react";
 
 let defaultOphtho = {
     id: 0,
@@ -50,11 +51,15 @@ export default class Admin extends React.Component {
             loadingList: false,
             insertLoading: false,
             insertMessage: '',
+            opthalsFoundNames: [],
+            loadingOphthalsNames: false,
         };
 
         this.specialties = [];
         this.selectedAddress = defaultSelectedAddress;
         this.perPage = 0;
+
+        this.selectedOphtalId = 0;
     }
 
     componentWillMount() {
@@ -476,6 +481,60 @@ export default class Admin extends React.Component {
         this.setState({currentPage: pageNumber});
     }
 
+    _getOphthosNom(){
+
+    }
+
+    _handleSearchOpthalsNom(value){
+        this.setState({
+            loadingOphthalsNames: true,
+        });
+
+        axio.post('api/search/ophthalmologists',{
+            'searchQuery': value,
+        })
+            .then((response) => {
+                this.setState({
+                    loadingOphthalsNames: false,
+                    opthalsFoundNames: response.data,
+                });
+            })
+            .catch((error) => {
+                console.log(error);
+                this.setState({
+                    loadingOphthalsNames: false,
+                });
+            });
+    }
+
+    _handleSelectOphthalNom(arr){
+        if (arr.length > 0)
+            this.selectedOphtalId = arr[0].id;
+    }
+
+    _handleSubmitSearchOphthalForm(e){
+        e.preventDefault();
+
+        this.setState({
+            loadingList: true,
+        });
+
+        axio.get('api/ophthalmologists/'+this.selectedOphtalId)
+            .then((response) => {
+                this.setState({
+                    ophthalmologists: response.data,
+                    loadingList: false,
+                    currentPage: 1,
+                    total: response.data.length,
+                });
+            })
+            .catch(error => {
+                console.log(error);
+                this.setState({
+                    loadingList: false,
+                })
+            });
+    }
     render(){
         return (
             <div id="crud">
@@ -494,29 +553,55 @@ export default class Admin extends React.Component {
                                     <h2>Doctor <b>Locator</b></h2>
                                 </div>
                                 <div className="col-sm-6">
-                                    <a href="#addEmployeeModal" onClick={this._handleAjoutBtnClick.bind(this)} className="btn actionBtn" data-toggle="modal"><i className="fas fa-plus-circle material-icons" /> <span>Ajouter</span></a>
+                                    <a href="#addEmployeeModal" onClick={this._handleAjoutBtnClick.bind(this)} className="btn actionBtn" data-toggle="modal"><i style={{marginRight: '0px',float: 'none'}} className="fas fa-plus-circle material-icons" /></a>
+                                    <a data-toggle="collapse" data-target="#dd" aria-controls="dd" aria-expanded="false" aria-label="Toggle" className="btn actionBtn"><i style={{marginRight: '0px',float: 'none'}} className="fas fa-search" /></a>
                                     <a className="btn cancelBtn" onClick={this.props.onLogout}><i className="fas fa-sign-out-alt" /> <span>Se déconnecter</span></a>
                                 </div>
                             </div>
                         </div>
 
-                        <table style={{position: 'relative'}} className="table table-striped table-hover">
+                        <div id="dd" className="collapse navbar-collapse" style={{position: 'relative', zIndex: 999}}>
+                            <form onSubmit={this._handleSubmitSearchOphthalForm.bind(this)}>
+                                <div className="search-toggle" style={{background: 'white', overflow: 'visible'}}>
+                                    <div className="container">
+                                        <div className="row">
+                                            <div className="col-12 form-inline justify-content-center" >
+                                                <label style={{marginRight: '20px'}} >Nom ophthalmologist: </label>
+                                                <Typeahead
+                                                    onChange={this._handleSelectOphthalNom.bind(this)}
+                                                    onSearch={this._handleSearchOpthalsNom.bind(this)}
+                                                    options={this.state.opthalsFoundNames}
+                                                    labelKey="nom"
+                                                    id="1"
+                                                    isLoading={this.state.loadingOphthalsNames}
+                                                />
+                                                <button className="search-btn"><i className="fa fa-search search-div" /></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div style={{position: 'relative'}}>
                             {this.state.loadingList && <LoadingLayer/>}
-                            <thead>
-                            <tr>
-                                <th style={{minWidth: "200px"}}>Name</th>
-                                <th>Email</th>
-                                <th>Address</th>
-                                <th>Phone</th>
-                                <th>Actions</th>
-                            </tr>
-                            </thead>
-                            <tbody>
+                            <table className="table table-striped table-hover">
+                                <thead>
+                                <tr>
+                                    <th style={{minWidth: "200px"}}>Name</th>
+                                    <th>Email</th>
+                                    <th>Address</th>
+                                    <th>Phone</th>
+                                    <th>Actions</th>
+                                </tr>
+                                </thead>
+                                <tbody>
 
-                            {this._renderItems()}
+                                {this._renderItems()}
 
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        </div>
                         <div className="clearfix">
                             <div className="hint-text">Montrant <b>{this.state.ophthalmologists.length}</b> sur <b>{this.state.total}</b> entrées</div>
                             <Pagination
