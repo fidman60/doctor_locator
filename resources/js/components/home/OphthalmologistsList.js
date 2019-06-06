@@ -13,9 +13,9 @@ class OphthalmologistsList extends Component {
             favorites: [],
         };
 
-        this.inBoundsFavoriteNbr = 0;
-
         this.fovoritesCurrentIndex = 0;
+
+        this.inBoundsFavoriteNbr = 0;
 
         this._renderOphtoList = this._renderOphtoList.bind(this);
     }
@@ -97,15 +97,18 @@ class OphthalmologistsList extends Component {
     _handleToggleFavoriteClick(ophto, e){
         e.stopPropagation();
         e.preventDefault();
+
         const id = ophto.id;
 
         axios.post('api/ophthalmologists/toggle_favorite',{id: id})
             .then(response => {
                 axios.post('api/ophthalmologists/get_favorites')
                     .then(response => {
+                        const inBoundsFavoritesList = this.props.inBoundsMarkers.filter(ophthalmologist => response.data.findIndex(id => id === ophthalmologist.id) > -1);
+                        this.inBoundsFavoriteNbr = inBoundsFavoritesList.length;
                         this.setState({
-                            favorites: response.data
-                        })
+                            favorites: response.data,
+                        });
                     })
                     .catch((error) => this.props.dispatch(setErrorMessage(error)));
             })

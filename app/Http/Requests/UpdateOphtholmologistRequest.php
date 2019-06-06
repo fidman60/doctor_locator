@@ -26,7 +26,7 @@ class UpdateOphtholmologistRequest extends FormRequest
         $id = $this->ophthalmologist['id'];
         return [
             'specialties' => 'required|array|min:1|max:4',
-            'specialties.0.id' => 'required|integer',
+            'specialties.*.id' => 'required|integer',
             'ophthalmologist.nom' => 'required|max:200|min:3|unique:ophthalmologists,nom,'.$id,
             'ophthalmologist.adresse_line1' => 'required|unique:ophthalmologists,adresse_line1,'.$id,
             'ophthalmologist.adresse_line2' => 'required|unique:ophthalmologists,adresse_line2,'.$id,

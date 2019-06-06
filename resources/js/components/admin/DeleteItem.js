@@ -9,7 +9,7 @@ export default class DeleteItem extends Component {
                     <div className="modal-content">
                         <form>
                             <div className="modal-header">
-                                <h4 className="modal-title">Delete Employee</h4>
+                                <h4 className="modal-title">Supprimer</h4>
                                 <button type="button" className="close" data-dismiss="modal"
                                         aria-hidden="true">&times;</button>
                             </div>
@@ -18,8 +18,8 @@ export default class DeleteItem extends Component {
                             </div>
                             <div className="modal-footer">
                                 <input type="button" className="btn cancelBtn" data-dismiss="modal"
-                                       value="Cancel" />
-                                <input data-dismiss="modal" type="submit" className="btn actionBtn" value="Delete" onClick={this.props.onDeleteClick} />
+                                       value="Annuler" />
+                                <input data-dismiss="modal" type="submit" className="btn actionBtn" value="Supprimer" onClick={this.props.onDeleteClick} />
                             </div>
                         </form>
                     </div>

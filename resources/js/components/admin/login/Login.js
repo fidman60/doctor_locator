@@ -2,7 +2,6 @@ import React from "react";
 import '../../../styles/login/main2.css';
 import '../../../styles/login/util2.css';
 import '../../../styles/crud.css';
-import LoadingLayer from "../LoadingLayer";
 import MsgAlert from "../MsgAlert";
 import axio from 'axios';
 
@@ -27,6 +26,12 @@ export default class Login extends React.Component {
     }
 
     componentDidMount() {
+
+        document.title = "Se connecter";
+        // solve issue
+        const p = document.querySelector('.modal-backdrop');
+        if (p) p.style.display = "none" ;
+
         (function ($) {
             "use strict";
 
@@ -122,7 +127,7 @@ export default class Login extends React.Component {
             .catch(error => {
                 console.log(error);
                 this.setState({
-                    message: 'Nous ne pouvons pas trouver un utilisateur avec cette adresse e-mail',
+                    message: 'Une erreur s\'est produite. Veuillez réessayer',
                     loading: false,
                     error: true
                 })
@@ -187,7 +192,7 @@ export default class Login extends React.Component {
                                 <div className="flex-sb-m w-full p-t-3 p-b-32">
                                     <div>
                                         <a href="#resetPassModel" className="txt1" data-toggle="modal">
-                                            <i className="fas fa-sync-alt" style={{marginRight: '5px'}} /> <span>Mot de passe oublier?</span>
+                                            <i className="fas fa-sync-alt" style={{marginRight: '5px'}} /> <span>Réinitialiser le mot de passe</span>
                                         </a>
                                     </div>
                                 </div>

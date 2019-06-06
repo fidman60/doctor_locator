@@ -16,7 +16,7 @@ export default class ResetForm extends React.Component {
     }
 
     componentDidMount() {
-
+        document.title = "Réinitialiser le mot de passe"
     }
 
     _handleSendForm(e){
@@ -54,7 +54,7 @@ export default class ResetForm extends React.Component {
                     });
                 } else {
                     this.setState({
-                        message: "Le jeton de réinitialisation de mot de passe ou l'email sont invalides",
+                        message: "Le jeton de réinitialisation de mot de passe ou l'email est invalide",
                         loadingForm: false,
                         error: true,
                     })

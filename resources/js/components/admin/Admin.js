@@ -62,6 +62,10 @@ export default class Admin extends React.Component {
         this.selectedOphtalId = 0;
     }
 
+    componentDidMount() {
+        document.title = "Administrateur";
+    }
+
     componentWillMount() {
         axio.get(`api/paginate/ophthalmologists?page=${this.state.currentPage}`)
             .then(response => {
@@ -127,7 +131,7 @@ export default class Admin extends React.Component {
                         loading: false,
                     });
                 } else {
-                    alert("Désolé, l'adrsse n'est pas chargé merci de recharger vote currentPage");
+                    alert("Désolé, l'adresse n'est pas chargé merci de recharger vote currentPage");
                 }
             } else {
                 alert("Désolé, quelque chose s'est mal passé");
@@ -274,7 +278,7 @@ export default class Admin extends React.Component {
              ]
          };
 
-         axio.put('api/ophthalmologists/'+ophthoToSend.ophthalmologist.id,ophthoToSend)
+         axio.put('api/ophthalmologists/'+ophthoToSend.ophthalmologist.id, ophthoToSend)
              .then(response => {
 
                  const data = response.data[0];
@@ -308,10 +312,19 @@ export default class Admin extends React.Component {
                  });
              })
              .catch(error => {
-                 this.setState({
-                     errors: error.response.data.errors,
-                     loading: false,
-                 });
+
+                 console.log(error.response.data.message.localeCompare("Unauthenticated.") === 0);
+                 if (error.response.data.message.localeCompare("Unauthenticated.") === 0){
+                     //window.location = "/admin";
+                     //fix issue
+                     document.getElementById('editEmployeeModal').classList.toggle("show");
+                     this.props.logout();
+                 } else {
+                     this.setState({
+                         errors: error.response.data.errors,
+                         loading: false,
+                     });
+                 }
              });
     }
 
@@ -481,10 +494,6 @@ export default class Admin extends React.Component {
         this.setState({currentPage: pageNumber});
     }
 
-    _getOphthosNom(){
-
-    }
-
     _handleSearchOpthalsNom(value){
         this.setState({
             loadingOphthalsNames: true,
@@ -566,7 +575,7 @@ export default class Admin extends React.Component {
                                     <div className="container">
                                         <div className="row">
                                             <div className="col-12 form-inline justify-content-center" >
-                                                <label style={{marginRight: '20px'}} >Nom ophthalmologist: </label>
+                                                <label style={{marginRight: '20px'}} >Nom ophtalmologiste: </label>
                                                 <Typeahead
                                                     onChange={this._handleSelectOphthalNom.bind(this)}
                                                     onSearch={this._handleSearchOpthalsNom.bind(this)}
@@ -588,10 +597,10 @@ export default class Admin extends React.Component {
                             <table className="table table-striped table-hover">
                                 <thead>
                                 <tr>
-                                    <th style={{minWidth: "200px"}}>Name</th>
+                                    <th style={{minWidth: "200px"}}>Nom</th>
                                     <th>Email</th>
-                                    <th>Address</th>
-                                    <th>Phone</th>
+                                    <th>Adresse</th>
+                                    <th>Téléphone</th>
                                     <th>Actions</th>
                                 </tr>
                                 </thead>

@@ -5017,6 +5017,25 @@ module.exports = exports['default'];
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/styles/404/404.css":
+/*!*************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/styles/404/404.css ***!
+  \*************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "*\r\n{\r\n    font-family: 'PT Sans Caption', sans-serif, 'arial', 'Times New Roman';\r\n}\r\n/* Error Page */\r\n.error .clip .shadow\r\n{\r\n    height: 180px;  /*Contrall*/\r\n}\r\n.error .clip:nth-of-type(2) .shadow\r\n{\r\n    width: 130px;   /*Contrall play with javascript*/\r\n}\r\n.error .clip:nth-of-type(1) .shadow, .error .clip:nth-of-type(3) .shadow\r\n{\r\n    width: 250px; /*Contrall*/\r\n}\r\n.error .digit\r\n{\r\n    width: 150px;   /*Contrall*/\r\n    height: 150px;  /*Contrall*/\r\n    line-height: 150px; /*Contrall*/\r\n    font-size: 120px;\r\n    font-weight: bold;\r\n}\r\n.error h2   /*Contrall*/\r\n{\r\n    font-size: 32px;\r\n}\r\n.error .msg /*Contrall*/\r\n{\r\n    top: -190px;\r\n    left: 30%;\r\n    width: 80px;\r\n    height: 80px;\r\n    line-height: 80px;\r\n    font-size: 32px;\r\n}\r\n.error span.triangle    /*Contrall*/\r\n{\r\n    top: 70%;\r\n    right: 0%;\r\n    border-left: 20px solid #535353;\r\n    border-top: 15px solid transparent;\r\n    border-bottom: 15px solid transparent;\r\n}\r\n\r\n\r\n.error .container-error-404\r\n{\r\n    margin-top: 10%;\r\n    position: relative;\r\n    height: 250px;\r\n    padding-top: 40px;\r\n}\r\n.error .container-error-404 .clip\r\n{\r\n    display: inline-block;\r\n    -webkit-transform: skew(-45deg);\r\n            transform: skew(-45deg);\r\n}\r\n.error .clip .shadow\r\n{\r\n\r\n    overflow: hidden;\r\n}\r\n.error .clip:nth-of-type(2) .shadow\r\n{\r\n    overflow: hidden;\r\n    position: relative;\r\n    box-shadow: inset 20px 0px 20px -15px rgba(150, 150, 150,0.8), 20px 0px 20px -15px rgba(150, 150, 150,0.8);\r\n}\r\n\r\n.error .clip:nth-of-type(3) .shadow:after, .error .clip:nth-of-type(1) .shadow:after\r\n{\r\n    content: \"\";\r\n    position: absolute;\r\n    right: -8px;\r\n    bottom: 0px;\r\n    z-index: 9999;\r\n    height: 100%;\r\n    width: 10px;\r\n    background: linear-gradient(90deg, transparent, rgba(173,173,173, 0.8), transparent);\r\n    border-radius: 50%;\r\n}\r\n.error .clip:nth-of-type(3) .shadow:after\r\n{\r\n    left: -8px;\r\n}\r\n.error .digit\r\n{\r\n    position: relative;\r\n    top: 8%;\r\n    color: white;\r\n    background: #07B3F9;\r\n    border-radius: 50%;\r\n    display: inline-block;\r\n    -webkit-transform: skew(45deg);\r\n            transform: skew(45deg);\r\n}\r\n.error .clip:nth-of-type(2) .digit\r\n{\r\n    left: -10%;\r\n}\r\n.error .clip:nth-of-type(1) .digit\r\n{\r\n    right: -20%;\r\n}.error .clip:nth-of-type(3) .digit\r\n {\r\n     left: -20%;\r\n }\r\n.error h2\r\n{\r\n    color: #A2A2A2;\r\n    font-weight: bold;\r\n    padding-bottom: 20px;\r\n}\r\n.error .msg\r\n{\r\n    position: relative;\r\n    z-index: 9999;\r\n    display: block;\r\n    background: #535353;\r\n    color: #A2A2A2;\r\n    border-radius: 50%;\r\n    font-style: italic;\r\n}\r\n.error .triangle\r\n{\r\n    position: absolute;\r\n    z-index: 999;\r\n    -webkit-transform: rotate(45deg);\r\n            transform: rotate(45deg);\r\n    content: \"\";\r\n    width: 0;\r\n    height: 0;\r\n}\r\n\r\n/* Error Page */\r\n@media(max-width: 767px)\r\n{\r\n    /* Error Page */\r\n    .error .clip .shadow\r\n    {\r\n        height: 100px;  /*Contrall*/\r\n    }\r\n    .error .clip:nth-of-type(2) .shadow\r\n    {\r\n        width: 80px;   /*Contrall play with javascript*/\r\n    }\r\n    .error .clip:nth-of-type(1) .shadow, .error .clip:nth-of-type(3) .shadow\r\n    {\r\n        width: 100px; /*Contrall*/\r\n    }\r\n    .error .digit\r\n    {\r\n        width: 80px;   /*Contrall*/\r\n        height: 80px;  /*Contrall*/\r\n        line-height: 80px; /*Contrall*/\r\n        font-size: 52px;\r\n    }\r\n    .error h2   /*Contrall*/\r\n    {\r\n        font-size: 24px;\r\n    }\r\n    .error .msg /*Contrall*/\r\n    {\r\n        top: -110px;\r\n        left: 15%;\r\n        width: 40px;\r\n        height: 40px;\r\n        line-height: 40px;\r\n        font-size: 18px;\r\n    }\r\n    .error span.triangle    /*Contrall*/\r\n    {\r\n        top: 70%;\r\n        right: -3%;\r\n        border-left: 10px solid #535353;\r\n        border-top: 8px solid transparent;\r\n        border-bottom: 8px solid transparent;\r\n    }\r\n    .error .container-error-404\r\n    {\r\n        height: 150px;\r\n    }\r\n    /* Error Page */\r\n}\r\n\r\n/*--------------------------------------------Framework --------------------------------*/\r\n\r\n.overlay { position: relative; z-index: 20; } /*done*/\r\n.ground-color { background: white; }  /*done*/\r\n.item-bg-color { background: #EAEAEA } /*done*/\r\n\r\n/* Padding Section*/\r\n.padding-top { padding-top: 10px; } /*done*/\r\n.padding-bottom { padding-bottom: 10px; }   /*done*/\r\n.padding-vertical { padding-top: 10px; padding-bottom: 10px; }\r\n.padding-horizontal { padding-left: 10px; padding-right: 10px; }\r\n.padding-all { padding: 10px; }   /*done*/\r\n\r\n.no-padding-left { padding-left: 0px; }    /*done*/\r\n.no-padding-right { padding-right: 0px; }   /*done*/\r\n.no-vertical-padding { padding-top: 0px; padding-bottom: 0px; }\r\n.no-horizontal-padding { padding-left: 0px; padding-right: 0px; }\r\n.no-padding { padding: 0px; }   /*done*/\r\n/* Padding Section*/\r\n\r\n/* Margin section */\r\n.margin-top { margin-top: 10px; }   /*done*/\r\n.margin-bottom { margin-bottom: 10px; } /*done*/\r\n.margin-right { margin-right: 10px; } /*done*/\r\n.margin-left { margin-left: 10px; } /*done*/\r\n.margin-horizontal { margin-left: 10px; margin-right: 10px; } /*done*/\r\n.margin-vertical { margin-top: 10px; margin-bottom: 10px; } /*done*/\r\n.margin-all { margin: 10px; }   /*done*/\r\n.no-margin { margin: 0px; }   /*done*/\r\n\r\n.no-vertical-margin { margin-top: 0px; margin-bottom: 0px; }\r\n.no-horizontal-margin { margin-left: 0px; margin-right: 0px; }\r\n\r\n.inside-col-shrink { margin: 0px 20px; }    /*done - For the inside sections that has also Title section*/\r\n/* Margin section */\r\n\r\nhr\r\n{ margin: 0px; padding: 0px; border-top: 1px dashed #999; }\r\n/*--------------------------------------------FrameWork------------------------*/", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/styles/crud.css":
 /*!**********************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/styles/crud.css ***!
@@ -82652,6 +82671,152 @@ if (token) {
 
 /***/ }),
 
+/***/ "./resources/js/components/404/PageNotFound.js":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/404/PageNotFound.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return PageNotFound; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _styles_404_404_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../styles/404/404.css */ "./resources/js/styles/404/404.css");
+/* harmony import */ var _styles_404_404_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_404_404_css__WEBPACK_IMPORTED_MODULE_1__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+var PageNotFound =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(PageNotFound, _React$Component);
+
+  function PageNotFound() {
+    _classCallCheck(this, PageNotFound);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(PageNotFound).apply(this, arguments));
+  }
+
+  _createClass(PageNotFound, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      document.title = "Page non trouvée";
+
+      function randomNum() {
+        "use strict";
+
+        return Math.floor(Math.random() * 9) + 1;
+      }
+
+      var loop1,
+          loop2,
+          loop3,
+          time = 30,
+          i = 0,
+          number,
+          selector3 = document.querySelector('.thirdDigit'),
+          selector2 = document.querySelector('.secondDigit'),
+          selector1 = document.querySelector('.firstDigit');
+      loop3 = setInterval(function () {
+        "use strict";
+
+        if (i > 40) {
+          clearInterval(loop3);
+          selector3.textContent = 4;
+        } else {
+          selector3.textContent = randomNum();
+          i++;
+        }
+      }, time);
+      loop2 = setInterval(function () {
+        "use strict";
+
+        if (i > 80) {
+          clearInterval(loop2);
+          selector2.textContent = 0;
+        } else {
+          selector2.textContent = randomNum();
+          i++;
+        }
+      }, time);
+      loop1 = setInterval(function () {
+        "use strict";
+
+        if (i > 100) {
+          clearInterval(loop1);
+          selector1.textContent = 4;
+        } else {
+          selector1.textContent = randomNum();
+          i++;
+        }
+      }, time);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "error"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container-floud"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-xs-12 ground-color text-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container-error-404"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "clip"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "shadow"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "digit thirdDigit"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "clip"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "shadow"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "digit secondDigit"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "clip"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "shadow"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "digit firstDigit"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "msg"
+      }, "OH!", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "triangle"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        className: "h1"
+      }, "D\xE9sol\xE9! Page non trouv\xE9e"))));
+    }
+  }]);
+
+  return PageNotFound;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/App.js":
 /*!****************************************!*\
   !*** ./resources/js/components/App.js ***!
@@ -82676,6 +82841,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _admin_AdminRoute__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./admin/AdminRoute */ "./resources/js/components/admin/AdminRoute.js");
 /* harmony import */ var _admin_LoginRoute__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./admin/LoginRoute */ "./resources/js/components/admin/LoginRoute.js");
 /* harmony import */ var _admin_login_ResetFormParent__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./admin/login/ResetFormParent */ "./resources/js/components/admin/login/ResetFormParent.js");
+/* harmony import */ var _404_PageNotFound__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./404/PageNotFound */ "./resources/js/components/404/PageNotFound.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
@@ -82697,6 +82863,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -82736,7 +82903,6 @@ function (_Component) {
   _createClass(App, [{
     key: "componentWillMount",
     value: function componentWillMount() {
-      //axio.defaults.headers.common['Authorization'] = 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjJmYjQ1YzRkOWY5ZTJiMTk1NWVlOTg3ZjhiNjMyNWU4MmY5MTgyMjA3YjBjMGFjODQyMTI3MjFjMjYyZDMyZWU1M2E1M2M5YmFkOTI1MTc0In0.eyJhdWQiOiIxIiwianRpIjoiMmZiNDVjNGQ5ZjllMmIxOTU1ZWU5ODdmOGI2MzI1ZTgyZjkxODIyMDdiMGMwYWM4NDIxMjcyMWMyNjJkMzJlZTUzYTUzYzliYWQ5MjUxNzQiLCJpYXQiOjE1NTgyNjU1MjAsIm5iZiI6MTU1ODI2NTUyMCwiZXhwIjoxNTg5ODg3OTIwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.oe8jiDDESq1YO41977bV-JQTxMhZk9a59xXdrhoFPv_mLTiXi8-siKaLvqZJ0Sa9_Kckyq2TpvaOq9foUrQ0Ep2p6BnjDtNQvY_Iq2fWAQsDoFCtq3d5XO6eADbyHPjSX2NGEJivX99JJHezR_QvLo7H1p7FUl7UHFA28M8kbplvM-dTaQAK1-n-SLjQeU09QC6cG7v4n8a0cgYK9GP4DeLzvFbNRe0wNqEcu2j7By3cJDkevvigganI0LsKlQXIQoMmWYP3VO5iFzJy4zRn82fq9KOMEYmf4euqYKI5dIB66MeNZ6EZkyQ-FvW1N9KrtZJU23YJxvKs7oJ1DVB8zIofyprwA06lTlHA0dStX08qQLHtgl_9Zvc1TORS2mg9pldVumEFbhVHkw0XLZvj9fW_viewj8Xf61vWH7aBUQbUQJL6CxSCEn0uzgzgS5wLzl7f9o5cEcdnpKslaCdhm1fKcTJtMOg7Y7FLsAtWOY7SZsiqiz1DAirl6oN02suyOKs5w3jAKgjSTC1IxUfOm8BhrkavCkk_fmGotffyEfqAt8Zd2hjYuEne9TiE1pmpkfe9wsPlKk9R6NSd3EGHwgFiKsHuslm5Z5yI-cuoRcH5kdieT54xaqezq5j_DkklrUYn7LyJFTuFvwYx1lqwaY9g0IESwNaYYAcpeJDyXYw';
       //axio.post('api/details',)
       //    .then(rep => console.log(rep))
       //    .catch(error => console.log(error));
@@ -82744,6 +82910,7 @@ function (_Component) {
 
       if (state) {
         var AppState = JSON.parse(state);
+        if (AppState.loggedIn) axios__WEBPACK_IMPORTED_MODULE_7___default.a.defaults.headers.common['Authorization'] = 'Bearer ' + AppState.token;
         this.setState({
           loggedIn: AppState.loggedIn,
           user: AppState.user,
@@ -82771,6 +82938,7 @@ function (_Component) {
             token: data.token,
             user: data.user
           };
+          axios__WEBPACK_IMPORTED_MODULE_7___default.a.defaults.headers.common['Authorization'] = 'Bearer ' + appState.token;
           localStorage["appState"] = JSON.stringify(appState);
 
           _this2.setState(_objectSpread({}, appState, {
@@ -82782,7 +82950,7 @@ function (_Component) {
         console.log(error);
 
         _this2.setState({
-          loginMessage: "Vous avez saisi un email ou un mot de passe invalide",
+          loginMessage: "Vous avez entré un email ou un mot de passe invalide",
           connecting: false
         });
       });
@@ -82790,7 +82958,7 @@ function (_Component) {
   }, {
     key: "_handleLogout",
     value: function _handleLogout(e) {
-      e.preventDefault();
+      if (e) e.preventDefault();
       var appState = {
         loggedIn: false,
         token: '',
@@ -82815,13 +82983,15 @@ function (_Component) {
         path: "/",
         component: _home_Home__WEBPACK_IMPORTED_MODULE_5__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+        exact: true,
         path: "/reset",
         component: _admin_login_ResetFormParent__WEBPACK_IMPORTED_MODULE_11__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_admin_AdminRoute__WEBPACK_IMPORTED_MODULE_9__["default"], {
         loggedIn: this.state.loggedIn,
         path: "/admin",
         component: _admin_Admin__WEBPACK_IMPORTED_MODULE_6__["default"],
-        onLogout: this._handleLogout.bind(this)
+        onLogout: this._handleLogout.bind(this),
+        logout: this._handleLogout.bind(this)
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_admin_LoginRoute__WEBPACK_IMPORTED_MODULE_10__["default"], {
         loggedIn: this.state.loggedIn,
         connecting: this.state.connecting,
@@ -82830,6 +83000,9 @@ function (_Component) {
         onLogin: this._handleLoginClick.bind(this),
         loginMessage: this.state.loginMessage,
         onAlertDismiss: this._handleLoginAlertDismiss.bind(this)
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+        path: "*",
+        component: _404_PageNotFound__WEBPACK_IMPORTED_MODULE_12__["default"]
       }));
     }
   }]);
@@ -82974,7 +83147,7 @@ function (_Component) {
         className: "modal-header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
         className: "modal-title"
-      }, "Add Employee"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }, "Ajouter"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "button",
         className: "close",
         "data-dismiss": "modal",
@@ -83058,7 +83231,7 @@ function (_Component) {
         type: "button",
         className: "btn cancelBtn",
         "data-dismiss": "modal",
-        value: "Cancel",
+        value: "Annuler",
         onClick: onCloseModal
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "submit",
@@ -83198,6 +83371,11 @@ function (_React$Component) {
   }
 
   _createClass(Admin, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      document.title = "Administrateur";
+    }
+  }, {
     key: "componentWillMount",
     value: function componentWillMount() {
       var _this2 = this;
@@ -83280,7 +83458,7 @@ function (_React$Component) {
               loading: false
             });
           } else {
-            alert("Désolé, l'adrsse n'est pas chargé merci de recharger vote currentPage");
+            alert("Désolé, l'adresse n'est pas chargé merci de recharger vote currentPage");
           }
         } else {
           alert("Désolé, quelque chose s'est mal passé");
@@ -83446,10 +83624,20 @@ function (_React$Component) {
           loading: false
         });
       })["catch"](function (error) {
-        _this6.setState({
-          errors: error.response.data.errors,
-          loading: false
-        });
+        console.log(error.response.data.message.localeCompare("Unauthenticated.") === 0);
+
+        if (error.response.data.message.localeCompare("Unauthenticated.") === 0) {
+          //window.location = "/admin";
+          //fix issue
+          document.getElementById('editEmployeeModal').classList.toggle("show");
+
+          _this6.props.logout();
+        } else {
+          _this6.setState({
+            errors: error.response.data.errors,
+            loading: false
+          });
+        }
       });
     }
   }, {
@@ -83625,9 +83813,6 @@ function (_React$Component) {
       });
     }
   }, {
-    key: "_getOphthosNom",
-    value: function _getOphthosNom() {}
-  }, {
     key: "_handleSearchOpthalsNom",
     value: function _handleSearchOpthalsNom(value) {
       var _this10 = this;
@@ -83755,7 +83940,7 @@ function (_React$Component) {
         style: {
           marginRight: '20px'
         }
-      }, "Nom ophthalmologist: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_typeahead_es_components_AsyncTypeahead_react__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      }, "Nom ophtalmologiste: "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_bootstrap_typeahead_es_components_AsyncTypeahead_react__WEBPACK_IMPORTED_MODULE_10__["default"], {
         onChange: this._handleSelectOphthalNom.bind(this),
         onSearch: this._handleSearchOpthalsNom.bind(this),
         options: this.state.opthalsFoundNames,
@@ -83776,7 +83961,7 @@ function (_React$Component) {
         style: {
           minWidth: "200px"
         }
-      }, "Name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Email"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Address"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Phone"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Actions"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, this._renderItems()))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Nom"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Email"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Adresse"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "T\xE9l\xE9phone"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Actions"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, this._renderItems()))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "clearfix"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "hint-text"
@@ -83871,12 +84056,16 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 function AdminRoute(_ref) {
   var Component = _ref.component,
       loggedIn = _ref.loggedIn,
-      rest = _objectWithoutProperties(_ref, ["component", "loggedIn"]);
+      logout = _ref.logout,
+      rest = _objectWithoutProperties(_ref, ["component", "loggedIn", "logout"]);
 
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], _extends({}, rest, {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], _extends({
+    exact: true
+  }, rest, {
     render: function render(props) {
       return loggedIn === true ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Component, _extends({}, props, {
-        onLogout: rest.onLogout
+        onLogout: rest.onLogout,
+        logout: logout
       })) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
         to: {
           pathname: '/login',
@@ -83979,7 +84168,7 @@ function (_Component) {
         className: "modal-header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
         className: "modal-title"
-      }, "Delete Employee"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }, "Supprimer"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "button",
         className: "close",
         "data-dismiss": "modal",
@@ -83992,12 +84181,12 @@ function (_Component) {
         type: "button",
         className: "btn cancelBtn",
         "data-dismiss": "modal",
-        value: "Cancel"
+        value: "Annuler"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         "data-dismiss": "modal",
         type: "submit",
         className: "btn actionBtn",
-        value: "Delete",
+        value: "Supprimer",
         onClick: this.props.onDeleteClick
       }))))));
     }
@@ -84139,7 +84328,7 @@ function (_Component) {
         className: "modal-header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
         className: "modal-title"
-      }, "Edit Employee"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }, "Modifier"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "button",
         className: "close",
         "data-dismiss": "modal",
@@ -84221,12 +84410,12 @@ function (_Component) {
         type: "button",
         className: "btn cancelBtn",
         "data-dismiss": "modal",
-        value: "Cancel",
+        value: "Annuler",
         onClick: onCloseModal
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "submit",
         className: "btn actionBtn",
-        value: "Save"
+        value: "Enregistrer"
       }))))));
     }
   }]);
@@ -84371,7 +84560,9 @@ function LoginRoute(_ref) {
       loggedIn = _ref.loggedIn,
       rest = _objectWithoutProperties(_ref, ["component", "loggedIn"]);
 
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], _extends({}, rest, {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], _extends({
+    exact: true
+  }, rest, {
     render: function render(props) {
       return loggedIn === false ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Component, _extends({}, props, {
         onLogin: rest.onLogin,
@@ -84482,10 +84673,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_login_util2_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_login_util2_css__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _styles_crud_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../styles/crud.css */ "./resources/js/styles/crud.css");
 /* harmony import */ var _styles_crud_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_crud_css__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _LoadingLayer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../LoadingLayer */ "./resources/js/components/admin/LoadingLayer.js");
-/* harmony import */ var _MsgAlert__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../MsgAlert */ "./resources/js/components/admin/MsgAlert.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _MsgAlert__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../MsgAlert */ "./resources/js/components/admin/MsgAlert.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -84503,7 +84693,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
 
 
 
@@ -84543,6 +84732,11 @@ function (_React$Component) {
   }, {
     key: "componentDidMount",
     value: function componentDidMount() {
+      document.title = "Se connecter"; // solve issue
+
+      var p = document.querySelector('.modal-backdrop');
+      if (p) p.style.display = "none";
+
       (function ($) {
         "use strict";
         /*==================================================================
@@ -84616,7 +84810,7 @@ function (_React$Component) {
       this.setState({
         loading: true
       });
-      axios__WEBPACK_IMPORTED_MODULE_6___default.a.post('api/password/create', {
+      axios__WEBPACK_IMPORTED_MODULE_5___default.a.post('api/password/create', {
         email: this.refs.emailReset.value
       }).then(function (response) {
         _this2.refs.emailReset.value = '';
@@ -84630,7 +84824,7 @@ function (_React$Component) {
         console.log(error);
 
         _this2.setState({
-          message: 'Nous ne pouvons pas trouver un utilisateur avec cette adresse e-mail',
+          message: 'Une erreur s\'est produite. Veuillez réessayer',
           loading: false,
           error: true
         });
@@ -84660,7 +84854,7 @@ function (_React$Component) {
         onSubmit: this._handleSubmit.bind(this)
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "login100-form-title p-b-43"
-      }, "S'authentifier"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MsgAlert__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      }, "S'authentifier"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MsgAlert__WEBPACK_IMPORTED_MODULE_4__["default"], {
         render: this.props.loginMessage.length > 0,
         message: this.props.loginMessage,
         onAlertDismiss: this.props.onAlertDismiss,
@@ -84702,7 +84896,7 @@ function (_React$Component) {
         style: {
           marginRight: '5px'
         }
-      }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Mot de passe oublier?")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "R\xE9initialiser le mot de passe")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container-login100-form-btn"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "login100-form-btn"
@@ -84737,7 +84931,7 @@ function (_React$Component) {
         "aria-hidden": "true"
       }, "\xD7")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "modal-body"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MsgAlert__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MsgAlert__WEBPACK_IMPORTED_MODULE_4__["default"], {
         render: this.state.message.length > 0,
         message: this.state.message,
         onAlertDismiss: this._handleAlertDismiss.bind(this),
@@ -84841,7 +85035,9 @@ function (_React$Component) {
 
   _createClass(ResetForm, [{
     key: "componentDidMount",
-    value: function componentDidMount() {}
+    value: function componentDidMount() {
+      document.title = "Réinitialiser le mot de passe";
+    }
   }, {
     key: "_handleSendForm",
     value: function _handleSendForm(e) {
@@ -84877,7 +85073,7 @@ function (_React$Component) {
           });
         } else {
           _this2.setState({
-            message: "Le jeton de réinitialisation de mot de passe ou l'email sont invalides",
+            message: "Le jeton de réinitialisation de mot de passe ou l'email est invalide",
             loadingForm: false,
             error: true
           });
@@ -85293,11 +85489,18 @@ function (_Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "header-logo text-center"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "index.html"
-      }, "GL", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fa fa-globe"
-      }), "BO"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Search__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        style: {
+          fontSize: '18px'
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "/",
+        style: {
+          color: '#333333'
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "font-weight-bold"
+      }, "Doctor"), " Locator"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Search__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "dd",
         className: "collapse navbar-collapse",
         style: {
@@ -85408,29 +85611,72 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Map */ "./resources/js/components/home/Map.js");
 /* harmony import */ var _config_tokens__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../config/tokens */ "./resources/js/config/tokens.js");
 /* harmony import */ var _OphthalmologistsList__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./OphthalmologistsList */ "./resources/js/components/home/OphthalmologistsList.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
 
 
 
 
-function Home(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ErrorAlert__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Map__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    googleMapURL: "https://maps.googleapis.com/maps/api/js?key=" + _config_tokens__WEBPACK_IMPORTED_MODULE_4__["googleApiToken"] + "&libraries=geometry,drawing,places",
-    loadingElement: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Fidman Loading"),
-    containerElement: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      style: {
-        width: '100%',
-        height: '400px'
-      }
-    }),
-    mapElement: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      style: {
-        height: "100%"
-      }
-    })
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OphthalmologistsList__WEBPACK_IMPORTED_MODULE_5__["default"], null));
-}
+
+
+var Home =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Home, _React$Component);
+
+  function Home() {
+    _classCallCheck(this, Home);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Home).apply(this, arguments));
+  }
+
+  _createClass(Home, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      document.title = "Doctor Locator";
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ErrorAlert__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Map__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        googleMapURL: "https://maps.googleapis.com/maps/api/js?key=" + _config_tokens__WEBPACK_IMPORTED_MODULE_4__["googleApiToken"] + "&libraries=geometry,drawing,places",
+        loadingElement: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Chargement..."),
+        containerElement: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          style: {
+            width: '100%',
+            height: '400px'
+          }
+        }),
+        mapElement: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          style: {
+            height: "100%"
+          }
+        })
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OphthalmologistsList__WEBPACK_IMPORTED_MODULE_5__["default"], null));
+    }
+  }]);
+
+  return Home;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
 
 /***/ }),
 
@@ -85871,8 +86117,8 @@ function (_Component) {
     _this.state = {
       favorites: []
     };
-    _this.inBoundsFavoriteNbr = 0;
     _this.fovoritesCurrentIndex = 0;
+    _this.inBoundsFavoriteNbr = 0;
     _this._renderOphtoList = _this._renderOphtoList.bind(_assertThisInitialized(_this));
     return _this;
   }
@@ -85963,6 +86209,14 @@ function (_Component) {
         id: id
       }).then(function (response) {
         axios__WEBPACK_IMPORTED_MODULE_3___default.a.post('api/ophthalmologists/get_favorites').then(function (response) {
+          var inBoundsFavoritesList = _this5.props.inBoundsMarkers.filter(function (ophthalmologist) {
+            return response.data.findIndex(function (id) {
+              return id === ophthalmologist.id;
+            }) > -1;
+          });
+
+          _this5.inBoundsFavoriteNbr = inBoundsFavoritesList.length;
+
           _this5.setState({
             favorites: response.data
           });
@@ -86197,6 +86451,36 @@ var mapStateToProps = function mapStateToProps(state) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "googleApiToken", function() { return googleApiToken; });
 var googleApiToken = 'AIzaSyCG8IyXjPNuc0j4Qx80f3Z0Oct5ewH5p0Y';
+
+/***/ }),
+
+/***/ "./resources/js/styles/404/404.css":
+/*!*****************************************!*\
+  !*** ./resources/js/styles/404/404.css ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/postcss-loader/src??ref--6-2!./404.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/styles/404/404.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 

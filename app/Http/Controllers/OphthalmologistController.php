@@ -21,6 +21,8 @@ class OphthalmologistController extends Controller{
      */
     public function __construct(OphthalmologistRepository $ophthalmologistRepository){
         $this->ophthalmologistRepository = $ophthalmologistRepository;
+
+        $this->middleware('auth:api')->only(['update', 'indexPerPage', 'store', 'destroy', 'getOpthosNomByQuery', 'show']);
     }
 
 

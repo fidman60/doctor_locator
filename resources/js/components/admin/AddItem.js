@@ -70,7 +70,7 @@ export default class AddItem extends Component {
                         <form onSubmit={onAddForm} autoComplete="false">
                             {loading && <LoadingLayer/>}
                             <div className="modal-header">
-                                <h4 className="modal-title">Add Employee</h4>
+                                <h4 className="modal-title">Ajouter</h4>
                                 <button type="button" className="close" data-dismiss="modal"
                                         aria-hidden="true" onClick={onCloseModal}>&times;</button>
                             </div>
@@ -162,7 +162,7 @@ export default class AddItem extends Component {
                             </div>
                             <div className="modal-footer">
                                 <input type="button" className="btn cancelBtn" data-dismiss="modal"
-                                       value="Cancel" onClick={onCloseModal} />
+                                       value="Annuler" onClick={onCloseModal} />
                                 <input type="submit" className="btn actionBtn" value="Ajouter" />
                             </div>
                         </form>

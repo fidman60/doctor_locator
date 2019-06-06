@@ -36,7 +36,7 @@ class Header extends Component {
         return (
             <header>
                 <div className="header-logo text-center">
-                    <h2><a href="index.html">GL<i className="fa fa-globe" />BO</a></h2>
+                    <h2 style={{fontSize: '18px'}}><a href="/" style={{color: '#333333'}}><span className="font-weight-bold">Doctor</span> Locator</a></h2>
                 </div>
 
                 <Search />

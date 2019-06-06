@@ -25,10 +25,10 @@ class StoreOphtholmologistRequest extends FormRequest
     {
         return [
             'specialties' => 'required|array|min:1|max:4',
-            'specialties.0.id' => 'required|integer',
-            'ophthalmologist.nom' => 'required|max:200|min:3|unique:ophthalmologists,nom',
-            'ophthalmologist.adresse_line1' => 'required|unique:ophthalmologists,adresse_line1',
-            'ophthalmologist.adresse_line2' => 'required|unique:ophthalmologists,adresse_line2',
+            'specialties.*.id' => 'required|integer',
+            'ophthalmologist.nom' => 'required|string|max:200|min:3|unique:ophthalmologists,nom',
+            'ophthalmologist.adresse_line1' => 'required|min:5|max:230|unique:ophthalmologists,adresse_line1',
+            'ophthalmologist.adresse_line2' => 'required|min:5|max:230|unique:ophthalmologists,adresse_line2',
             'ophthalmologist.cp' => 'required',
             'ophthalmologist.ville' => 'required',
             'ophthalmologist.tele' => 'required|unique:ophthalmologists,tele',
