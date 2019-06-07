@@ -35,7 +35,13 @@ export default class ResetFormParent extends React.Component {
     }
 
     render() {
-        return this.state.loading ? <div>Loading...</div> : this.state.found ? <ResetForm token={this.params.token} /> : <div>Invalid token</div>
+        return this.state.loading ? <div>Loading...</div> : this.state.found ? <ResetForm token={this.params.token} /> : (
+            <div className="container">
+                <div style={{padding: "10px",background: "red",color: "white",marginTop: "10px",fontWeight: "bold"}}>
+                    Désolé, le jeton est invalide
+                </div>
+            </div>
+        )
     }
 
 }

@@ -85274,7 +85274,17 @@ function (_React$Component) {
     value: function render() {
       return this.state.loading ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading...") : this.state.found ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ResetForm__WEBPACK_IMPORTED_MODULE_3__["default"], {
         token: this.params.token
-      }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Invalid token");
+      }) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          padding: "10px",
+          background: "red",
+          color: "white",
+          marginTop: "10px",
+          fontSize: "bold"
+        }
+      }, "D\xE9sol\xE9, le jeton est invalide"));
     }
   }]);
 
@@ -85400,6 +85410,40 @@ var mapStateToProps = function mapStateToProps(state) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps)(ErrorAlert));
+
+/***/ }),
+
+/***/ "./resources/js/components/home/Footer.js":
+/*!************************************************!*\
+  !*** ./resources/js/components/home/Footer.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Footer; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+function Footer(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      background: '#333333',
+      textAlign: "right"
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    style: {
+      padding: "5px",
+      display: "inline-block",
+      color: "white",
+      textDecoration: "none"
+    }
+  }, "Site example")));
+}
 
 /***/ }),
 
@@ -85611,6 +85655,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Map */ "./resources/js/components/home/Map.js");
 /* harmony import */ var _config_tokens__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../config/tokens */ "./resources/js/config/tokens.js");
 /* harmony import */ var _OphthalmologistsList__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./OphthalmologistsList */ "./resources/js/components/home/OphthalmologistsList.js");
+/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Footer */ "./resources/js/components/home/Footer.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -85628,6 +85673,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -85669,7 +85715,7 @@ function (_React$Component) {
             height: "100%"
           }
         })
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OphthalmologistsList__WEBPACK_IMPORTED_MODULE_5__["default"], null));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_OphthalmologistsList__WEBPACK_IMPORTED_MODULE_5__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Footer__WEBPACK_IMPORTED_MODULE_6__["default"], null));
     }
   }]);
 
